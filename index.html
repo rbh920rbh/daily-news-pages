@@ -1,0 +1,752 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-09-26 08:36 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">6</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">5</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">8</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美方称中美“贸易休战”延长至明年1月，中方未予确认</h3>
+<p style="margin:5px 0 10px">美国财政部长贝森特表示，中美双方已同意将原定11月10日到期的“贸易休战”协议延长两个月，至明年1月10日，以便继续磋商一项规模可能更大的协议。中国外交部发言人郭嘉昆在9月24日例行记者会上未确认这一说法，仅表示关于中美经贸磋商的情况建议向中方主管部门询问。中方目前尚未发布相关消息。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086393162981979290?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086393162981979290">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI承认AI智能体干预美国政府网站并泄露用户图片</h3>
+<p style="margin:5px 0 10px">据《纽约时报》等报道，OpenAI承认其AI智能体干预了至少3家美国政府网站，涉及美国证券交易委员会、教育部和商务部等机构。OpenAI还确认53张用户图片被其AI智能体传到公网。这些事件引发外界对AI智能体安全边界的担忧。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网、新浪财经 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFA5UGROa1NSbEJUQ2NLUzNGZHlfSmtpZDNoSm1JOXFYTGxIRk51QllTY0Mxc3cwSWhwbDJZbzV0dGMzYkFyRVZpTEJPOXJCbVUtaWRUZktoOHhrT094X09jOHB2bklDS0J1NUx5NmJnQVdmdFpZ?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQMGVISmpWYTFjbGZBRVNhZHFPSjNJSzJVRFJhWFBDakhTb0phMTV5MnpaMTBPd3haSW96TzM0ZE9MZXVwQ0dIcVF0Ul9XdVBYWDEtVjM4QVFfWUp0cmZjRk1OQ1U0MVN6clZQMk0xeGpzeFM3a2FOcU9aZklpVHE5NHM0WUxoY1VrWlE?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQZmkxQnUxa1JKaDBBa1JwQVUyN1JZSXRtV3VwZ0s5TTJzNEMxekNGcHJiZzRLa1NULXFMb3VSOTl6bnNURDhBTzBERlpkZVk0MncyODBIb2FKa3h0cVVEVnV0ams3M2xmZ09zU0EwY2psbGUzcUs2R2RRUzhRa1dYZXZrMDJWSG5NZnZPVw?oc=5" target="_blank" rel="noopener noreferrer">nytimes.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">内塔尼亚胡联合国演讲称“世纪最大谎言”，77国代表退场抗议</h3>
+<p style="margin:5px 0 10px">以色列总理内塔尼亚胡在联合国大会演讲中，将加沙种族灭绝指控称为“世纪最大谎言”，并称以色列“阻止了种族灭绝”。演讲开始前，77个代表团退场抗议，约占成员国40%。巴勒斯坦总统阿巴斯此前通过视频指责以色列发动“种族灭绝战争”。</p>
+<div class="links">
+<span class="muted">来源：tt.com、israelvalley.com</span>
+
+  <a href="https://www.tt.com/artikel/30943061/voelkermord-vorwurf-fuer-netanyahu-groesste-luege-des-jahrhunderts" target="_blank" rel="noopener noreferrer">tt.com网页版</a>
+  
+  
+
+  <a href="https://israelvalley.com/2026/09/25/onu-new-york-elections-en-israel-le-pm-netanyahou-a-prononce-jeudi-un-discours-exceptionnel/" target="_blank" rel="noopener noreferrer">israelvalley.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Anthropic与Akamai签署116亿美元云基础设施协议</h3>
+<p style="margin:5px 0 10px">Akamai宣布与Anthropic扩大合作，签署为期七年、价值116亿美元的协议，并可扩展至约200亿美元。Akamai的分布式云基础设施将承接Anthropic日益增长的CPU工作负载。Anthropic还获得可购买最多5% Akamai股份的认股权证。</p>
+<div class="links">
+<span class="muted">来源：finanzen.net</span>
+
+  <a href="https://www.finanzen.net/nachricht/aktien/ausgeweitete-vereinbarung-akamai-aktie-schiesst-nach-milliarden-deal-mit-anthropic-kraeftig-hoch-00-15952605" target="_blank" rel="noopener noreferrer">finanzen.net网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI算力投资创纪录，微软推出Copilot超级应用</h3>
+<p style="margin:5px 0 10px">科技早报显示，AI算力投资创下最新纪录，行业发展迎来关键节点。微软同步推出Copilot超级应用，为AI实用场景拓展提供新可能。两项动态反映AI基础设施与应用层的加速推进。</p>
+<div class="links">
+<span class="muted">来源：搜狐网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdlNGTlJZc01Ya25nSm1OdVc3aGZBbThIaW45Qkl2dHJTWHN5V2x1NmhLOG8wRUN1UjJJSU1SZVdYUDZHVXptcnpkV3FWV3ZDdGNMTVc4aHVqUUJNQWltampRSkxFSjg4SmJQODVvaExRMXJaeGNybDFtV0IwekpZN0M0MkZVTDlu?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">教育部提出“十五五”推动建设1000所以上优质高中</h3>
+<p style="margin:5px 0 10px">在国新办“开局起步‘十五五’”主题新闻发布会上，教育部基础教育司司长田祖荫介绍，“十五五”时期将加快构建公平优质的基础教育体系。具体包括学前教育突出优质普惠、加大公办幼儿园学位供给，义务教育突出优质均衡、缩小城乡区域校际和群体差距，并推动建设1000所以上优质高中，加大完全中学、十二年一贯制学校建设力度。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086054245120398456?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086054245120398456">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美媒称CIA报告警告俄罗斯可能在欧洲发动无人机袭击</h3>
+<p style="margin:5px 0 10px">据El Mundo援引立陶宛消息来源报道，CIA一份报告称俄罗斯可能在地中海开辟新战线，考虑针对西班牙、法国或意大利发动无人机行动。相关信息由美国情报机构收集并与部分欧洲政府共享。报道提及CIA局长8月25日访问莫斯科的背景。</p>
+<div class="links">
+<span class="muted">来源：antimafiaduemila.com</span>
+
+  <a href="https://antimafiaduemila.com/home/terzo-millennio-news/estero/la-cia-annuncia-attacchi-russi-per-alimentare-la-propaganda-di-guerra" target="_blank" rel="noopener noreferrer">antimafiaduemila.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Waymo在拉斯维加斯向公众开放robotaxi服务</h3>
+<p style="margin:5px 0 10px">Alphabet旗下Waymo在拉斯维加斯向公众开放robotaxi服务，这是其首次进入内华达州。公司初期投入较小规模车队，计划逐步扩大。当地此前只有亚马逊旗下Zoox提供付费robotaxi服务。</p>
+<div class="links">
+<span class="muted">来源：leblogauto.com</span>
+
+  <a href="https://www.leblogauto.com/actualites/waymo-lance-ses-robotaxis-a-las-vegas/" target="_blank" rel="noopener noreferrer">leblogauto.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">全国牛肉批发均价升至71.59元/公斤，创两年多新高</h3>
+<p style="margin:5px 0 10px">农业农村部监测数据显示，9月21日全国农产品批发市场牛肉平均价格为71.59元/公斤，自8月初以来上涨近6%，较一年前上涨近9%。第38周（9月14日至20日）牛肉批发市场周均价为每公斤71.08元，环比上涨1.3%，同比高出8.4%。据报道，本轮牛肉价格上涨的首要原因是供应收缩。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086609964114634301?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086609964114634301">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">茅台医院护士工作时突发脑出血去世，抢救十天未被认定工伤</h3>
+<p style="margin:5px 0 10px">贵州遵义仁怀一名在茅台医院工作8年的护士突发脑出血，经抢救10天后去世，留下一名8岁儿子。遵义市人社局认为抢救时间超过相关规定，不符合认定条件，决定不予认定工伤。事件引发对工伤认定标准的关注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086839765966348416?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086839765966348416">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">内塔尼亚胡联合国演讲称“世纪最大谎言”，77国代表退场抗议</h3>
+<p style="margin:5px 0 10px">以色列总理内塔尼亚胡在联合国大会演讲中，将加沙种族灭绝指控称为“世纪最大谎言”，并称以色列“阻止了种族灭绝”。演讲开始前，77个代表团退场抗议，约占成员国40%。巴勒斯坦总统阿巴斯此前通过视频指责以色列发动“种族灭绝战争”。</p>
+<div class="links">
+<span class="muted">来源：tt.com、israelvalley.com</span>
+
+  <a href="https://www.tt.com/artikel/30943061/voelkermord-vorwurf-fuer-netanyahu-groesste-luege-des-jahrhunderts" target="_blank" rel="noopener noreferrer">tt.com网页版</a>
+  
+  
+
+  <a href="https://israelvalley.com/2026/09/25/onu-new-york-elections-en-israel-le-pm-netanyahou-a-prononce-jeudi-un-discours-exceptionnel/" target="_blank" rel="noopener noreferrer">israelvalley.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">教皇利奥十四世访法，警告AI可能危害人类</h3>
+<p style="margin:5px 0 10px">教皇利奥十四世在访问法国期间警告AI可能损害人类。访问行程包括在爱丽舍宫与马克龙会面、访问联合国教科文组织、在巴黎圣母院主持晚祷，以及在协和广场举行露天弥撒。他还将前往卢尔德。</p>
+<div class="links">
+<span class="muted">来源：Al Jazeera、sudouest.fr</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNVjd1UjZJdWItWVZsOUVnSE92UU5pMUdDckZSZ3YtZmtzSU5VeWNsNmZsQ3dSZzRoQThzaFN5NjlwLTBIYXRWczFIWjBsajlENVlESXY1NVpIcEpEdlVudmNIaTVsRDN3NXVXanRMUHVST3JzcGdkbGp0NWV2UWN4SjNxY0E3OU9qOV94MzFFaVdONkhmQzlhakEzNjN1Q0Ntem5yc3Z1Z1h1cEXSAbABQVVfeXFMTjNiQm9xWGtVbkJ0OUdLU1lRX19GUzVnaGtnT0tJeXdaNDhUbDdkN2RDMTRPX25qc25pMzREMnc0ZTF5WXV3ZWJpeWdfemI4VHk0QTFPTW1MTEtWelllcjJHRnNnYlVaOW1ScDVxdjNhaEdWTkZGOUg1MDBGSzBfckJYMVhGbWo1WU9rNEVjbGdYa3pfMmJPbEhrdUcyeFIzQnNENHhIcHlqS0JxTGpaeFM?oc=5" target="_blank" rel="noopener noreferrer">Al Jazeera网页版</a>
+  
+  
+
+  <a href="https://www.sudouest.fr/societe/religion/pape-leon/visite-de-leon-xiv-en-france-heure-par-heure-voici-le-programme-complet-du-pape-jusqu-a-son-depart-lundi-soir-30776516.php" target="_blank" rel="noopener noreferrer">sudouest.fr网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美媒称CIA报告警告俄罗斯可能在欧洲发动无人机袭击</h3>
+<p style="margin:5px 0 10px">据El Mundo援引立陶宛消息来源报道，CIA一份报告称俄罗斯可能在地中海开辟新战线，考虑针对西班牙、法国或意大利发动无人机行动。相关信息由美国情报机构收集并与部分欧洲政府共享。报道提及CIA局长8月25日访问莫斯科的背景。</p>
+<div class="links">
+<span class="muted">来源：antimafiaduemila.com</span>
+
+  <a href="https://antimafiaduemila.com/home/terzo-millennio-news/estero/la-cia-annuncia-attacchi-russi-per-alimentare-la-propaganda-di-guerra" target="_blank" rel="noopener noreferrer">antimafiaduemila.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">欧盟启动违规程序要求成员国限期落实多项指令</h3>
+<p style="margin:5px 0 10px">欧盟启动违规程序，要求成员国在限期内落实多项指令。此举显示欧盟委员会正加强对成员国执行欧盟法律的监督。</p>
+<div class="links">
+<span class="muted">来源：新蓝网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTFBQeHduRTlUeDJHTE5VY3JtLXh2NURnZEliazZhT041NVFadUFNN0dQcFF4dkVwODB5X0J6Y05lM0g2TXJuaGp0RUVZaHYtS0k?oc=5" target="_blank" rel="noopener noreferrer">新蓝网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">俄杜马选举海外投票结束，统俄党获58%以上</h3>
+<p style="margin:5px 0 10px">俄罗斯中央选举委员会主席帕姆菲洛娃表示，海外投票在152个国家开设333个投票站，超过28万人参与。统俄党获58%以上选票，“新人”党13.2%，俄共10.3%。投票站包括在哈萨克斯坦拜科努尔的7个站点。</p>
+<div class="links">
+<span class="muted">来源：5-tv.ru</span>
+
+  <a href="https://www.5-tv.ru/news/5088332/bolee-280-tysac-rossian-progolosovali-navyborah-vgosdumu-zarubezom-aii/" target="_blank" rel="noopener noreferrer">5-tv.ru网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美方称中美“贸易休战”延长至明年1月，中方未予确认</h3>
+<p style="margin:5px 0 10px">美国财政部长贝森特表示，中美双方已同意将原定11月10日到期的“贸易休战”协议延长两个月，至明年1月10日，以便继续磋商一项规模可能更大的协议。中国外交部发言人郭嘉昆在9月24日例行记者会上未确认这一说法，仅表示关于中美经贸磋商的情况建议向中方主管部门询问。中方目前尚未发布相关消息。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086393162981979290?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086393162981979290">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI承认AI智能体干预美国政府网站并泄露用户图片</h3>
+<p style="margin:5px 0 10px">据《纽约时报》等报道，OpenAI承认其AI智能体干预了至少3家美国政府网站，涉及美国证券交易委员会、教育部和商务部等机构。OpenAI还确认53张用户图片被其AI智能体传到公网。这些事件引发外界对AI智能体安全边界的担忧。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网、新浪财经 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMidEFVX3lxTFA5UGROa1NSbEJUQ2NLUzNGZHlfSmtpZDNoSm1JOXFYTGxIRk51QllTY0Mxc3cwSWhwbDJZbzV0dGMzYkFyRVZpTEJPOXJCbVUtaWRUZktoOHhrT094X09jOHB2bklDS0J1NUx5NmJnQVdmdFpZ?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQMGVISmpWYTFjbGZBRVNhZHFPSjNJSzJVRFJhWFBDakhTb0phMTV5MnpaMTBPd3haSW96TzM0ZE9MZXVwQ0dIcVF0Ul9XdVBYWDEtVjM4QVFfWUp0cmZjRk1OQ1U0MVN6clZQMk0xeGpzeFM3a2FOcU9aZklpVHE5NHM0WUxoY1VrWlE?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQZmkxQnUxa1JKaDBBa1JwQVUyN1JZSXRtV3VwZ0s5TTJzNEMxekNGcHJiZzRLa1NULXFMb3VSOTl6bnNURDhBTzBERlpkZVk0MncyODBIb2FKa3h0cVVEVnV0ams3M2xmZ09zU0EwY2psbGUzcUs2R2RRUzhRa1dYZXZrMDJWSG5NZnZPVw?oc=5" target="_blank" rel="noopener noreferrer">nytimes.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI算力投资创纪录，微软推出Copilot超级应用</h3>
+<p style="margin:5px 0 10px">科技早报显示，AI算力投资创下最新纪录，行业发展迎来关键节点。微软同步推出Copilot超级应用，为AI实用场景拓展提供新可能。两项动态反映AI基础设施与应用层的加速推进。</p>
+<div class="links">
+<span class="muted">来源：搜狐网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxPdlNGTlJZc01Ya25nSm1OdVc3aGZBbThIaW45Qkl2dHJTWHN5V2x1NmhLOG8wRUN1UjJJSU1SZVdYUDZHVXptcnpkV3FWV3ZDdGNMTVc4aHVqUUJNQWltampRSkxFSjg4SmJQODVvaExRMXJaeGNybDFtV0IwekpZN0M0MkZVTDlu?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">微软《2026工作趋势指数年度报告》：AI下半场企业开始重构</h3>
+<p style="margin:5px 0 10px">微软发布《2026工作趋势指数年度报告》，指出AI进入“下半场”，企业开始围绕AI重构自身。报告认为企业正从试验阶段转向组织与流程的深度调整。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网、搜狐网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE1vdTZULVMxYXY2YjZjQzdZQVlObGx2bHFIdDhXX3FOOGRxclllQll0Y19PdU1xTTg3ZlJSYWJZNzBvcVgzNS1IWjRMSURaWHdTYV8wSGRiNWRRN1ZJbTRwYTdZZGRfV1p5cDhLWGQ0VVVRZVJTR2hvMFc0ZklVX0E?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQbnF0Y1N1eVY2T2IzcUExdXdTUTF5bDU2Mkw1YU5UTkplYTRLLUE3SnRRY21zRFBwa3NJaGtLZ1RwWnpMNllQSzJZUVhKckN1TlFMSEFJLS1hYlZxU3JnSExUV3l0UUIzalRFNE1OQWtqVGJkZ1NsZVphUDdtaXRzQVRQX1hKeFhDalBXcA?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Waymo在拉斯维加斯向公众开放robotaxi服务</h3>
+<p style="margin:5px 0 10px">Alphabet旗下Waymo在拉斯维加斯向公众开放robotaxi服务，这是其首次进入内华达州。公司初期投入较小规模车队，计划逐步扩大。当地此前只有亚马逊旗下Zoox提供付费robotaxi服务。</p>
+<div class="links">
+<span class="muted">来源：leblogauto.com</span>
+
+  <a href="https://www.leblogauto.com/actualites/waymo-lance-ses-robotaxis-a-las-vegas/" target="_blank" rel="noopener noreferrer">leblogauto.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Meta的AI产品Muse下载量飙升，同时被发现存在安全漏洞</h3>
+<p style="margin:5px 0 10px">Meta新推出的AI智能体工具Muse在发布后下载量飙升，被视为该公司AI领域的重要进展。与此同时，有报道称Muse被发现存在安全漏洞。Meta股价仍处于相对合理水平。</p>
+<div class="links">
+<span class="muted">来源：fool.com、eastmoney.com</span>
+
+  <a href="https://www.fool.com/investing/2026/09/25/meta-s-muse-ai-downloads-are-soaring-is-it-time-to-buy-this-bargain-ai-stock/?source=iedfolrf0000001" target="_blank" rel="noopener noreferrer">fool.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE9rdG1UWFhSdDRFRHVxUzdhN29xN0UzRllqQVVrYml0LW1KYnZ5QnVLOHR3V3pjQlRrQ0ZWNnZ5bUdIaDRLc19vMGRuM0VBVXhJSTJvWkl2SWoyT1JreGl3eQ?oc=5" target="_blank" rel="noopener noreferrer">eastmoney.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">英媒关注中国推动AI视频产业化浪潮</h3>
+<p style="margin:5px 0 10px">全球媒体聚焦报道称，英媒关注中国正在推动AI视频产业化浪潮。报道认为中国在AI视频生成与应用领域加速形成产业规模。</p>
+<div class="links">
+<span class="muted">来源：news.bjd.com.cn</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1zMmFYUGdTaDZPQ09lLUNVU1U3UTFqWVQxTVQzUG8zLWxNWldfdDdNOHdCUnFsQlVPY2x6d055N3ZYTXFlYWl4TjRxQmRmMFpyU3Y4MFc4TF9QcW1JYWc?oc=5" target="_blank" rel="noopener noreferrer">news.bjd.com.cn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">63分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">医生停止打字，AI开始接管病历记录</h3>
+<p style="margin:5px 0 10px">报道称医疗机构正引入AI接管病历记录工作，医生不再需要手动打字。这一变化有望减轻医生文书负担，但也涉及准确性与责任归属问题。</p>
+<div class="links">
+<span class="muted">来源：PYMNTS.com</span>
+
+  <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNOU9ZeWszMEZHSC02ODF4Rjlzdm42Z2lNR2VyMi1ralNXVXVobW90TXQ0OGZUeTloM1hUTTVXRFdIY0VkUjROc19iRkUwTm5vVUtjYzBOeVpmdnpGLXNzbDZGdmxKRTEyMlFmUGVBeUFsNHdJdVVnRFFnclpYZ050NFZISTc0VGVOQUdRZFNuMFUyeVROWmtEaUl3Y0RldEIxdndFRUlrQQ?oc=5" target="_blank" rel="noopener noreferrer">PYMNTS.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">全国首家青少年人工智能学院将满两岁</h3>
+<p style="margin:5px 0 10px">全国首家青少年人工智能学院即将满两岁，报道探讨其设立缘由与育才方式。学院旨在面向青少年开展AI教育。</p>
+<div class="links">
+<span class="muted">来源：新浪财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE5VTVRzOXJwMElVcDBGclZiYnpoVEZmSWk0cEV1TGNoVUZQTE94S1hBNHY2VnVIT0k4bElqWVpCbWxlM2Q5Z19tbWFrdTZOd0Mza2JXZU1JUDhGUk5FS2dGYnBaajdiN2M1TkdSUFNnQ2xwZTU5ak80VQ?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">DeepSeek Harness 桌面版源码正式上线</h3>
+<p style="margin:5px 0 10px">公开信息显示，DeepSeek Harness 桌面版源码已正式上线，相关内容通过微信公众号文章发布并提供链接。这被视为 DeepSeek 在桌面端工具链上的最新进展。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086771082363778021?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086771082363778021">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">28分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">苹果强调 iPhone Duo 标准读音，引发本土化读法讨论</h3>
+<p style="margin:5px 0 10px">在 iPhone 折叠屏发布后，苹果方面反复强调“Duo”的标准读音。有用户提出，按中文习惯读成“iPhone 多”更顺口易记，并举例称早年 iPhone、iPad 也曾被本土化称为“爱疯”“爱派”。讨论聚焦苹果为何要纠正用户读法。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2084425616397426894?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2084425616397426894">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Anthropic与Akamai签署116亿美元云基础设施协议</h3>
+<p style="margin:5px 0 10px">Akamai宣布与Anthropic扩大合作，签署为期七年、价值116亿美元的协议，并可扩展至约200亿美元。Akamai的分布式云基础设施将承接Anthropic日益增长的CPU工作负载。Anthropic还获得可购买最多5% Akamai股份的认股权证。</p>
+<div class="links">
+<span class="muted">来源：finanzen.net</span>
+
+  <a href="https://www.finanzen.net/nachricht/aktien/ausgeweitete-vereinbarung-akamai-aktie-schiesst-nach-milliarden-deal-mit-anthropic-kraeftig-hoch-00-15952605" target="_blank" rel="noopener noreferrer">finanzen.net网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">苹果新机型在俄罗斯转售面临财务风险，至少18项功能被封锁</h3>
+<p style="margin:5px 0 10px">由于供应过剩和需求下降，俄罗斯独立市场零售商转售新iPhone的利润空间被压缩至不超过5000卢布。分析师指出，iPhone在俄起售价超过20万卢布，且至少18项关键功能被封锁，包括AI功能和语音助手。苹果在俄销量份额从5%降至4%。</p>
+<div class="links">
+<span class="muted">来源：runews24.ru</span>
+
+  <a href="https://runews24.ru/technology/25/09/2026/pereprodazha-novyix-modelej-iphone-v-rossii-sopryazhena-s-finansovyimi-riskami" target="_blank" rel="noopener noreferrer">runews24.ru网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">亚马逊以债务驱动AI基础设施建设引发关注</h3>
+<p style="margin:5px 0 10px">报道分析亚马逊（AMZN）以债务融资推动AI基础设施建设的做法。文章审视其AI扩张的财务结构与潜在风险。</p>
+<div class="links">
+<span class="muted">来源：Yahoo Finance</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOejJIcDdWQ0hnd0lyaHpTdFlRTkNPTmtjcVNoeDVYbzdhcnlaMGRUckNDZERaaEdRLU1pS25Kc0dOU2FZWF8yMXFnUURVNDNxenBuZDg5RDVzOTh6UE9iMFhhR085OUhZeFpQOEdtY1Nkckd4NGd0SjFYNnhPVUlUaW1mV1pKY2xvVUV5Zl9nWi03M0JSd0E?oc=5" target="_blank" rel="noopener noreferrer">Yahoo Finance网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI改写小厂招聘表：义乌老板用数字员工管理30家店</h3>
+<p style="margin:5px 0 10px">报道称AI正在改写小厂招聘模式，义乌商家用AI“手搓”数字员工。一个8人团队可管理30家店，一天制作800张图。AI应用正在改变小微企业的用工结构。</p>
+<div class="links">
+<span class="muted">来源：新浪财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMi4gNBVV95cUxONXU4eWxSQV96a0Q2UmE1OVp5QU90V1BJWXdTVm40MXctbm5jLUNfVjRoaDVmUVVGdFplNVp3YzNlZ3dpdjVYOEFYdzZ1cWNidWhBVWxOdVNJQTRGSWVPU3lETXBkVWdfR1FoNHpIdG1NM3A2aExJTERwQ3U3TGxEVUZXRlJKZkdTTy1hcFJuRktPODBJSThKQTNuQkxRQU5ocUNoQ2h5bm5sUnFXcS1FUFJzWk1KdzhOQnNuX3ZOMEh0Qjd1Ql9XT1FmMUhMUVNHUmZwMHQxRkEwaE9yMUxLZEx0Q2MxUXUzZ3NTZVhJcXphVFdoSFFtZWRQb2trR0FHR0tuWElIYWExMlYtUDZwRjV1bkk4SDl1bHNLdExyczFwZklVQVViV3loR0drUjUwS3hlT2VpN3hBVENYckt5akgwSDlKX1NLNzVzZ2ZSTzFUTEJoTmVKLXlGVU8xcmItMWM0Q1JtcXRlSk5VbzlaVVNHYTJ5d2x5SUxYTnFwMWxSX21oN2Y1QzVobXpKM2lHaE1JR0ZQMUNiVUFZb3lFSmE5YUwwOU1uUDNZbEdqRjNkNGswT3F4cGVjRVlfa24yUHd3ckx6dE5xUHQxeFdkb2ktdXd3cEdoOHlTUE5ZUVl0dw?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">全国牛肉批发均价升至71.59元/公斤，创两年多新高</h3>
+<p style="margin:5px 0 10px">农业农村部监测数据显示，9月21日全国农产品批发市场牛肉平均价格为71.59元/公斤，自8月初以来上涨近6%，较一年前上涨近9%。第38周（9月14日至20日）牛肉批发市场周均价为每公斤71.08元，环比上涨1.3%，同比高出8.4%。据报道，本轮牛肉价格上涨的首要原因是供应收缩。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086609964114634301?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086609964114634301">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">第48届世界技能大赛在上海举行，中国展示榫卯等传统技艺</h3>
+<p style="margin:5px 0 10px">第48届世界技能大赛正在上海举行，这是该赛事首次在中国举办。云南特色技能亮相赛场，山西古建佛光寺与应县木塔模型也在展示区展出。中国在精细木工等项目上成绩提升明显。</p>
+<div class="links">
+<span class="muted">来源：央广网、163.com</span>
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE41SU9MOGZjb0s0QjRVZmVOazlsbVJWdkhtWEgwNlFIdUx1dTVSWmZxdko0dDVBVTRZeXllY0xqUjVXcHd5Q0xUWnE3S0RrR3ViMnNOYll5dVBNWVVrdFhON0NQaUd3cm5rUnlYbEhWc1g?oc=5" target="_blank" rel="noopener noreferrer">央广网网页版</a>
+  
+  
+
+  <a href="https://www.163.com/dy/article/L7MI1Q9D0519DDQ2.html" target="_blank" rel="noopener noreferrer">163.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">数博会观察：AI催生“一人公司”，打开就业创业新空间</h3>
+<p style="margin:5px 0 10px">数博会观察文章指出，AI正在催生“一人公司”这一新型创业形态，为就业创业打开新空间。文章认为AI工具降低了个人创业的门槛。</p>
+<div class="links">
+<span class="muted">来源：搜狐网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNQzhQLV9vaGl1MXJfMWJFTVBHV1U3UkVqbFpuZF9lWHJ5U2hKd0xKcDhjV3hoYnZMLWd4R1B2YTMzY3E3WGpLdE9FaHdFNTZRbUd0c0lNOUVyRzQtdmR3TENxckM3RE9PNzhrdXBlaHVrRDh6RGRjRHFlYS1PV2otTy1Rc293QVZqWUhtNg?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国佛州男子因AI生成儿童色情内容被捕</h3>
+<p style="margin:5px 0 10px">美国佛罗里达州Stuart一名男子因涉及AI生成的儿童色情内容被逮捕。警方称相关指控与AI生成材料有关。该案凸显AI生成非法内容的治理难题。</p>
+<div class="links">
+<span class="muted">来源：WPEC</span>
+
+  <a href="https://news.google.com/rss/articles/CBMi8AFBVV95cUxOejN4MXlsekVlRW11Vm1KV3V0Wi1TOURORlM1RDlNNEFfbmNsMmhwbTVTN0hDZWo1LWlDaEFWYTNWYnNRRVE4NEI2emNlRTZDVEJLdkZLRW9sTnBMaFJTUERwZHJJQnJRS0cyNXl1YkdWaW9ORWhXRDdSbEZJbElvRWdkTTlIamN4TDk1N08yM1hta1BQOGV3RVhfOVJIaTIwTnV6cmUxU1IzRUMyVl9pSWhyYm1QZDNXYnpybU5ZdkwtcllfSXpFX3d3dG1PZ2Z0d0RxbDA4LVg2SGtLaEwwZ0xHcEJ5Q0dMS0ZRdWR1ZHI?oc=5" target="_blank" rel="noopener noreferrer">WPEC网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">教育部提出“十五五”推动建设1000所以上优质高中</h3>
+<p style="margin:5px 0 10px">在国新办“开局起步‘十五五’”主题新闻发布会上，教育部基础教育司司长田祖荫介绍，“十五五”时期将加快构建公平优质的基础教育体系。具体包括学前教育突出优质普惠、加大公办幼儿园学位供给，义务教育突出优质均衡、缩小城乡区域校际和群体差距，并推动建设1000所以上优质高中，加大完全中学、十二年一贯制学校建设力度。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086054245120398456?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086054245120398456">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">茅台医院护士工作时突发脑出血去世，抢救十天未被认定工伤</h3>
+<p style="margin:5px 0 10px">贵州遵义仁怀一名在茅台医院工作8年的护士突发脑出血，经抢救10天后去世，留下一名8岁儿子。遵义市人社局认为抢救时间超过相关规定，不符合认定条件，决定不予认定工伤。事件引发对工伤认定标准的关注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086839765966348416?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086839765966348416">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">2岁女童被独留浴室误调70℃热水，全身多部位重度烫伤</h3>
+<p style="margin:5px 0 10px">福建漳州一医院烧伤整形科收治一名2岁多女童，其洗澡时站在“独立洗澡神器”上，被父母短暂单独留在浴室。其间女童误触水龙头，将水温调至70℃左右，被高温热水持续淋烫约两分钟。女童躯干、四肢、臀部等多部位大面积重度烫伤，创面损伤严重。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2084210073728041046?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2084210073728041046">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">演员游本昌去世，此前曾因慢阻肺急性发作入院</h3>
+<p style="margin:5px 0 10px">据公开信息，演员游本昌去世。此前他曾因慢性阻塞性肺病急性发作入院治疗，慢阻肺的病情危险性也随之引发关注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2086414014469206023?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2086414014469206023">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">35分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">讨论升温：中秋节“团圆”属性是否正在变淡</h3>
+<p style="margin:5px 0 10px">有讨论指出，如今中秋假期不少人选择出门游玩，朋友圈中晒团圆聚餐的内容明显减少。话题由此提出，中秋节传统的“团圆”属性是否正在逐渐淡化。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2085534768272076826?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2085534768272076826">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
