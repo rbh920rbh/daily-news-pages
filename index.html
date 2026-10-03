@@ -1,0 +1,856 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-10-03 09:09 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">5</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">5</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">14</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">11</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普称与伊朗战事“很快结束”，同时暗示中期选举后或加大轰炸</h3>
+<p style="margin:5px 0 10px">美国总统特朗普最新表态称与伊朗的战事将“很快结束”，但此前类似说法已出现数十次。相关报道还显示，他提出可能在中期选举后加大对伊朗轰炸，美军同时大举增兵中东。这一表态出现在中东冲突推高全球油价、柴油价格飙升的背景下。</p>
+<div class="links">
+<span class="muted">来源：华尔街见闻</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA5LWlWZ0Z0aHZ5aTNRS1lXa1NZMS1FMWFPX3ZVRERoVmlCbXQyeklHdWE2S2dVZW1Ya0xyUjV4SEJMRnZ2QV8xaC1zdDd3MU1SekFz?oc=5" target="_blank" rel="noopener noreferrer">华尔街见闻网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">G7同意释放石油储备以压低油价，英国柴油价格创纪录</h3>
+<p style="margin:5px 0 10px">在美国施压下，七国集团同意释放石油储备以缓解燃料价格压力，特朗普称欧洲将释放“大量”柴油储备。受此影响，布伦特原油价格回落至每桶100美元以下。与此同时，英国柴油价格首次达到每升2英镑的纪录高位，英国政府称柴油供应“稳健”，但仍参加与布鲁塞尔的危机磋商。</p>
+<div class="links">
+<span class="muted">来源：The Washington Post、dunfermlinepress.com 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNRFIxeWtpUXU5RzJsMjFIbEI2eU1pSkJyVlVleWROa0t5NXNHLUJjcDJOd0ZMeTdQSUNEYkUzbk9yOWd5WVItVUtTMTg4a3NKUEZWUWVJWFc5c2JUb01LdmV5MzdmdWN6dU5BTDNCTUNDZlNKTHJ2QlMtX3l0cHhoa3VzY2J5cXZST2hIZmktN3EwckhjT3NJckM3VHdUSkFtYXQ0c1huMk9XQjEtZ3BBS1MwVFBMb1YzSlBYNWF3?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://www.dunfermlinepress.com/news/national/26600861.dont-worry-diesel-shortages-government-says-us-urges-use-reserves/" target="_blank" rel="noopener noreferrer">dunfermlinepress.com网页版</a>
+  
+  
+
+  <a href="https://www.boursorama.com/bourse/actualites/les-contrats-a-terme-de-wall-street-progressent-alors-que-les-taux-d-interet-et-les-cours-du-petrole-reculent-a-la-veille-de-la-publication-des-chiffres-de-l-emploi-c976a7f7b6c4e287403ee4d35599b51a" target="_blank" rel="noopener noreferrer">boursorama.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国9月非农就业仅增2.9万人，远低于预期</h3>
+<p style="margin:5px 0 10px">美国9月非农就业人数增加2.9万人，预期为增加9万人，前值增加16.2万人，两个月数据净下修6万人。9月失业率升至4.2%，高于预期的4.1%，平均每小时工资同比升3%。数据公布后，交易员削减对美联储加息的押注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089459225881847418?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089459225881847418">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">极客湾拆解华为麒麟9050Pro，解析“逻辑折叠”芯片</h3>
+<p style="margin:5px 0 10px">极客湾于10月2日发布视频，称切开一颗麒麟9050Pro芯片并用电子显微镜观察内部结构，解析其“逻辑折叠”设计原理，同时测试了华为Mate 90 Pro Max的实机表现。该视频在平台引发对华为新一代芯片性能的讨论。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089412797440455404?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089412797440455404">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">比亚迪9月销量46.36万辆，连续数月环比增长</h3>
+<p style="margin:5px 0 10px">比亚迪公布2026年9月销量为46.36万辆，其中乘用车45.67万辆，乘用车及皮卡海外销售17.99万辆，同比增长153.9%。集团销量从4月的32.11万辆连续环比攀升至9月的46.36万辆，1—9月累计313.16万辆，同比下降约3.94%，降幅较7、8月底进一步收窄。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089066625966290352?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089066625966290352">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普将“人工智能”改称“超级智能”，斯洛文尼亚.si域名注册量暴增2100%</h3>
+<p style="margin:5px 0 10px">美国正式执行特朗普对AI的重新定义，将其改称“超级智能”，随后斯洛文尼亚国家顶级域名“.si”注册量环比激增2100%。这一命名变化引发业界对AI政策表述与监管口径的关注。</p>
+<div class="links">
+<span class="muted">来源：搜狐网、驱动之家</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNdU1ibzRDOGVmX3pXakRvN0oxS0VGb2VIQzBaeElqcVNTWS1hc2VUdllqVkJ5aHNycmJkaUJqbEx0OHJRNEVnd1QzaXZfTUxJTW1MRmw1WW5jeFh3ZVNmVGNwZHJndGV3OWM2WUJqbWRJanp4ZFIxYmUwNHJxTDBzRU5QTGFIS1ZuUXA4bg?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rZHJCc3hUOXd3MHhKcW9oTmRQOTZ6cEVUNTVQeS1XNFA2amM3MmFUdmlnd1lKZEhCU0JTSEMxcVIxVWhJOExRd0JsRTQydlhpSUNjaTI4Nm8?oc=5" target="_blank" rel="noopener noreferrer">驱动之家网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国制裁与俄罗斯关联的A7影子银行网络，指其帮助伊朗规避制裁</h3>
+<p style="margin:5px 0 10px">美国财政部宣布制裁与俄罗斯关联的“A7”影子银行网络，称其被伊朗用于规避制裁，并将其认定为重大跨国犯罪组织。该行动属于美方对伊朗制裁施压的“经济流放者”行动的一部分。FinCEN同时提出规则，禁止涉及该网络子代理的转账交易。</p>
+<div class="links">
+<span class="muted">来源：eurointegration.com.ua</span>
+
+  <a href="https://www.eurointegration.com.ua/news/2026/10/2/7246774/" target="_blank" rel="noopener noreferrer">eurointegration.com.ua网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">俄罗斯以新型弹头打击乌克兰电网与第聂伯河桥梁</h3>
+<p style="margin:5px 0 10px">俄军使用被称作“Tsar-Geranium”的新型弹头，打击乌克兰高压电力系统和第聂伯河上的桥梁，称已击毙多名乌方军官。该弹头含约40公斤主装药及四个切割模块，专门用于破坏高压输电塔和钢结构。乌方记录显示至少8条输电线路被毁，750千伏和330千伏线路的安全运行受到关注。</p>
+<div class="links">
+<span class="muted">来源：soha.vn</span>
+
+  <a href="https://soha.vn/nga-tung-tsar-geranium-danh-no-muc-tieu-bat-kha-xam-pham-tuyen-bo-ha-loat-si-quan-ukraine-ong-putin-cong-bo-su-that-ve-svo-198261002140638371.htm" target="_blank" rel="noopener noreferrer">soha.vn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">江歌妈妈发文“十年维权路，尘埃终将落定”</h3>
+<p style="margin:5px 0 10px">江秋莲发布长文《金昌，此生不再相见》，称这是她第三次前往金昌处理维权事宜，并透露“十年维权路，步步皆辛苦”。她透露在甘肃金昌起诉一名长期在社交平台发布博文、捏造说法并恶意诋毁江歌及其本人的网民。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2088971415525356116?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2088971415525356116">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国庆假期首日铁路客流创历史新高，新能源车高速充电排队成焦点</h3>
+<p style="margin:5px 0 10px">国庆假期首日，中国铁路单日旅客发送量创下历史新高，铁路与民航同步迎来客流高峰。与此同时，多地高速服务区出现新能源汽车“抢桩大战”，有车主反映充电排队等待长达5小时。多地推出移动补能等措施保障假期新能源车出行。</p>
+<div class="links">
+<span class="muted">来源：央广网、中国科技网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9zeUJHektUMXVuY3BFZXZrOU5SNHd2OEl3ZHBvYmJHc3lCMTlLNEpkWk1kZlN2bGhmYk9tVUNRSER2RG03dmoxbmxfNWcwT2xOZGJEdUhNUTNxVVNROWVHelJIX193aXpucFRkdjJaLVRGYW1CUHFwc2RWNEE?oc=5" target="_blank" rel="noopener noreferrer">央广网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9zZ2hzekh6ZDJ1VlVCeXhZSTJyZTJkTGhGSjM4NkREMlVmamR6djU4WHNpeExaUkpoQ2tQWGlmcTVOb2s5c2VKaU9mTTRWekg3TzB1R1BObDZWUGd6VDdLWVZrSGRrdk9UY2RuZTUxNHQ?oc=5" target="_blank" rel="noopener noreferrer">中国科技网网页版</a>
+  
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普称与伊朗战事“很快结束”，同时暗示中期选举后或加大轰炸</h3>
+<p style="margin:5px 0 10px">美国总统特朗普最新表态称与伊朗的战事将“很快结束”，但此前类似说法已出现数十次。相关报道还显示，他提出可能在中期选举后加大对伊朗轰炸，美军同时大举增兵中东。这一表态出现在中东冲突推高全球油价、柴油价格飙升的背景下。</p>
+<div class="links">
+<span class="muted">来源：华尔街见闻</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFA5LWlWZ0Z0aHZ5aTNRS1lXa1NZMS1FMWFPX3ZVRERoVmlCbXQyeklHdWE2S2dVZW1Ya0xyUjV4SEJMRnZ2QV8xaC1zdDd3MU1SekFz?oc=5" target="_blank" rel="noopener noreferrer">华尔街见闻网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国制裁与俄罗斯关联的A7影子银行网络，指其帮助伊朗规避制裁</h3>
+<p style="margin:5px 0 10px">美国财政部宣布制裁与俄罗斯关联的“A7”影子银行网络，称其被伊朗用于规避制裁，并将其认定为重大跨国犯罪组织。该行动属于美方对伊朗制裁施压的“经济流放者”行动的一部分。FinCEN同时提出规则，禁止涉及该网络子代理的转账交易。</p>
+<div class="links">
+<span class="muted">来源：eurointegration.com.ua</span>
+
+  <a href="https://www.eurointegration.com.ua/news/2026/10/2/7246774/" target="_blank" rel="noopener noreferrer">eurointegration.com.ua网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">俄罗斯以新型弹头打击乌克兰电网与第聂伯河桥梁</h3>
+<p style="margin:5px 0 10px">俄军使用被称作“Tsar-Geranium”的新型弹头，打击乌克兰高压电力系统和第聂伯河上的桥梁，称已击毙多名乌方军官。该弹头含约40公斤主装药及四个切割模块，专门用于破坏高压输电塔和钢结构。乌方记录显示至少8条输电线路被毁，750千伏和330千伏线路的安全运行受到关注。</p>
+<div class="links">
+<span class="muted">来源：soha.vn</span>
+
+  <a href="https://soha.vn/nga-tung-tsar-geranium-danh-no-muc-tieu-bat-kha-xam-pham-tuyen-bo-ha-loat-si-quan-ukraine-ong-putin-cong-bo-su-that-ve-svo-198261002140638371.htm" target="_blank" rel="noopener noreferrer">soha.vn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">日本拟追加对俄制裁并锁定“影子舰队”，普京称关系恶化责任在日方</h3>
+<p style="margin:5px 0 10px">日本政府开始研议对俄罗斯追加制裁，对象预计包括运输俄能源、规避制裁的“影子舰队”油轮，并考虑扩大出口管制品项。俄罗斯总统普京表示有意与日本合作，但重申日俄关系恶化责任在于日本实施制裁，并对日本扩充军备表示忧虑。双方在北方四岛问题上立场依旧对立。</p>
+<div class="links">
+<span class="muted">来源：udn.com</span>
+
+  <a href="https://udn.com/news/story/6809/9791129" target="_blank" rel="noopener noreferrer">udn.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普被曝在绑架马杜罗前数小时咨询Grok，事后称其“很聪明”</h3>
+<p style="margin:5px 0 10px">有报道称，美国总统特朗普在对委内瑞拉总统马杜罗采取行动前，曾花数小时咨询马斯克旗下AI聊天机器人Grok，该AI当时鼓励他这么做，事后特朗普认为Grok“很聪明”。另有报道显示，马杜罗之后，外界关注转向其盟友Mireya Blavia de Cisneros的腐败问题。上述内容来自媒体报道，尚待更多独立信源证实。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网、samaa.tv</span>
+
+  <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFA1ZHFFcUVHX1dEUGNpeW9PbjZWZWNrb3ktdzZLclhOcDU1NlBMbTRsVHFfaWplM2pDTkhFNzJmV0Y0b2E2WllzY090RWl6MVhqTG91LWFCNWZrYWpjUTJxVFBSU1JrWjMyZnhEX3lqWG5hQQ?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+  <a href="https://www.samaa.tv/2087357807-after-maduro-scrutiny-turns-to-his-ally-mireya-blavia-de-cisneros-over-corruption" target="_blank" rel="noopener noreferrer">samaa.tv网页版</a>
+  
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普将“人工智能”改称“超级智能”，斯洛文尼亚.si域名注册量暴增2100%</h3>
+<p style="margin:5px 0 10px">美国正式执行特朗普对AI的重新定义，将其改称“超级智能”，随后斯洛文尼亚国家顶级域名“.si”注册量环比激增2100%。这一命名变化引发业界对AI政策表述与监管口径的关注。</p>
+<div class="links">
+<span class="muted">来源：搜狐网、驱动之家</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNdU1ibzRDOGVmX3pXakRvN0oxS0VGb2VIQzBaeElqcVNTWS1hc2VUdllqVkJ5aHNycmJkaUJqbEx0OHJRNEVnd1QzaXZfTUxJTW1MRmw1WW5jeFh3ZVNmVGNwZHJndGV3OWM2WUJqbWRJanp4ZFIxYmUwNHJxTDBzRU5QTGFIS1ZuUXA4bg?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTE5rZHJCc3hUOXd3MHhKcW9oTmRQOTZ6cEVUNTVQeS1XNFA2amM3MmFUdmlnd1lKZEhCU0JTSEMxcVIxVWhJOExRd0JsRTQydlhpSUNjaTI4Nm8?oc=5" target="_blank" rel="noopener noreferrer">驱动之家网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">极客湾拆解华为麒麟9050Pro，解析“逻辑折叠”芯片</h3>
+<p style="margin:5px 0 10px">极客湾于10月2日发布视频，称切开一颗麒麟9050Pro芯片并用电子显微镜观察内部结构，解析其“逻辑折叠”设计原理，同时测试了华为Mate 90 Pro Max的实机表现。该视频在平台引发对华为新一代芯片性能的讨论。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089412797440455404?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089412797440455404">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">iPhone 18 Pro被曝多次死机重启，苹果称系Face ID相关系统漏洞</h3>
+<p style="margin:5px 0 10px">苹果证实最新发布的iPhone 18 Pro及iPhone 18 Pro Max存在一项与Face ID面容识别相关的系统漏洞。客服表示问题出在系统软件而非硬件，已提交工程部调查，后续将通过系统版本更新解决。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2085637806781642585?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2085637806781642585">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">54分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">中国AI短剧火热而国外未成规模，原因引发讨论</h3>
+<p style="margin:5px 0 10px">讨论指出中国AI短剧发展如火如荼，而国外AI短剧并未形成规模。提问者推测可能与国外对真人演员的保护、国外长剧供给充足等因素有关，并向网友征询原因。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2087643546463613137?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2087643546463613137">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">“用AI抽卡拿到大结果”，论文署名归属引讨论</h3>
+<p style="margin:5px 0 10px">有讨论提出，使用AI“抽卡”获得重要研究结果后，论文署名应当归谁。话题聚焦AI辅助科研中的学术署名与贡献认定问题。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2088617692831774235?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2088617692831774235">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">G7同意释放石油储备以压低油价，英国柴油价格创纪录</h3>
+<p style="margin:5px 0 10px">在美国施压下，七国集团同意释放石油储备以缓解燃料价格压力，特朗普称欧洲将释放“大量”柴油储备。受此影响，布伦特原油价格回落至每桶100美元以下。与此同时，英国柴油价格首次达到每升2英镑的纪录高位，英国政府称柴油供应“稳健”，但仍参加与布鲁塞尔的危机磋商。</p>
+<div class="links">
+<span class="muted">来源：The Washington Post、dunfermlinepress.com 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMivgFBVV95cUxNRFIxeWtpUXU5RzJsMjFIbEI2eU1pSkJyVlVleWROa0t5NXNHLUJjcDJOd0ZMeTdQSUNEYkUzbk9yOWd5WVItVUtTMTg4a3NKUEZWUWVJWFc5c2JUb01LdmV5MzdmdWN6dU5BTDNCTUNDZlNKTHJ2QlMtX3l0cHhoa3VzY2J5cXZST2hIZmktN3EwckhjT3NJckM3VHdUSkFtYXQ0c1huMk9XQjEtZ3BBS1MwVFBMb1YzSlBYNWF3?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://www.dunfermlinepress.com/news/national/26600861.dont-worry-diesel-shortages-government-says-us-urges-use-reserves/" target="_blank" rel="noopener noreferrer">dunfermlinepress.com网页版</a>
+  
+  
+
+  <a href="https://www.boursorama.com/bourse/actualites/les-contrats-a-terme-de-wall-street-progressent-alors-que-les-taux-d-interet-et-les-cours-du-petrole-reculent-a-la-veille-de-la-publication-des-chiffres-de-l-emploi-c976a7f7b6c4e287403ee4d35599b51a" target="_blank" rel="noopener noreferrer">boursorama.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美股续涨：纳指与英伟达盘中创新高，存储概念股重挫</h3>
+<p style="margin:5px 0 10px">美股大型科技股全线收涨，纳斯达克指数与英伟达盘中双双创下新高，SpaceX股价涨超7%。存储概念股表现分化明显，西部数据、希捷科技单日跌幅均超过10%。市场同时关注非农数据走弱对加息预期的影响，美债收益率波动加大。</p>
+<div class="links">
+<span class="muted">来源：东方财富、21财经 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTFBQR255c2J1U2NQbmFWMk03aVB3Z2hzN2JMZnRvRWllMlAxeS1scXdLTU4xZFcyUkZDRmNnYjlnZm4zRFhBTF9mWUV3c0NzUE5uLWtBWm9xeTAtVUJNU1lwNTdnd2htZw?oc=5" target="_blank" rel="noopener noreferrer">东方财富网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNMVJKTGJVTmtaTU45Ny02cU1CNUN2aFB6WVREZlNLMXlwQXpZWkdUcC1wYWsyOGZvWXZaR3RDT2liLXd5RnF2S3J2b29CWGg5U2UwVGYxTnVaajJuemJ6QWZPclZHRFNuSzNiSzNBYW5uV2ZyaXZrQlUtUjd5U3g5aXBvbWt6SUEtWVRLaHZENA?oc=5" target="_blank" rel="noopener noreferrer">21财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiugFBVV95cUxPUEFtaDY4N3BsbVY2dHpWV3h5RWd2b2R5TUZQb1FyVVJtSTRvczlJc2tHLXdNQlJuQTRYUlZHcUstZmcxY3dTNGdsZ296VEtnT0I2cHRZSTlwYlFGNlZtUGpFSDNTVkhMM2E1QVFidEd6c1k2NWNzSFE0eklobV9yV3E2Nm9TRmVwMVZWU1k5U2lhNUwwcE1Od0ktX09XTTRxeXhSX3hLejlidmk4QzRpZWRPRG02ekpaLUE?oc=5" target="_blank" rel="noopener noreferrer">Moomoo网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">欧元区9月通胀加速至3.8%，创三年新高</h3>
+<p style="margin:5px 0 10px">欧盟统计局初步数据显示，欧元区9月调和消费者价格指数同比上涨3.8%，高于8月的3.2%，为2023年9月以来最高。能源价格同比大涨18.8%，新鲜食品价格涨幅扩大至4.0%。通胀反弹主要受能源与食品涨价推动。</p>
+<div class="links">
+<span class="muted">来源：24sata.hr</span>
+
+  <a href="https://www.24sata.hr/news/eurostat-inflacija-u-eurozoni-u-rujnu-ubrzala-na-38-posto-1158233" target="_blank" rel="noopener noreferrer">24sata.hr网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Meta遭新墨西哥州索赔350亿至400亿美元罚款</h3>
+<p style="margin:5px 0 10px">美国新墨西哥州司法部门向法院申请对Meta处以350亿至400亿美元的民事罚款。此前圣菲陪审团于9月25日认定Meta在数据保护方面故意欺骗消费者，共认定43,899,725项违反消费者保护法的行为。法院预计在10月作出裁决，Meta主张应大幅降低罚金上限。</p>
+<div class="links">
+<span class="muted">来源：boerse-express.com</span>
+
+  <a href="https://www.boerse-express.com/news/articles/meta-aktie-new-mexico-fordert-milliardenstrafe-950152" target="_blank" rel="noopener noreferrer">boerse-express.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">2026年前三季度A股扫描：科创50领涨13.82%，北证50跌近28%</h3>
+<p style="margin:5px 0 10px">2026年前三季度A股震荡分化，仅科创50逆势上涨13.82%，北证50大跌27.83%表现最弱。半导体行业以33.00%的涨幅遥遥领先，煤炭、硬件设备、建材涨幅居前。覆铜板、氮化铝、六氟化钨、培育钻石、半导体设备等科技与新材料概念成为资金抱团方向。截至三季度末A股共有5572家上市公司，总市值121.85万亿元。</p>
+<div class="links">
+<span class="muted">来源：stock.jrj.com.cn</span>
+
+  <a href="https://stock.jrj.com.cn/2026/10/02172958606805.shtml" target="_blank" rel="noopener noreferrer">stock.jrj.com.cn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">德国联邦审计院警告：养老金支出或吞掉近半联邦预算</h3>
+<p style="margin:5px 0 10px">德国联邦审计院警告，法定养老金保险对联邦预算的压力将持续上升，未来可能接近半数联邦预算用于养老金给付。报告重点批评已通过的母亲养老金扩展和2031年前稳定养老金水平两项措施，认为这些非缴费型支出到2040年将带来约2100亿欧元额外成本。审计院建议限制这一负担。</p>
+<div class="links">
+<span class="muted">来源：t-online.de</span>
+
+  <a href="https://www.t-online.de/finanzen/ratgeber/altersvorsorge/gesetzlicherente/id_101462802/rente-rechnungshof-warnt-bei-haushalt-wegen-muetterrente-und-rentenniveau.html" target="_blank" rel="noopener noreferrer">t-online.de网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">48分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">物理AI概念股欢创科技上市次日暴跌48%，股民呼吁报警</h3>
+<p style="margin:5px 0 10px">由中金保荐的欢创科技上市首日暴涨266%，次日即暴跌48%，被指成为“割韭菜”工具，部分股民表示要报警。该股此前被市场冠以“物理AI大牛股”概念。事件引发对概念股炒作与新股定价机制的讨论。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网、搜狐网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxPSlFpbTNqc1c2WEpSbGlnYkRZMkRvMkNTZkVDbUhkYkhPSUFrZElUd3ZCZ3BuUzBybDIycGJTV1Z4d0hYYW01QjlDTks5MUhDQ3htajJTMzlzOEF2N3A2T2pvUG93WkRCazNCUGV3a3lGa1NFWlI0V19Kck5ZWGxubFlUQQ?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxQS29DYkhPOGNta1VTeXg5OUFzVno2azh2S0ZkdjVPalJmVjJrek4td1h3X0RjMmlTdWR4R3pxWFQyamNrclBpMzgtWXJpMVFPRU02TjMzZW9ieTUwc0VYZ0FOeXZEODhkdnRuOWs4WUZlazZuQTRzalpfVUk0ZTl0SG1fMHgyYUtpdUZzZA?oc=5" target="_blank" rel="noopener noreferrer">搜狐网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">42分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Netflix承认观看时长增长仅2%，流媒体竞争压力上升</h3>
+<p style="margin:5px 0 10px">Netflix联席CEO萨兰多斯承认，平台2026年上半年观看时长仅增长约2%，坦言“增长没有我希望的那么快”。公司每年内容投入约200亿美元，其中约5%投向直播节目，但直播仅贡献约1%的观看时长。市场同时关注Paramount Skydance与华纳兄弟探索1110亿美元合并带来的竞争压力。</p>
+<div class="links">
+<span class="muted">来源：dnews.gr</span>
+
+  <a href="https://www.dnews.gr/eidhseis/entertainment/613938/provlimatismos-sto-netflix-gia-tin-tiletheasi-poso-konta-einai-to-dorean-periexomeno-me-diafimiseis" target="_blank" rel="noopener noreferrer">dnews.gr网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国9月非农就业仅增2.9万人，远低于预期</h3>
+<p style="margin:5px 0 10px">美国9月非农就业人数增加2.9万人，预期为增加9万人，前值增加16.2万人，两个月数据净下修6万人。9月失业率升至4.2%，高于预期的4.1%，平均每小时工资同比升3%。数据公布后，交易员削减对美联储加息的押注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089459225881847418?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089459225881847418">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">比亚迪9月销量46.36万辆，连续数月环比增长</h3>
+<p style="margin:5px 0 10px">比亚迪公布2026年9月销量为46.36万辆，其中乘用车45.67万辆，乘用车及皮卡海外销售17.99万辆，同比增长153.9%。集团销量从4月的32.11万辆连续环比攀升至9月的46.36万辆，1—9月累计313.16万辆，同比下降约3.94%，降幅较7、8月底进一步收窄。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089066625966290352?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089066625966290352">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">新能源车事故维修费用达燃油车1.7倍，引发“修不起”讨论</h3>
+<p style="margin:5px 0 10px">有内容指出，新能源汽车事故维修平均费用达燃油车的1.7倍，与电车日常使用成本低的卖点形成反差。讨论聚焦电车“修不起”的根本原因，以及车主的整体用车成本应如何计算。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2087701209415271180?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2087701209415271180">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">机械硬盘价格异常，1TB与2TB同价</h3>
+<p style="margin:5px 0 10px">有讨论指出机械硬盘价格“离谱”，1TB与2TB容量价格相同，4TB反而成为性价比首选。相关内容聚焦硬盘定价与容量之间的关系。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2082856338791706870?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2082856338791706870">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">莫氏鸡煲爆火半年后客流回落，员工从180人减至30多人</h3>
+<p style="margin:5px 0 10px">2026年10月1日，莫氏鸡煲佛山顺德陈村总店午市整体上座率约六成，此前为排队顾客准备的候“鸡”亭已撤走。员工从爆火时的180人减至30多人，创始人莫叔表示正筹建新养鸡场保障活鸡供应，称“把质量搞好了，不怕没有生意”。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089354143802418288?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089354143802418288">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">46分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">六神稳居花露水市场第一，行业集中度持续提升</h3>
+<p style="margin:5px 0 10px">报道称我国花露水市场集中度显著提升，头部效应持续强化，中小品牌加速退出或转向细分领域。六神凭借国民级品牌认知、全国全渠道布局、研发实力和全品类矩阵稳居行业第一，隆力奇、润本、榄菊等位于第二梯队。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2087306147153666673?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2087306147153666673">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国庆假期首日铁路客流创历史新高，新能源车高速充电排队成焦点</h3>
+<p style="margin:5px 0 10px">国庆假期首日，中国铁路单日旅客发送量创下历史新高，铁路与民航同步迎来客流高峰。与此同时，多地高速服务区出现新能源汽车“抢桩大战”，有车主反映充电排队等待长达5小时。多地推出移动补能等措施保障假期新能源车出行。</p>
+<div class="links">
+<span class="muted">来源：央广网、中国科技网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE9zeUJHektUMXVuY3BFZXZrOU5SNHd2OEl3ZHBvYmJHc3lCMTlLNEpkWk1kZlN2bGhmYk9tVUNRSER2RG03dmoxbmxfNWcwT2xOZGJEdUhNUTNxVVNROWVHelJIX193aXpucFRkdjJaLVRGYW1CUHFwc2RWNEE?oc=5" target="_blank" rel="noopener noreferrer">央广网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE9zZ2hzekh6ZDJ1VlVCeXhZSTJyZTJkTGhGSjM4NkREMlVmamR6djU4WHNpeExaUkpoQ2tQWGlmcTVOb2s5c2VKaU9mTTRWekg3TzB1R1BObDZWUGd6VDdLWVZrSGRrdk9UY2RuZTUxNHQ?oc=5" target="_blank" rel="noopener noreferrer">中国科技网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">菲律宾儿童疫苗接种遭社交媒体假信息冲击，约23万人拒接</h3>
+<p style="margin:5px 0 10px">菲律宾今年一项儿童疫苗接种计划受到社交媒体大量虚假信息干扰，约23万人拒绝接种。一名3岁男童接种后不适的照片被误传为死亡证据，相关视频被数十万次观看。专家指出，疫苗犹豫的根源在于对政府和医疗机构的不信任，而非单纯缺乏科学知识。</p>
+<div class="links">
+<span class="muted">来源：metrohk.com.hk</span>
+
+  <a href="https://metrohk.com.hk/%E5%9C%8B%E9%9A%9B/%E8%8F%B2%E5%BE%8B%E8%B3%93%E7%96%AB%E8%8B%97%E6%8E%A5%E7%A8%AE%E9%81%AD%E7%A4%BE%E4%BA%A4%E5%AA%92%E9%AB%94%E5%81%87%E8%B3%87%E8%A8%8A%E5%9B%B0%E6%93%BE-90d3ff" target="_blank" rel="noopener noreferrer">metrohk.com.hk网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">澳大利亚发生汽车冲撞人群事件，致数人受伤</h3>
+<p style="margin:5px 0 10px">据新华网报道，澳大利亚发生一起汽车冲撞人群事件，造成数人受伤。事件具体原因与后续处置仍在进一步了解中。</p>
+<div class="links">
+<span class="muted">来源：新华网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE9RZGJrZHAzV245ODNFY0k4WWpWUW9Md2JDYy04d085UDhIOThIckF6SGpLQlZJR0JLUWRNaU5RejgyeUpRSnk3TGtFb2djbjhPOGwwcXNZdVBzWTJXc2NFcHN3UU9pSXQ1Ti1lMmp1aW1DOUtlaERGTlN5a0xHQQ?oc=5" target="_blank" rel="noopener noreferrer">新华网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">45分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">迪拜飞特拉维夫航班副驾驶袭击机长，印度飞行员受伤</h3>
+<p style="margin:5px 0 10px">一架从迪拜飞往特拉维夫的Flydubai航班上，副驾驶在驾驶舱内袭击机长，印度籍机长受伤。机长打开驾驶舱门求助后，乘客和其他飞行员进入驾驶舱协助控制局面。印度总理莫迪与受伤机长通话，称赞其勇气并祝愿其早日康复。</p>
+<div class="links">
+<span class="muted">来源：sanjevani.com</span>
+
+  <a href="https://sanjevani.com/indians-do-not-take-lives-modi/" target="_blank" rel="noopener noreferrer">sanjevani.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">40分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">研究显示X、Y染色体不仅决定性別，还影响衰老、肿瘤与心血管疾病</h3>
+<p style="margin:5px 0 10px">《Science》发表的一项研究综述指出，性染色体X和Y的作用远超决定生物学性别，还可影响免疫系统、代谢与衰老过程，并影响肿瘤和心血管疾病风险。研究由亚利桑那大学和加州大学旧金山分校学者完成。这一发现可能推动性别医学发展，改进诊断、治疗和临床试验设计。</p>
+<div class="links">
+<span class="muted">来源：quotidianodipuglia.it</span>
+
+  <a href="https://www.quotidianodipuglia.it/salute/ricerca/cromosomi_x_y_invecchiamento_tumori_malattie_cuore-9799569.html" target="_blank" rel="noopener noreferrer">quotidianodipuglia.it网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">38分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">博茨瓦纳为独立60周年庆典批准宰杀23头大象引争议</h3>
+<p style="margin:5px 0 10px">博茨瓦纳政府批准为独立60周年庆典宰杀23头大象，被宰杀动物的肉将在纪念活动中分发。该国拥有全球最多的大象种群，数量超过13万头，主要分布在北部乔贝国家公园和奥卡万戈三角洲一带。该决定再次引发关于大象种群管理方式的争论。</p>
+<div class="links">
+<span class="muted">来源：larazon.es</span>
+
+  <a href="https://www.larazon.es/actualidad/polemica-decision-botswana-23-elefantes-seran-abatidos-sus-celebraciones-b50m_202610026abf878ea4297764c3a800d3.html" target="_blank" rel="noopener noreferrer">larazon.es网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">江歌妈妈发文“十年维权路，尘埃终将落定”</h3>
+<p style="margin:5px 0 10px">江秋莲发布长文《金昌，此生不再相见》，称这是她第三次前往金昌处理维权事宜，并透露“十年维权路，步步皆辛苦”。她透露在甘肃金昌起诉一名长期在社交平台发布博文、捏造说法并恶意诋毁江歌及其本人的网民。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2088971415525356116?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2088971415525356116">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">64分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">12306候补凌晨兑现致乘客误车，客服建议设置截止兑现时间</h3>
+<p style="margin:5px 0 10px">9月30日，深圳一网友称因直达车票售罄提交12306候补订单，系统于凌晨悄然兑现成功，其睡醒后发现车次已开走。帖文引发大量“同款经历”讨论，12306回应可设置截止兑现时间。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2089009532022125355?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2089009532022125355">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">女装网店加装“防拆丝带”应对恶意退货</h3>
+<p style="margin:5px 0 10px">网购女装近年悄然普及“防拆丝带”，在领口、肩缝、拉链处加装一次性显色丝带，剪断即被视为已使用、商家有权拒绝退换。部分商家把单件防护点从1至2个防拆扣增至二十余个，用于堵住“穿完再退”的漏洞，也引发市场信任崩塌的讨论。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2088728472214684789?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2088728472214684789">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">2027年丘成桐数学科学领军人才培养计划招生简章发布</h3>
+<p style="margin:5px 0 10px">2027年丘成桐数学科学领军人才培养计划招生简章公布，自2027招生年度起，高一及以上学生原则上只允许报名一次，初三学生可报名一次、进入高中后可再报一次。学科能力测试包括一试、二试和三试，一试内容涵盖中学数学全部内容、数学1、数学2及物理。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2087963484638147097?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2087963484638147097">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">小诊所“好得快”被指依赖抗生素激素，引发健康担忧</h3>
+<p style="margin:5px 0 10px">有网友称小诊所看病见效快，是因其采用抗生素、激素等猛药压制症状。相关讨论聚焦该说法是否属实，以及这类疗法可能对健康造成哪些影响。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2088709467814585476?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2088709467814585476">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
