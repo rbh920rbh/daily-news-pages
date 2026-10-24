@@ -1,0 +1,864 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-10-24 08:37 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">9</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">7</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">9</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">6</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">95分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">霍尔木兹海峡油轮爆炸与美伊对抗升级</h3>
+<p style="margin:5px 0 10px">伊朗称两艘超级油轮在霍尔木兹海峡南部触雷爆炸，另有7艘“违规”船只在周边海域起火。特朗普威胁对伊朗发动小规模“史诗怒火”行动，伊方被指拟打击海底电缆。油价大幅上涨，伊方还称在美压力下陆上贸易路线受损并宣布处于“战争状态”。</p>
+<div class="links">
+<span class="muted">来源：东方财富、华尔街见闻 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBpWVVGa2JTcVFrZm1Rdm94OUpuZmk4RmFnNzdvMkp4WVoteHBOZ045RUM5bi1jT0dXZzJWSW1WNWxYQ1ZUUW4tRXF2RGlNak9WRWdhaWZ2SlR6SXZTaWxJQg?oc=5" target="_blank" rel="noopener noreferrer">东方财富网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBiajBWNEVOOUc1RXVfWkdERjkwdWVKLVNwQlpYME5BRWFJNXBtelliWEhEeTJDX244MWk2M1FucUhWSjMyX3VIcXVtdURhYWl2akZZ?oc=5" target="_blank" rel="noopener noreferrer">华尔街见闻网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOUHF5ekRkcndKaWc3dm5QbUlkS1NoR2VBZHlDcldxRTZZdVZyMFJmeHE2OGVfQlNYZFYwNUlHOGRwSnpKeGVzNVVCVjA1NEhaTXdXV01ZQ0FoSi1mbkNIeVd6RzNWSG5lTGx6Vk03MWd5bDIwOEQwejJSZ1c0YmtZaS1VVGdGM25IMWRhX1lEQUlVbERnYnpvaDFGOXVwZGt1NDRYSzRn?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">90分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">俄美乌三方谈判安排出现新动向</h3>
+<p style="margin:5px 0 10px">佩斯科夫称俄美乌三方谈判将于11月上旬在阿布扎比启动，泽连斯基证实这一安排；乌沙科夫表示普京愿在11月中旬恢复三方谈判。泽连斯基此前称，乌方可在保留至少75%领土控制权的基础上达成和平协议。俄乌空袭仍在持续，协议前景不被看好。</p>
+<div class="links">
+<span class="muted">来源：观察者网、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5idERPRloyVG5DUVZRVUxITjJKUG9WRmUyNFVQYzM4Q0IyMkprOWtMN2x1QWFLVVlWTkNvcGxjWE1pdVFpODdqa290Szk0RThybzNCX1VpeDhya00tSjZYLVNrd1VSUkV5bHM1Q0NicjE5djQ?oc=5" target="_blank" rel="noopener noreferrer">观察者网网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2096377609613472454?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096377609613472454">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">90分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">以色列在约旦河西岸发动大规模行动</h3>
+<p style="margin:5px 0 10px">以色列军方称两名士兵在约旦河西岸袭击中死亡、两名枪手被击毙，随后下令展开大规模行动。以方开始拆除该市建筑，内塔尼亚胡呼吁封锁。</p>
+<div class="links">
+<span class="muted">来源：NBC News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNN3dwb0R4Z1VVa2VJenltT3B4WWEzS0xsc2Q5SmY0eEEwNy1FN2J6RlZDZE1DaUhzOTdKeHNuckEtMkJvYk0yS2VfRmtBQmhuT3VpcU5CMDFPWlBIYWRDU25XaU51SHJ5cVF2NHkxNGdLb3AtVkpuaHhOR2ZpQjk3aWd2Ni1NY04zM1dLNUxYVlctdWZnUE1RR1N5Q1dsUzF3em1pWjlqUUxpQS1p?oc=5" target="_blank" rel="noopener noreferrer">NBC News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">中国西藏地区发生致命地震</h3>
+<p style="margin:5px 0 10px">中国西藏地区发生致命地震。救援人员正在搜寻幸存者。</p>
+<div class="links">
+<span class="muted">来源：AP News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOWnM1d0c0MlpBemN5ZHRYb2VlQlNPb3hlWlVNdmVtMEVFc1NYVm5sUUp2eGtUTXk3LUU0RlMxYnVONXd5TmpOeThfS1VqaE9RR3dQNDNBSmloU2JOUm5rYXZSZEwyWDNfenZrcnE3QUhpak84LWdSRG1MNHBlRU9VM0tZVWRpazlpNmVjTE5kUzJ4QQ?oc=5" target="_blank" rel="noopener noreferrer">AP News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">84分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI估值担忧引发美股科技股抛售</h3>
+<p style="margin:5px 0 10px">美股三大指数收跌，道指跌超1%，纳指重挫近700点，存储芯片股和科技巨头大跌。国际油价涨近4%。市场担忧AI估值，Axios称“AI仙尘”正失去股市魔力，周度综述也提到AI担忧拖累市场与组合。</p>
+<div class="links">
+<span class="muted">来源：东方财富、Axios 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE9LUzRSYVE5di1YWkNrR1Jyb2FONlJYeGI5TTlxZnl4LTVsYkxFdVBpY2dPc181eUdYQzN3V0VMQnVyVnRpSjhfajBsaGFWVy1ja2R4SUVJSlBCcXR2Rm5XQzJ2ek1mZw?oc=5" target="_blank" rel="noopener noreferrer">东方财富网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5ILUtHNDlPMWRZdXNwQXlnTnQtVE8zTTJBUmtzVTVudzJMRTV1dHRsRFFsd3puWEJGR0Q0dTZtMXYtbGM3Z3hPZUg1MUR4dVZCMzJGOUMwcWU2MVp3YzR6Tm5fYUZwN3d4Y2NvaDFLV3U?oc=5" target="_blank" rel="noopener noreferrer">Axios网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQR01KeXBjdXBubVRzTlJfWWJTMHctb2hFS2pVT21ydWtZNzBaMldxd1c2ZUJGNWhIeGV6MUxvQVZvSl9GdFh5QThQbFpuT0IwYi02Y3JGM19YSWJ3LXMtb29RbS1WZUljdGtsS2dockxHVm5SWnBSMzJpM0Y4RFItdW5SMzFsdXg2LWtrYWE1SC1TQlkxOERJZHNtQVREdw?oc=5" target="_blank" rel="noopener noreferrer">Reuters网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxONmtqLWNpMzZxVm1BMWNlaU9jVEZVSVE2Y2NSa1p4N1ZNcC1veC01d1lhWnNFRXV2azRNVVhKM25iUkdXbmNDSlpIZ1ZOeDVyVWwwZUU3bFdUbHNIN1lDRFh5YXB5UEpaZnlHZE85cnBKal9lZUQ4VnhSQlV5WUl0NA?oc=5" target="_blank" rel="noopener noreferrer">Bloomberg.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOdWFRd1AxelNrM2tfNzA0X3hDTzZKQUIyVEVZTDdORFNFZS1sYkM4S3hZbDFXUGxrRFZEVHUtQnpHR1BOSjUtVFlpVWc3N2M1NnVWV0pEZ080dVdENFpjVTk2TUp3X3JNbU00STNDaHlCS2pPN3hBVHhSbXQxbHlFQUk5VTZhc2dlLTFnZVVQVDFzaUI4cTBEX0hrdHZwb0JTR3RCaUNYRQ?oc=5" target="_blank" rel="noopener noreferrer">RealMoney Pro网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国务院办公厅公布AI就业友好型发展方式意见</h3>
+<p style="margin:5px 0 10px">国务院办公厅公布《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。文件提出减缓岗位替代影响、建立失业缓冲机制。</p>
+<div class="links">
+<span class="muted">来源：证券之星</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50TmQ5alAzbFlERjA0azNwOWZIaVlFQkw5WlZ6dENWU3B5STRKTTB3eWFVUnpoWFhWVEE1VjlwcTBveU1ZRlFFZmlEbko4U2c1NUp1ZU50QWNXdTM0WTc2Ug?oc=5" target="_blank" rel="noopener noreferrer">证券之星网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI停止用实时互联网训练AI模型</h3>
+<p style="margin:5px 0 10px">OpenAI表示将不再使用实时互联网训练AI模型，理由是存在“重大风险”。另有报道称其恢复最强AI模型训练并切断互联网访问以防意外。</p>
+<div class="links">
+<span class="muted">来源：TechCrunch、凤凰网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOZFJYWGNtWXRnNTVYSlV2QWpHaEstdS1tVEljMThVeEF2SnU5MnBkeXBrSUVVSHFuQXN6SjhWMWIySnAzYTNrbGlRZS1mazktVXF6bU80dU5WZi1hcG9MdWpUSVh0SlkyS2dYWXAybHBsMnpxT3ZXTFJoSm5fRHpQSzVsSnRaclpvU0o4N3pqcGJpaDRvUzdRT3YyaXg3TlNmM2tYY3RPcGhYYTNIUXQ1ZWZ4VHlVZ183N3hrSThibFVPZWFiTXlFYWZR?oc=5" target="_blank" rel="noopener noreferrer">TechCrunch网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CeF91YU0wckNPZkZhOTNUV1lGdHV2UzhmaVhsWmxhdzdoRlBQdC0xQ3JydXVPRUxobmUzM2pEWlN1VURpb1gtb3lBN2lEUG0td2c?oc=5" target="_blank" rel="noopener noreferrer">凤凰网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">79分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI安全漏洞与攻击风险集中显现</h3>
+<p style="margin:5px 0 10px">《华尔街日报》称AI黑客攻击正密集出现并令互联网不堪重负。《福布斯》报道AI发现全球70%网站存在灾难性安全漏洞。另有报道称部分美国银行在客户账户中发现未经授权的AI代理，硅谷分析也讨论代理式AI的安全与网络韧性。</p>
+<div class="links">
+<span class="muted">来源：WSJ、Forbes 等4个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPTUNnR1RPd3VXa0hoTW1USmVib3RXRVNMbjI3R2NwNDhtYkV4YU10azF5U0VVUEZWQXFRdFdlaUg1eWFDRkZTZi04UUJ6MmtEem5YdUhra0lCX2trOEtSWGIydnpjQXotNDBZVHdXT2lOeWlKenNnWC1CS3NBNVhQOW9KNmJWZTNoTlZkUEd0c01XTWs1M3dTbkstZVpCNjVROE5r?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPUVdUd255clVvcVExVHZZNVhWUGRYdlU1eUlaNnI4aHo2UjdtejhrS3dwSFRlYW93X0tlaUJCc0R6V3hUQmdTaGJxc0FuYlhEUFZBMURSaWNtbC1qRVR4Sm1XTDYyRU1zc205eTEwdmdKd0tkdWFaNEo2Y0lSN0JwUGtjOUF2b3NFaGhFNklJRGg4aDY0cm9uZjc4a1NjZTM4aldGZGtQUHhKUFpDWkp1bVE4UWhmWHRoNUNtRGlUXzJ5YjdqTEloWVh0SQ?oc=5" target="_blank" rel="noopener noreferrer">Forbes网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNZy10WE55MjFudmZQTGR3VlQ0ekpfSm5RMWFobVppZWEzVUtGdkNPLTk3YVJTbS1CYU13X1JuX250VjNoaTlZRmlxbXNSSWs0cDJXYUVHYTdwcGNLRXpYRDlWZmM2STdSakJZV0YwV3lfWlg0ckVqaDVZRmVCUUoyRml1ZHlCeWR5NC04TC1HQVl4bWZf0gGaAUFVX3lxTE1TV2NxbHc5QURHYzJyVWN1a2hfck9XalBQaC1LWVpXc3RBdmk3Z0Rld3NaVzRta3FOVDBaRGFpdFdvOUJ2bFRkSnNQTVNoQnJxTTVLZ0d1ZUFTYUFkd3dqSzVBV3RqRk9NNDFOYnJKVGxQUjZVelMxaEJPcXZzQ25qaEZwZmQtdUNBYWwzVFQwZVk0UUY4Q29JNnc?oc=5" target="_blank" rel="noopener noreferrer">NewsNation网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPNVI5YXhaUDdrdVFmVzdhZzZoamZhRFFZdE9KWGlfRGc1YVkxMnhEeV9hOVlRS3dobnJCUl9qaGdhc3JNZ2VlcGtKUS1LdXljUGNIVENETzBORGtWRHpyeW91bEliaktlZGVnaDlvSjZaRzlSbW82cVVCWGdNV01jcm53c05uLWRSUWtPS2MxYW16QmxtaUNabVM3RTdPdHBzQzJsTDFWSFEzeTRVZnpr?oc=5" target="_blank" rel="noopener noreferrer">SiliconANGLE网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Kimi K3.1 Pro发布</h3>
+<p style="margin:5px 0 10px">Kimi正式发布K3.1 Pro，称其为K3.1系列首个模型，也是迄今能力最强的3万亿级参数模型，支持100万上下文。发布信息称，该模型在代码、3D创作、金融研究和长程Agent能力上有提升。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096972346951198516?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096972346951198516">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">现货黄金失守4000美元关口</h3>
+<p style="margin:5px 0 10px">10月23日，现货黄金向下跌破4000美元关口，日内下跌0.7%。市场关注此前支撑金价的避险逻辑为何失效，以及当前价位是否适合买入。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096905271801127566?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096905271801127566">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">95分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">霍尔木兹海峡油轮爆炸与美伊对抗升级</h3>
+<p style="margin:5px 0 10px">伊朗称两艘超级油轮在霍尔木兹海峡南部触雷爆炸，另有7艘“违规”船只在周边海域起火。特朗普威胁对伊朗发动小规模“史诗怒火”行动，伊方被指拟打击海底电缆。油价大幅上涨，伊方还称在美压力下陆上贸易路线受损并宣布处于“战争状态”。</p>
+<div class="links">
+<span class="muted">来源：东方财富、华尔街见闻 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBpWVVGa2JTcVFrZm1Rdm94OUpuZmk4RmFnNzdvMkp4WVoteHBOZ045RUM5bi1jT0dXZzJWSW1WNWxYQ1ZUUW4tRXF2RGlNak9WRWdhaWZ2SlR6SXZTaWxJQg?oc=5" target="_blank" rel="noopener noreferrer">东方财富网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiU0FVX3lxTFBiajBWNEVOOUc1RXVfWkdERjkwdWVKLVNwQlpYME5BRWFJNXBtelliWEhEeTJDX244MWk2M1FucUhWSjMyX3VIcXVtdURhYWl2akZZ?oc=5" target="_blank" rel="noopener noreferrer">华尔街见闻网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMipgFBVV95cUxOUHF5ekRkcndKaWc3dm5QbUlkS1NoR2VBZHlDcldxRTZZdVZyMFJmeHE2OGVfQlNYZFYwNUlHOGRwSnpKeGVzNVVCVjA1NEhaTXdXV01ZQ0FoSi1mbkNIeVd6RzNWSG5lTGx6Vk03MWd5bDIwOEQwejJSZ1c0YmtZaS1VVGdGM25IMWRhX1lEQUlVbERnYnpvaDFGOXVwZGt1NDRYSzRn?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">90分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">俄美乌三方谈判安排出现新动向</h3>
+<p style="margin:5px 0 10px">佩斯科夫称俄美乌三方谈判将于11月上旬在阿布扎比启动，泽连斯基证实这一安排；乌沙科夫表示普京愿在11月中旬恢复三方谈判。泽连斯基此前称，乌方可在保留至少75%领土控制权的基础上达成和平协议。俄乌空袭仍在持续，协议前景不被看好。</p>
+<div class="links">
+<span class="muted">来源：观察者网、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMic0FVX3lxTE5idERPRloyVG5DUVZRVUxITjJKUG9WRmUyNFVQYzM4Q0IyMkprOWtMN2x1QWFLVVlWTkNvcGxjWE1pdVFpODdqa290Szk0RThybzNCX1VpeDhya00tSjZYLVNrd1VSUkV5bHM1Q0NicjE5djQ?oc=5" target="_blank" rel="noopener noreferrer">观察者网网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2096377609613472454?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096377609613472454">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">90分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">以色列在约旦河西岸发动大规模行动</h3>
+<p style="margin:5px 0 10px">以色列军方称两名士兵在约旦河西岸袭击中死亡、两名枪手被击毙，随后下令展开大规模行动。以方开始拆除该市建筑，内塔尼亚胡呼吁封锁。</p>
+<div class="links">
+<span class="muted">来源：NBC News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMirAFBVV95cUxNN3dwb0R4Z1VVa2VJenltT3B4WWEzS0xsc2Q5SmY0eEEwNy1FN2J6RlZDZE1DaUhzOTdKeHNuckEtMkJvYk0yS2VfRmtBQmhuT3VpcU5CMDFPWlBIYWRDU25XaU51SHJ5cVF2NHkxNGdLb3AtVkpuaHhOR2ZpQjk3aWd2Ni1NY04zM1dLNUxYVlctdWZnUE1RR1N5Q1dsUzF3em1pWjlqUUxpQS1p?oc=5" target="_blank" rel="noopener noreferrer">NBC News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">中共中央政治局召开会议</h3>
+<p style="margin:5px 0 10px">中共中央政治局召开会议。人民网发布相关消息，输入材料未提供会议具体议题。</p>
+<div class="links">
+<span class="muted">来源：人民网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMib0FVX3lxTFAxbEx4dHhyZExvQUZMV3llREw4cEpvUVdZbUNGQ3NEYzNKZDdES2JIdFZCMzhSMFBqeEdsYXluS1Z0V3VwOVoybTVhZUk3V01TU2h4dlJUMVgwaWdKemh3SlpGbjdNRWN6Q1JOS09raw?oc=5" target="_blank" rel="noopener noreferrer">人民网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">习近平在纪念长征胜利90周年大会上发表讲话</h3>
+<p style="margin:5px 0 10px">习近平在纪念中国工农红军长征胜利90周年大会上发表讲话，提出弘扬伟大长征精神、走好新的长征路。四川日报等报道还提到“金沙水拍云崖暖”专题展览开展。</p>
+<div class="links">
+<span class="muted">来源：四川日报</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFAyeENkOUZFNk9rUGtWcEtxa092UmVka05yUVNmVE9hNkNGeG42UnZla1c0UkV2MlVqVnczQXRySmxfdEJXSndrdkEwVWdKemlSSktMc2duLWF5MEZpNDdILTFXRl9FRzlOSEE?oc=5" target="_blank" rel="noopener noreferrer">四川日报网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国多州关注AI生成政治广告合规问题</h3>
+<p style="margin:5px 0 10px">美国密西西比州总检察长要求Colom撤下AI生成广告，称其似乎违反州法律。Colom随后回应并移除相关视频。NBC News报道称越来越多候选人使用AI生成图像做政治广告。</p>
+<div class="links">
+<span class="muted">来源：Commercial Dispatch、WLBT 等4个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNWXJPVTlPb2p0ZVU5UVZIeGI2bzRxUG9OOTBvdG02VkdoajBDdjBYbTB1aDNxa2FTdUN6NHNJMTd4T19ZOEo4XzJpQklDSTB2OVFPanpMaFk0R3dTWEhzWG1IbmxpNmhjcGpQdDZFc1pCNTBCXzVZZTg4Y2t4RXZFX2NReDVMUjJO?oc=5" target="_blank" rel="noopener noreferrer">Commercial Dispatch网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiwgFBVV95cUxNYVZyZldjUnVIME00VGpWZjVVeldFbFdUU1loM3B6U3JvZFRVWE1kVzhiOG5UMnFVZEdCemZ6ZTlUeXZsazlJTFZwSjBPOUM2RVUyWEN3MXo1dUhseXZDMnQtekRTTEdQVFVxRENKdFdSclE5NGY1UU04YmtTaEVGU2JpQmJwY2xSRlhySzZpWjNiUXVNLUYyYlBpdUV2X0NQY2JNaWZKVEFsNVhlQk05LVVRc2YxTnlZMThYbHFBdlZiQQ?oc=5" target="_blank" rel="noopener noreferrer">WLBT网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiiwFBVV95cUxQWkhSM2VPTGZmYXgtVnhfZmxZSEdSZ0x0QUZ0dkFwQlVFZExNVWJfcF9mLWNrWUhFVElNQm5iX0ZRR0hLWGp4Q19XbUVTVExGSnJVV3BrZnlpWUx4MnhXZmtZWk1zcGpBNDJZLUJXazEtMkwxUlZYRklaVGFlbC1CRUFseVB4a3VCREdN?oc=5" target="_blank" rel="noopener noreferrer">WLOX网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiuAFBVV95cUxPNjBIcFl2cGhpemRSNzBYVlFWaGg0eGxycFYxcTVLa3FMeks3U0xVVVpheXlkcktrOTROUlJKUGh3TjV1cUlRTjVlRy1id2Z5azRMbGViUUJGMDBFSEMzaTlSSV9pdl9YTnZwek1lajRfdUpJNUhBUEtyVVV5cFFmYUFFQmJ0UWJFOVdOTEVHQmZRZTgzdVJyUnVHdDRnT1lyS05qMkdfUFptT0w4U1o4ZE9WVnN6NEk3?oc=5" target="_blank" rel="noopener noreferrer">NBC News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">63分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普政府AI“智能墙”在边境实施监视</h3>
+<p style="margin:5px 0 10px">《纽约时报》报道，特朗普政府的AI摄像头“智能墙”正在边境实施监视。报道称其监控范围覆盖超过100万人。</p>
+<div class="links">
+<span class="muted">来源：The New York Times</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxNUVdSdlhMWldtYjhEWlV1QjIyTFc1VmhyRlNGNS1fX3QwVzNISnlfM3lIZ29GN0ZTZHFYVFZCbDNqTFdpMF9Scy16bHctOWY5dTd1R3c1NnA0aG1WTEpVSVQ4VGdqTVo4bk16M2RhLUVHLTVaYlI0TlVSbF9QWHJHeWJiNnVBZzQwTWhlX1JVVXdUdV8xVTMtdTNPelhQdzl4VDNZ?oc=5" target="_blank" rel="noopener noreferrer">The New York Times网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">英国拟改革电视牌照费制度</h3>
+<p style="margin:5px 0 10px">英国正评估改革电视牌照费制度，可能将YouTube、Netflix等在线视频平台纳入收费范围。现行制度通常以住户为单位，观看直播电视或使用BBC iPlayer需持有许可证。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096182423621059644?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096182423621059644">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">莫大旭日旗事件涉事学生开除文件已下达</h3>
+<p style="margin:5px 0 10px">莫斯科国立大学历史系课堂出现带有日本军国主义象征的旭日旗，引发在俄中国留学生联名请愿，要求校方调查处理。消息人士称涉事学生开除文件已下达，但因隐私法律规定可能不对外公开。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096969379007000835?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096969379007000835">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI停止用实时互联网训练AI模型</h3>
+<p style="margin:5px 0 10px">OpenAI表示将不再使用实时互联网训练AI模型，理由是存在“重大风险”。另有报道称其恢复最强AI模型训练并切断互联网访问以防意外。</p>
+<div class="links">
+<span class="muted">来源：TechCrunch、凤凰网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxOZFJYWGNtWXRnNTVYSlV2QWpHaEstdS1tVEljMThVeEF2SnU5MnBkeXBrSUVVSHFuQXN6SjhWMWIySnAzYTNrbGlRZS1mazktVXF6bU80dU5WZi1hcG9MdWpUSVh0SlkyS2dYWXAybHBsMnpxT3ZXTFJoSm5fRHpQSzVsSnRaclpvU0o4N3pqcGJpaDRvUzdRT3YyaXg3TlNmM2tYY3RPcGhYYTNIUXQ1ZWZ4VHlVZ183N3hrSThibFVPZWFiTXlFYWZR?oc=5" target="_blank" rel="noopener noreferrer">TechCrunch网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9CeF91YU0wckNPZkZhOTNUV1lGdHV2UzhmaVhsWmxhdzdoRlBQdC0xQ3JydXVPRUxobmUzM2pEWlN1VURpb1gtb3lBN2lEUG0td2c?oc=5" target="_blank" rel="noopener noreferrer">凤凰网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">79分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI安全漏洞与攻击风险集中显现</h3>
+<p style="margin:5px 0 10px">《华尔街日报》称AI黑客攻击正密集出现并令互联网不堪重负。《福布斯》报道AI发现全球70%网站存在灾难性安全漏洞。另有报道称部分美国银行在客户账户中发现未经授权的AI代理，硅谷分析也讨论代理式AI的安全与网络韧性。</p>
+<div class="links">
+<span class="muted">来源：WSJ、Forbes 等4个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiowFBVV95cUxPTUNnR1RPd3VXa0hoTW1USmVib3RXRVNMbjI3R2NwNDhtYkV4YU10azF5U0VVUEZWQXFRdFdlaUg1eWFDRkZTZi04UUJ6MmtEem5YdUhra0lCX2trOEtSWGIydnpjQXotNDBZVHdXT2lOeWlKenNnWC1CS3NBNVhQOW9KNmJWZTNoTlZkUEd0c01XTWs1M3dTbkstZVpCNjVROE5r?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiywFBVV95cUxPUVdUd255clVvcVExVHZZNVhWUGRYdlU1eUlaNnI4aHo2UjdtejhrS3dwSFRlYW93X0tlaUJCc0R6V3hUQmdTaGJxc0FuYlhEUFZBMURSaWNtbC1qRVR4Sm1XTDYyRU1zc205eTEwdmdKd0tkdWFaNEo2Y0lSN0JwUGtjOUF2b3NFaGhFNklJRGg4aDY0cm9uZjc4a1NjZTM4aldGZGtQUHhKUFpDWkp1bVE4UWhmWHRoNUNtRGlUXzJ5YjdqTEloWVh0SQ?oc=5" target="_blank" rel="noopener noreferrer">Forbes网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNZy10WE55MjFudmZQTGR3VlQ0ekpfSm5RMWFobVppZWEzVUtGdkNPLTk3YVJTbS1CYU13X1JuX250VjNoaTlZRmlxbXNSSWs0cDJXYUVHYTdwcGNLRXpYRDlWZmM2STdSakJZV0YwV3lfWlg0ckVqaDVZRmVCUUoyRml1ZHlCeWR5NC04TC1HQVl4bWZf0gGaAUFVX3lxTE1TV2NxbHc5QURHYzJyVWN1a2hfck9XalBQaC1LWVpXc3RBdmk3Z0Rld3NaVzRta3FOVDBaRGFpdFdvOUJ2bFRkSnNQTVNoQnJxTTVLZ0d1ZUFTYUFkd3dqSzVBV3RqRk9NNDFOYnJKVGxQUjZVelMxaEJPcXZzQ25qaEZwZmQtdUNBYWwzVFQwZVk0UUY4Q29JNnc?oc=5" target="_blank" rel="noopener noreferrer">NewsNation网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMirwFBVV95cUxPNVI5YXhaUDdrdVFmVzdhZzZoamZhRFFZdE9KWGlfRGc1YVkxMnhEeV9hOVlRS3dobnJCUl9qaGdhc3JNZ2VlcGtKUS1LdXljUGNIVENETzBORGtWRHpyeW91bEliaktlZGVnaDlvSjZaRzlSbW82cVVCWGdNV01jcm53c05uLWRSUWtPS2MxYW16QmxtaUNabVM3RTdPdHBzQzJsTDFWSFEzeTRVZnpr?oc=5" target="_blank" rel="noopener noreferrer">SiliconANGLE网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">英国拨款建设AI生物安全实验室</h3>
+<p style="margin:5px 0 10px">英国拨款1亿英镑建设AI生物安全实验室，OpenAI和Anthropic提供最高2亿英镑模型额度。路透称英国政府安排约8亿美元AI安全资金，FT称该实验室用于监测生物安全威胁。</p>
+<div class="links">
+<span class="muted">来源：凤凰网、Reuters 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTFBrNXdtZFB2QVg0N2xoc3NkeDdpUWxXWEx4ZGFMQlZNWGw2blNaRGpIaUMyd1FqOGxacTI4VTY5eXl1a1FxRTBJOEVIQXo3RU1XYXc?oc=5" target="_blank" rel="noopener noreferrer">凤凰网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMioAFBVV95cUxQTDJseUNYVnJGcWZWUjlPR0RUSXJHTVItRmh1dkdnNTFiZ2tmTFhUM1p3YnI1T2RGdlpFZ1JWN3BGR2dCajk3Y1pBMlBCYjNFX2dnbjJzZnNJb1BONkNGREFYamNWT1FLRFJXdjdVeEdMUFZnM3FQRXE2VFBIbFdWUVItWEJwd3F4dmFRbHpKTzE4RWpXSGRnTzY4QVdISFJj?oc=5" target="_blank" rel="noopener noreferrer">Reuters网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMihAFBVV95cUxOcjEzOW05RFZ3OUFlelRUYzZ2LWF1OGVESjUyT083ZGlyY1J4a0UxLTJHc2F6cWpvQ01ZMnFta2t0VmdtNEhHR0hkaWxDdENLbDlCTXRWUmhLQ3NsVlJiNU5lZzJwYko0Vm10SVkzZVhqa2RuU2JsaG9xYVMya2Y4QVBpVXQ?oc=5" target="_blank" rel="noopener noreferrer">Financial Times网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">76分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">比尔·盖茨警告AI将带来20年动荡</h3>
+<p style="margin:5px 0 10px">比尔·盖茨警告人工智能将带来20年的动荡。该报道以此为核心内容。</p>
+<div class="links">
+<span class="muted">来源：Anadolu Ajansı</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxNQ3ZBTjZncDZraHU2LWZjajJpNVpDSXo1RC1TS1FLMGVGMm04OUV0V2J0NENGbVNxOFl5UFRpcWFjTVNST2RIMmVZRko4WVdTaDFRLUk2elZSTkhrYjlkeEdSMjR4OEFjYjAxcFptaU94T0JaZ25TbTktSGJuN2J5Zjc1YXhSbmtCb3BTbEp6R1ppUU5iZ3VCU0RhQ0RERnpJa28zWEpOUVZ4UEE?oc=5" target="_blank" rel="noopener noreferrer">Anadolu Ajansı网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">首部获“龙标”的AI电影正式上映</h3>
+<p style="margin:5px 0 10px">首部获得“龙标”的AI电影正式上映。报道称影视制作从“挑模型”转向“搭片场”，全流程正在重构。</p>
+<div class="links">
+<span class="muted">来源：光明网、第一新闻</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1VTHNWTlpMSFdXVHJYcE5oZldqbjFSZU9haTVkczN3YU9XNEdGcjRmaDczS1NQejBFcTU5cVIzRGRwTDJzSlBicmFxeExfRzE0MldnZmVyWG83SXMtMkpBSlhzcWFHUQ?oc=5" target="_blank" rel="noopener noreferrer">光明网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiXEFVX3lxTE9JcFM1OG1uQ1AwYTVCT2F5TW9aSGk1U3Z2eTFZVWZ2MlNGWXBES1NaSktPU3hNdUFxajNWTnlJbjRIejFSanA3VEhXNmdRMlJsNTdBX1lYcjhQMHRX?oc=5" target="_blank" rel="noopener noreferrer">第一新闻网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Kimi K3.1 Pro发布</h3>
+<p style="margin:5px 0 10px">Kimi正式发布K3.1 Pro，称其为K3.1系列首个模型，也是迄今能力最强的3万亿级参数模型，支持100万上下文。发布信息称，该模型在代码、3D创作、金融研究和长程Agent能力上有提升。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096972346951198516?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096972346951198516">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Anthropic科学家称AGI若三年内到来读博将失去意义</h3>
+<p style="margin:5px 0 10px">Anthropic科学家在演讲中提出，若AGI三年内到来，读博将失去意义，相关观点引发热议。讨论集中在AGI对高等教育、科研训练和职业路径的冲击。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096930670463530796?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096930670463530796">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">84分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI估值担忧引发美股科技股抛售</h3>
+<p style="margin:5px 0 10px">美股三大指数收跌，道指跌超1%，纳指重挫近700点，存储芯片股和科技巨头大跌。国际油价涨近4%。市场担忧AI估值，Axios称“AI仙尘”正失去股市魔力，周度综述也提到AI担忧拖累市场与组合。</p>
+<div class="links">
+<span class="muted">来源：东方财富、Axios 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE9LUzRSYVE5di1YWkNrR1Jyb2FONlJYeGI5TTlxZnl4LTVsYkxFdVBpY2dPc181eUdYQzN3V0VMQnVyVnRpSjhfajBsaGFWVy1ja2R4SUVJSlBCcXR2Rm5XQzJ2ek1mZw?oc=5" target="_blank" rel="noopener noreferrer">东方财富网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTE5ILUtHNDlPMWRZdXNwQXlnTnQtVE8zTTJBUmtzVTVudzJMRTV1dHRsRFFsd3puWEJGR0Q0dTZtMXYtbGM3Z3hPZUg1MUR4dVZCMzJGOUMwcWU2MVp3YzR6Tm5fYUZwN3d4Y2NvaDFLV3U?oc=5" target="_blank" rel="noopener noreferrer">Axios网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxQR01KeXBjdXBubVRzTlJfWWJTMHctb2hFS2pVT21ydWtZNzBaMldxd1c2ZUJGNWhIeGV6MUxvQVZvSl9GdFh5QThQbFpuT0IwYi02Y3JGM19YSWJ3LXMtb29RbS1WZUljdGtsS2dockxHVm5SWnBSMzJpM0Y4RFItdW5SMzFsdXg2LWtrYWE1SC1TQlkxOERJZHNtQVREdw?oc=5" target="_blank" rel="noopener noreferrer">Reuters网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMigAFBVV95cUxONmtqLWNpMzZxVm1BMWNlaU9jVEZVSVE2Y2NSa1p4N1ZNcC1veC01d1lhWnNFRXV2azRNVVhKM25iUkdXbmNDSlpIZ1ZOeDVyVWwwZUU3bFdUbHNIN1lDRFh5YXB5UEpaZnlHZE85cnBKal9lZUQ4VnhSQlV5WUl0NA?oc=5" target="_blank" rel="noopener noreferrer">Bloomberg.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxOdWFRd1AxelNrM2tfNzA0X3hDTzZKQUIyVEVZTDdORFNFZS1sYkM4S3hZbDFXUGxrRFZEVHUtQnpHR1BOSjUtVFlpVWc3N2M1NnVWV0pEZ080dVdENFpjVTk2TUp3X3JNbU00STNDaHlCS2pPN3hBVHhSbXQxbHlFQUk5VTZhc2dlLTFnZVVQVDFzaUI4cTBEX0hrdHZwb0JTR3RCaUNYRQ?oc=5" target="_blank" rel="noopener noreferrer">RealMoney Pro网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Meta收购Sundial推进“聊天式”数据分析</h3>
+<p style="margin:5px 0 10px">扎克伯格旗下Meta收购Sundial，旨在让数据分析变成“聊天”一样简单。多家媒体报道称这是其AI新版图的一部分。</p>
+<div class="links">
+<span class="muted">来源：新浪网、凤凰网科技 等3个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifkFVX3lxTE54VXYwOGVzdUJ2MVhyWHZ1bUJfbmc1TE1ENjFUZ3NZUmNYUGFlM0hzSFVoZ0dEeHhpMnBvbWd5M3E4TFJuVGVQU2RuWjNqRVdmeUlfdFNRSWRTWS1YVUZZSE9tR3M3U1ZHaThacXprR0lCNXF3N190UzJ4YUFzdw?oc=5" target="_blank" rel="noopener noreferrer">新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiTEFVX3lxTE1sR3hMUXQ2bmxCOE5iVjdzTmhLNnRjd2JhYl8zeTltNEI3NXF6Ymd0QU5IUzJNZnNHbnFsN3VqaFNoTWJUT3B2Q1J3VHg?oc=5" target="_blank" rel="noopener noreferrer">凤凰网科技网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE81cWFQTVVLek5WRmlQcTJWbGpJQXpsOHJzZC05YVVOcUhHaEY3Y0hoR3JYdzZMWlJ0MHFGbjhpaHA1YXJhMGZ5R0ttYzY0b3ZRLWpjVVJBcTJpS0lpQUZBLUFlRG1sYVdXT1pZWGpFN2pONno0a2tZeXduaG1Lcjg?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">黄仁勋称AI算力需求旺盛但资本短缺制约新云扩张</h3>
+<p style="margin:5px 0 10px">黄仁勋表示AI算力需求极其旺盛。但他同时指出，资本短缺正制约“新云”扩张。</p>
+<div class="links">
+<span class="muted">来源：财联社</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9LRUF1dHVfQ00zVlFkakZ0LUpqcnhnSzdPbks0SVNfeDVZWnlzV09HaWlKbC1aeHRyM1ZRZ1I0c3JzdDFuSmVnTw?oc=5" target="_blank" rel="noopener noreferrer">财联社网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">64分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">巴克莱将支出转向AI并削减员工队伍</h3>
+<p style="margin:5px 0 10px">巴克莱银行将支出转向AI，并削减员工队伍。报道称其是最新一家这样调整的机构。</p>
+<div class="links">
+<span class="muted">来源：Charleston Gazette-Mail</span>
+
+  <a href="https://news.google.com/rss/articles/CBMi7wFBVV95cUxQSzBXSXNneFoydkVOSF9CNHZpbVpueWd6V3hNS1l4REhlX3paczZ2SXRPVVQ5YlJGSXlNUzE1XzRJSEdicjJITjc4WmxNZ2gzSG9fWEhJY2I2Vjc4VTFDUUlhQk04TlpqQW14Vi1fWHNZSkZaSTdhcU9vUzRVTXRPOFJHTEI2aWk0dWw3WGxDb25qb2V0Z3RpN1pBalF2Q3EzeGswcEJCOHFBTU1oR2dPTVBZZUluUm5nTHFWVlZlUlZzenZKNW02Q0labkZuTm13bmdJWi1OUjNLNHlldUJ0SjY5dHUyWEYtS2pMVzRFSQ?oc=5" target="_blank" rel="noopener noreferrer">Charleston Gazette-Mail网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">调查称79%企业经历AI成本超支</h3>
+<p style="margin:5px 0 10px">调查显示，79%的企业经历了AI成本超支。DoiT CEO就此接受了CNBC采访。</p>
+<div class="links">
+<span class="muted">来源：CNBC</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiqgFBVV95cUxNQ21CaEIzbDNGbTk1aUNqV1RiY1gwY3BYQ3JWTkJWRTl5ei1WZVVOd3RjdHNEMWhBZENVbnYzRWk1cFNGLXZZcnFxRzdKdFpzanNkUHE3QWdBajNXUzBfeEdxY2t5a3VPSVhFQVFpczJVc003LWVTNl96YTd6Y3VBSzJYMGd5Y2E3bWNZR1RmYUptNTQydFg1RFJjMUhuVmJvTERCMFo2eXJwQQ?oc=5" target="_blank" rel="noopener noreferrer">CNBC网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">三菱动力在佐治亚州扩建以回应AI与数据中心需求</h3>
+<p style="margin:5px 0 10px">三菱动力计划在佐治亚州Chatham County扩建，投资近4.9亿美元并创造220个就业岗位。多篇报道称此举回应AI和数据中心需求。</p>
+<div class="links">
+<span class="muted">来源：WJCL</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNOUxCOHc2QmtkWDdSTXo4RlBzb2F2UDNBc09YLTB3MlE4Q2pnZ3lwTFdDeFNIOWljN05rZW45OEwtNW5pekZRNzNHN3JXc2xFY1VMbjZCQ3hBSG9LUU1TaGdaZm9nUHpuS3JDMUNpMmZyLUo2OWdMU0syOHVmNVBUb0RET1hkZXdlcXRpVg?oc=5" target="_blank" rel="noopener noreferrer">WJCL网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">现货黄金失守4000美元关口</h3>
+<p style="margin:5px 0 10px">10月23日，现货黄金向下跌破4000美元关口，日内下跌0.7%。市场关注此前支撑金价的避险逻辑为何失效，以及当前价位是否适合买入。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096905271801127566?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096905271801127566">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">63分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">娃哈哈法定代表人许思敏在劳动争议开庭前辞职</h3>
+<p style="margin:5px 0 10px">10月22日晚，有娃哈哈员工向每经记者爆料，其与娃哈哈集团的劳动争议诉讼开庭前，法院通知集团法定代表人许思敏已辞职。2024年8月宗馥莉接班后，许思敏被提拔进入权力核心。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096884177970925776?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096884177970925776">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">小鹏MONA L05发布会“老登营销”引发争议</h3>
+<p style="margin:5px 0 10px">2026年10月15日，小鹏在MONA L05预售发布会上把主持权交给几位00后产品经理，现场将何小鹏、王凤英称为“老登”。这些年轻团队还把木纹、钢琴烤漆、镀铬条等传统高端设计归为“长辈的高级”“老登审美”，引发营销翻车争议。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2095562516445320151?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2095562516445320151">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">中国西藏地区发生致命地震</h3>
+<p style="margin:5px 0 10px">中国西藏地区发生致命地震。救援人员正在搜寻幸存者。</p>
+<div class="links">
+<span class="muted">来源：AP News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMikgFBVV95cUxOWnM1d0c0MlpBemN5ZHRYb2VlQlNPb3hlWlVNdmVtMEVFc1NYVm5sUUp2eGtUTXk3LUU0RlMxYnVONXd5TmpOeThfS1VqaE9RR3dQNDNBSmloU2JOUm5rYXZSZEwyWDNfenZrcnE3QUhpak84LWdSRG1MNHBlRU9VM0tZVWRpazlpNmVjTE5kUzJ4QQ?oc=5" target="_blank" rel="noopener noreferrer">AP News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国务院办公厅公布AI就业友好型发展方式意见</h3>
+<p style="margin:5px 0 10px">国务院办公厅公布《关于适应人工智能技术发展助力构建就业友好型发展方式的意见》。文件提出减缓岗位替代影响、建立失业缓冲机制。</p>
+<div class="links">
+<span class="muted">来源：证券之星</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTE50TmQ5alAzbFlERjA0azNwOWZIaVlFQkw5WlZ6dENWU3B5STRKTTB3eWFVUnpoWFhWVEE1VjlwcTBveU1ZRlFFZmlEbko4U2c1NUp1ZU50QWNXdTM0WTc2Ug?oc=5" target="_blank" rel="noopener noreferrer">证券之星网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">最高法通报牟某虐待案陪审员参审情况</h3>
+<p style="margin:5px 0 10px">最高法通报人民陪审员参审牟某虐待案，重点核查二人共同居住地点、频次、时长及经济往来支出，认定客观上具备较稳定的共同生活事实。报道提及牟某曾高频次、长时间、持续性辱骂女友，让其通过人工流产等方式换取心理平衡。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2097051890424832268?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2097051890424832268">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">广州商学院被指涨租逼走快递网点后要求教师投诉施压</h3>
+<p style="margin:5px 0 10px">9月中旬至10月中旬，广州商学院商管中心大幅上调校内快递场地租金，导致快递公司撤出。校方被指要求教职工每人完成6单邮政申诉、未完成扣绩效，累计超700单，以施压快递企业返校。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096242853957710863?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096242853957710863">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">9岁孩子开门致路人死亡司机获刑</h3>
+<p style="margin:5px 0 10px">10月20日，山东临沂女子孙某开车等红灯时，让9岁未成年人刘某下车到路边店铺取餐，刘某开门时与后方电动车碰撞，致驾驶人周某死亡。法院以交通肇事罪判处孙某有期徒刑十个月，缓刑一年。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096896642700013908?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096896642700013908">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">调查称4.8分网红餐厅更易踩雷并存在恶意差评黑产</h3>
+<p style="margin:5px 0 10px">新京报调查报道称，餐饮平台上接近满分的高分网红餐厅反而更容易踩雷，高分未必体现实菜品口味。报道还提及“职业差评”套餐宣称花钱可搞死店铺，恶意差评形成黑色产业链，破坏公平竞争。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2095302477340058129?utm_medium=openapi_platform&amp;utm_source=cf621feb3f2d" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2095302477340058129">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
