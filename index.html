@@ -1,0 +1,792 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-11-07 09:52 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">5</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">9</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">9</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">6</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">92分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">伊朗称击落美军无人机，美伊在军事对峙中推进核谈判</h3>
+<p style="margin:5px 0 10px">伊朗称两枚导弹击中格什姆岛，并宣布击落一架美国MQ-9无人机。美方官员称美伊战争是“勇敢而历史性的努力”，同时伊朗通过卡塔尔向美国转交核提案。多家媒体报道，双方在军事集结与对抗背景下接近核问题谈判。</p>
+<div class="links">
+<span class="muted">来源：中国新闻网、Fox News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RdHZDeURudVN4d3FBUUtHLUt6T2JzbnUtSHkwUzBYSk85cDFzcy1Cd2RxVTRoMHBxNnFaRHlZUXJheXVUaUpPdlZqYzBZVndGZGdhdUhtaUJ5YkptQ2swekJ0OXpsZWow?oc=5" target="_blank" rel="noopener noreferrer">中国新闻网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNV85dG0tUVl6b1BtcWJ3XzhsQ19aUnpQblF0XzJPcER0Q1JDSDB2THBGWXdFdXM5aGZ6UmZwN1hrTm9YcDBVWW1YWTJ0Skd2TXU3U3ZGcDlYZ0FxMnRTd05obzBQaTczSm4wQndGbWlVTnJEQzd5cmZsa01iS2c0bDQza2dwRlZqcUJaOFFvWHhGeFJlQzczZFZORHIyOTEyNlVWelNLdDM?oc=5" target="_blank" rel="noopener noreferrer">Fox News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">民主党选举大胜后AI股遭抛售，科技股经历震荡一周</h3>
+<p style="margin:5px 0 10px">美国民主党在选举中大胜后，投资者抛售AI相关股票，AI板块市值损失约2.5万亿美元。随后科技股在震荡中趋稳，AI股反弹温和，中概股和部分AI科技股一度大涨；Jim Cramer等市场人士认为此次抛售不同于2000年互联网泡沫破裂。</p>
+<div class="links">
+<span class="muted">来源：shattered.io、The Washington Post 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNZEE5dlROVEpGWGRwbEU4VGRSZy1qRXlFQTBZRVBiUUI0NDE0eXljNFdub2lQSEI4RG9Cc0NidUEzS25DRkFkWnhHd2d5eWVwRkw0YWxOTWVTWmkyZ2p2eDQyQk1MaFBzaHlpNnREdjJoeXhJbFhvWDBPZkFtU3kwY3VOV3JhMmsybUFzdjdSczY?oc=5" target="_blank" rel="noopener noreferrer">shattered.io网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOeHBQalQ0UlBpeEtqdmZBTlJpQTJtaVNlV1B4Zm45UnV3Q0R4VWl6MXF6U1RfZDRUSXBLQU5YWWFma0xxMnJ5OXpiRVliTFlELVoxZEZiWGFmbm8xNlJvTkJBdlZCTlY0RzlOTVNZNFp2UU1qTnFsalotZmZPcE5YbVktcm9URUNUN0dSN2draU5EYU81ekl1ZTZCOGZoZFRmVDI0NDlON2k1ZEREMEdyaWJsaHZyLTU5QWhNNnJ6bWE5U3BU?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQTW13UV85bWhRYVptdDMyaWUwSkx6eElHVEluWE83eGdUOFlqMU53cmUtenF5akp0UUVFcXhVLV9rZHNZNHMxSUNjbm15bzZaSzNpajJfdG1VRnZsaC01eDBZcnVxejhUd2k5QVV1OE1lTjVOYTRDVVhWSEhZZXctSkVVeXQxekxTYkc0Uy1kVHZaZ0o4MTdVVFg5dDYtQmV1eXBDZVlBWXJRMnBLMjFIYzFn?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQN0k3MUlIRnNjV2xSSm1GcUdDdzdPTlJvTC1wcGIwb2FEOEZKdEpXZ1J4X3ZRZXZMOWZmMlVtc2F5OVFhbTJ0ZFpLeF8zZkY3TTFraUhuSTFRLWpZUUE1dWlKVTdhQllKZ1hSSVVSX3dvUXcxb2lXNG5LbEozVkJHbENNbmNzSFlyNDJsdlFYRQ?oc=5" target="_blank" rel="noopener noreferrer">华尔街日报中文网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9wQlZNbWhSa1dKTXVoREl4d1duOUtZV1pkb2lfVXpROUoteHFzMEN1QVFRQ0dwSjNtOS1ZdGRLR09oblpCbnhyUVN1bDBEQzli?oc=5" target="_blank" rel="noopener noreferrer">凤凰网财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkROZXRCeGdzTjFBVU83WUVNVWNTekNZRHZpWTZkc0RWbW1OWGpmdVR2aDRZYy1HcEx3aldyY2NQUXFPTkE2VGFxLTN1VV9RbWRxTFhMeU03Mlp4YnEydi10cmppR2FsdG84Y25NODZBdkJYT2lubk5VeDI5eW9oV29tZHpFaUJkeEJtOEtwWG5UWXh5NEJPZXd1b3VuX0hLQ1oyNVFMeGdLSmc?oc=5" target="_blank" rel="noopener noreferrer">24/7 Wall St.网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国共和党选举大败后白宫换幕僚长，万斯公开批评特朗普</h3>
+<p style="margin:5px 0 10px">共和党在选举中遭遇大败后，白宫幕僚长换人，特朗普任命极右翼反移民政策关键人物斯蒂芬·米勒出任白宫办公厅主任。美国副总统万斯在社交媒体发文分析共和党中期选举失利，认为问题不在投票率，而在于部分2024年支持特朗普和万斯的选民转投民主党，主要诉求包括结束战争、聚焦生活成本与通胀、奉行“美国优先”以及调整美以关系，此番表态被外界解读为与特朗普进行政治切割。</p>
+<div class="links">
+<span class="muted">来源：Caixin Global、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1xcFlEcTNmWUVfRnpPS2dtazJnWWVuMlhtV0M5b08xdlFaTjU3VVNqQVRTSnZnTF91aUpvYkFhYTVqOGpsUmpKTGowVnBHc3RWcnpfMXBPOEtlVF9QOXVaZ0VBZ3Z5dEtwTlE?oc=5" target="_blank" rel="noopener noreferrer">Caixin Global网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2101610363875768152?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101610363875768152">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">84分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">法国2027年预算案在议会遭458票反对、0票赞成全票否决</h3>
+<p style="margin:5px 0 10px">法国政府提交的2027年预算案在议会投票中以458票反对、0票赞成未获通过，连马克龙阵营议员也未投赞成票。报道指出，议会数周反复修改使预算文本支离破碎，各方均无法接受，部分参与提交修正案的议员也不愿支持修改后的版本。这一结果罕见地暴露出法国当前政治协商与预算治理的僵局。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101727275771244573?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101727275771244573">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">英伟达涉中国间谍指控发酵，美国国会加大审查压力</h3>
+<p style="margin:5px 0 10px">纽约时报称中国顶级间谍机构招募了一名曾接近英伟达CEO黄仁勋的女性。国会民主党人将英伟达AI芯片出口作为审查目标，多名议员要求黄仁勋就与中国间谍有关的指控作出说明；英伟达在华盛顿面临更敌对的环境。</p>
+<div class="links">
+<span class="muted">来源：The New York Times</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNQlRKTG9WNHBINWg3VkxadkZGV0dCbHZPWUpFclJJNFZBdzNmbGNLbldyWVgtblFfUk1famJaZUlzX3JSTHpyYnRIa25Qd01jNWhPbVV0QllXRW5pTGdBam9NaE1iTXBXMmhCNVFoNTI3ZHFDVEFSU0F5dXNTMHVfY0Z1RzltVGpRdDdaUUlYNzQwWVlz?oc=5" target="_blank" rel="noopener noreferrer">The New York Times网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">何立峰与美国财长、贸易代表举行视频通话</h3>
+<p style="margin:5px 0 10px">中国副总理何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话。这是中美经贸高层在关税与贸易摩擦背景下的最新沟通。</p>
+<div class="links">
+<span class="muted">来源：新华网客户端</span>
+
+  <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPUHp4YnRSVXU0UVVEYnpGQnFPYng3X29pbG1LRlRobk5BMnVJRjJkbXFwQ3M0Rm1QRXEyOXRvYnRNbmRzdlVvYmo5S1NtcEJqMU9JUXJYLXZKUjRmWGk2d3M5dUtKT29fMC02allDbG56Nk5hQ2twQ0QwMWdPUGoxVlFFYUdvX3NQWndXMDRVZF9MbDJOTmlfMUNn?oc=5" target="_blank" rel="noopener noreferrer">新华网客户端网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">76分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">广电总局重申扶持真人短剧、规范AI短剧</h3>
+<p style="margin:5px 0 10px">国家广播电视总局相关负责人在2026中国广播电视精品创作大会微短剧论坛上重申，对真人微短剧与AI微短剧的态度是“扶持真人剧，规范AI剧”。该负责人表示，AI给微短剧带来的不只是创作环节降本增效，更是生产方式、产业形态和发展逻辑的系统性变革。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101979474723960031?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101979474723960031">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">73分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">宝马、丰田、大众接连出现冒用召回名义的精准诈骗</h3>
+<p style="margin:5px 0 10px">宝马中国声明称，近期有不法分子冒充宝马官方以“车辆召回”为名实施电信诈骗，相关“召回通知”均非官方发布。宝马强调官方召回不会引导车主提供银行卡、验证码或转账付款，并提示通过国家市场监管总局缺陷产品召回技术中心等官方渠道核实；报道还提到宝马、丰田、大众接连出现此类精准诈骗。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101797839600870754?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101797839600870754">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">微软据悉终止从甲骨文租用AI云算力</h3>
+<p style="margin:5px 0 10px">消息称微软将逐步终止从甲骨文租用AI云算力的安排，并不再续签相关协议。报道称这一变化涉及双方此前的AI算力租赁合作。</p>
+<div class="links">
+<span class="muted">来源：中金在线、DoNews</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE94T0NQeWN1dmFsQUQ4S1JzeVlURno2STVaSTdWRW45WkxPTTQ2clRNcHZZLXVyakRpQjM2a3dBb3dLU0lfcXIyaUI5alJadFFhZnpqMnFjaGFRd2RVUjBCYWZBXzRweWU4aFE?oc=5" target="_blank" rel="noopener noreferrer">中金在线网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFB4bkZ5U05UV0NQZmZkU1J6NnVIbUl4NXdmeHlTNGRMX3BvV3BWZWFONWhoejJPYm4wdXhKeUdKcW00ZF9GUm9Kd2JrZUpreTY4cGtaM0RqUndkNUotTXc?oc=5" target="_blank" rel="noopener noreferrer">DoNews网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">男子预判金价涨至2000元/克，花光积蓄买7斤黄金9个月亏114万元</h3>
+<p style="margin:5px 0 10px">郑州一家金店店长讲述，顾客孙某在今年2月金价暴涨时拿出全部资金买入3.5千克投资金条，买入价达每克1167元，并自认为年底能涨到每克2000元。此后金价持续波动，8月下旬起一再下挫，近日重回“8”字头；孙某9个月亏损114万元，因急用钱无奈“割肉”卖出。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101426752694261522?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101426752694261522">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">92分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">伊朗称击落美军无人机，美伊在军事对峙中推进核谈判</h3>
+<p style="margin:5px 0 10px">伊朗称两枚导弹击中格什姆岛，并宣布击落一架美国MQ-9无人机。美方官员称美伊战争是“勇敢而历史性的努力”，同时伊朗通过卡塔尔向美国转交核提案。多家媒体报道，双方在军事集结与对抗背景下接近核问题谈判。</p>
+<div class="links">
+<span class="muted">来源：中国新闻网、Fox News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTE5RdHZDeURudVN4d3FBUUtHLUt6T2JzbnUtSHkwUzBYSk85cDFzcy1Cd2RxVTRoMHBxNnFaRHlZUXJheXVUaUpPdlZqYzBZVndGZGdhdUhtaUJ5YkptQ2swekJ0OXpsZWow?oc=5" target="_blank" rel="noopener noreferrer">中国新闻网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiqAFBVV95cUxQNV85dG0tUVl6b1BtcWJ3XzhsQ19aUnpQblF0XzJPcER0Q1JDSDB2THBGWXdFdXM5aGZ6UmZwN1hrTm9YcDBVWW1YWTJ0Skd2TXU3U3ZGcDlYZ0FxMnRTd05obzBQaTczSm4wQndGbWlVTnJEQzd5cmZsa01iS2c0bDQza2dwRlZqcUJaOFFvWHhGeFJlQzczZFZORHIyOTEyNlVWelNLdDM?oc=5" target="_blank" rel="noopener noreferrer">Fox News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美国共和党选举大败后白宫换幕僚长，万斯公开批评特朗普</h3>
+<p style="margin:5px 0 10px">共和党在选举中遭遇大败后，白宫幕僚长换人，特朗普任命极右翼反移民政策关键人物斯蒂芬·米勒出任白宫办公厅主任。美国副总统万斯在社交媒体发文分析共和党中期选举失利，认为问题不在投票率，而在于部分2024年支持特朗普和万斯的选民转投民主党，主要诉求包括结束战争、聚焦生活成本与通胀、奉行“美国优先”以及调整美以关系，此番表态被外界解读为与特朗普进行政治切割。</p>
+<div class="links">
+<span class="muted">来源：Caixin Global、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE1xcFlEcTNmWUVfRnpPS2dtazJnWWVuMlhtV0M5b08xdlFaTjU3VVNqQVRTSnZnTF91aUpvYkFhYTVqOGpsUmpKTGowVnBHc3RWcnpfMXBPOEtlVF9QOXVaZ0VBZ3Z5dEtwTlE?oc=5" target="_blank" rel="noopener noreferrer">Caixin Global网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2101610363875768152?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101610363875768152">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">巴拉圭总统因银行倒闭危机被弹劾逮捕</h3>
+<p style="margin:5px 0 10px">巴拉圭总统圣地亚哥·佩尼亚因银行倒闭引发的金融危机被弹劾，随后被逮捕并软禁。新总统佩德罗·阿利安纳已宣誓就职，事件源于银行倒闭丑闻引发的政治与金融动荡。</p>
+<div class="links">
+<span class="muted">来源：AP News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMizAFBVV95cUxPaDFVTWxqNmxoN1JVVzVfSVdkQ1hSOXFmbkxBUnk3Y3FFaFZMZ3RFU1R1eUFiZTlUWG5Vdk9NU2NrRF9LSHVlaklHTUlpS2ZWMXRuNnRBb0JacVkxTEhpdmVTRlRKSDlQUWpZU3ZwVjVES2VCZU9WbGVWdXZRNVlRaGZadUYtTXRBVzZrbWhLQUFDb1oxTlF0MEpBRFlubEhVNmJvcnNLRW1zdEhqdmEwc3FTbGpJMXVHSGNYRmRfUkpiWFhGa3NHUnVxeG0?oc=5" target="_blank" rel="noopener noreferrer">AP News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">何立峰与美国财长、贸易代表举行视频通话</h3>
+<p style="margin:5px 0 10px">中国副总理何立峰与美国财政部长贝森特、贸易代表格里尔举行视频通话。这是中美经贸高层在关税与贸易摩擦背景下的最新沟通。</p>
+<div class="links">
+<span class="muted">来源：新华网客户端</span>
+
+  <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPUHp4YnRSVXU0UVVEYnpGQnFPYng3X29pbG1LRlRobk5BMnVJRjJkbXFwQ3M0Rm1QRXEyOXRvYnRNbmRzdlVvYmo5S1NtcEJqMU9JUXJYLXZKUjRmWGk2d3M5dUtKT29fMC02allDbG56Nk5hQ2twQ0QwMWdPUGoxVlFFYUdvX3NQWndXMDRVZF9MbDJOTmlfMUNn?oc=5" target="_blank" rel="noopener noreferrer">新华网客户端网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">84分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">法国2027年预算案在议会遭458票反对、0票赞成全票否决</h3>
+<p style="margin:5px 0 10px">法国政府提交的2027年预算案在议会投票中以458票反对、0票赞成未获通过，连马克龙阵营议员也未投赞成票。报道指出，议会数周反复修改使预算文本支离破碎，各方均无法接受，部分参与提交修正案的议员也不愿支持修改后的版本。这一结果罕见地暴露出法国当前政治协商与预算治理的僵局。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101727275771244573?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101727275771244573">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">英伟达涉中国间谍指控发酵，美国国会加大审查压力</h3>
+<p style="margin:5px 0 10px">纽约时报称中国顶级间谍机构招募了一名曾接近英伟达CEO黄仁勋的女性。国会民主党人将英伟达AI芯片出口作为审查目标，多名议员要求黄仁勋就与中国间谍有关的指控作出说明；英伟达在华盛顿面临更敌对的环境。</p>
+<div class="links">
+<span class="muted">来源：The New York Times</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxNQlRKTG9WNHBINWg3VkxadkZGV0dCbHZPWUpFclJJNFZBdzNmbGNLbldyWVgtblFfUk1famJaZUlzX3JSTHpyYnRIa25Qd01jNWhPbVV0QllXRW5pTGdBam9NaE1iTXBXMmhCNVFoNTI3ZHFDVEFSU0F5dXNTMHVfY0Z1RzltVGpRdDdaUUlYNzQwWVlz?oc=5" target="_blank" rel="noopener noreferrer">The New York Times网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">微软据悉终止从甲骨文租用AI云算力</h3>
+<p style="margin:5px 0 10px">消息称微软将逐步终止从甲骨文租用AI云算力的安排，并不再续签相关协议。报道称这一变化涉及双方此前的AI算力租赁合作。</p>
+<div class="links">
+<span class="muted">来源：中金在线、DoNews</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTE94T0NQeWN1dmFsQUQ4S1JzeVlURno2STVaSTdWRW45WkxPTTQ2clRNcHZZLXVyakRpQjM2a3dBb3dLU0lfcXIyaUI5alJadFFhZnpqMnFjaGFRd2RVUjBCYWZBXzRweWU4aFE?oc=5" target="_blank" rel="noopener noreferrer">中金在线网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFB4bkZ5U05UV0NQZmZkU1J6NnVIbUl4NXdmeHlTNGRMX3BvV3BWZWFONWhoejJPYm4wdXhKeUdKcW00ZF9GUm9Kd2JrZUpreTY4cGtaM0RqUndkNUotTXc?oc=5" target="_blank" rel="noopener noreferrer">DoNews网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI财务官称AI需求真实，基建仍遇民意阻力</h3>
+<p style="margin:5px 0 10px">OpenAI财务官表示，尽管AI基础设施建设遭遇民意阻力，但AI需求真实存在。该表态正值市场对AI基建投资与回报高度关注之际。</p>
+<div class="links">
+<span class="muted">来源：中金在线</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiakFVX3lxTFA3NkIyRE9fWGhUS3JicExZbmwtU1RraTJ3RUFBN2MyLWhtNUlCckxTWUZSOU9pZUVranZTc210dHh1UTUxNVJXbFJXU3dfMDdtcmt5SGF5bE1sZFRxSXR6aEtxUmd5MXNqUFE?oc=5" target="_blank" rel="noopener noreferrer">中金在线网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">65分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">谷神星二号遥三运载火箭发射成功</h3>
+<p style="margin:5px 0 10px">谷神星二号遥三运载火箭发射成功。相关消息由军网报道，目前公开信息主要披露了发射成功这一结果。</p>
+<div class="links">
+<span class="muted">来源：军网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiUkFVX3lxTE9lS2QwUF9wcEctLWltTE1lMXhTOC00UjVqd3NhR1M4aWd4UlBaSHluU2J4YjJzQThzUTJkalk0dnladzBzWGdLVUtEYzF2NE9seUE?oc=5" target="_blank" rel="noopener noreferrer">军网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">40分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Pangram发布AI图像检测模型，准确率达99.96%</h3>
+<p style="margin:5px 0 10px">Pangram正式发布AI图像检测模型，准确率达99.96%。该工具旨在识别AI生成图像。</p>
+<div class="links">
+<span class="muted">来源：DoNews</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE1ES3g4czFfcHZmbW1tbFdsWXBCdDRfalR6aDh2VXVfcjZRV096d2NvaFpwVW9rcHNzQ3UzVDRYMXlCWWRNZ2NVbkQtVzYtZ191QTgyMXZQdHlRbUFEUUE?oc=5" target="_blank" rel="noopener noreferrer">DoNews网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">40分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">“人工智能＋媒体”蓝皮书（2026）发布</h3>
+<p style="margin:5px 0 10px">“‘人工智能＋媒体’蓝皮书（2026）”发布。该蓝皮书聚焦AI在媒体领域的应用与发展。</p>
+<div class="links">
+<span class="muted">来源：新华网客户端</span>
+
+  <a href="https://news.google.com/rss/articles/CBMimgFBVV95cUxPaUgtNHJoa3BzWWtwbjdmZWw0NHctNUUtY3FSU3Q2MWJKQ3NKV0JES1R4SU5MYzFGbnZaZUhYcXRsM21GQnVLT2RHVWhoQURnYTdfQlFKTEZEcENXM3RMOTBFSU1BZFJKVEZrUzJxZDgtM0JzeERVYmtLNEhRaHhoSDVVc1d6MXlRQUpGcHI4YzJhb3BFQVdObUlR?oc=5" target="_blank" rel="noopener noreferrer">新华网客户端网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">35分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI编程工具Amp推出Spaces功能</h3>
+<p style="margin:5px 0 10px">AI编程工具Amp推出Spaces功能，可自主编排和协调Agent干活。该功能旨在提升AI编程中的多智能体协作效率。</p>
+<div class="links">
+<span class="muted">来源：DoNews</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9wemVDZ0VCNXlhYTEzTXhNNHRDM25GSnpxaFlzZnVBR0JRS3c3c0FfZWUtNnhpNlZha3VtRlE5RUF0cXoydzh0WVltTFRaOGRyWEEtUElSSW1RYVlfS0E?oc=5" target="_blank" rel="noopener noreferrer">DoNews网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">76分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">广电总局重申扶持真人短剧、规范AI短剧</h3>
+<p style="margin:5px 0 10px">国家广播电视总局相关负责人在2026中国广播电视精品创作大会微短剧论坛上重申，对真人微短剧与AI微短剧的态度是“扶持真人剧，规范AI剧”。该负责人表示，AI给微短剧带来的不只是创作环节降本增效，更是生产方式、产业形态和发展逻辑的系统性变革。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101979474723960031?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101979474723960031">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">45分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI仿真人剧《持械入宋》引发“为何真人影视不拍”讨论</h3>
+<p style="margin:5px 0 10px">有观众看完AI仿真人剧《持械入宋》后认为，该剧在技术上并没有很高壁垒，实拍难度也不大。由此提出疑问：既然AI能完成此类作品，为何真人影视行业没有人来拍；讨论涉及AI影视制作成本、题材选择与真人影视投资逻辑的差异。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101987202196400085?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101987202196400085">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">民主党选举大胜后AI股遭抛售，科技股经历震荡一周</h3>
+<p style="margin:5px 0 10px">美国民主党在选举中大胜后，投资者抛售AI相关股票，AI板块市值损失约2.5万亿美元。随后科技股在震荡中趋稳，AI股反弹温和，中概股和部分AI科技股一度大涨；Jim Cramer等市场人士认为此次抛售不同于2000年互联网泡沫破裂。</p>
+<div class="links">
+<span class="muted">来源：shattered.io、The Washington Post 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMikAFBVV95cUxNZEE5dlROVEpGWGRwbEU4VGRSZy1qRXlFQTBZRVBiUUI0NDE0eXljNFdub2lQSEI4RG9Cc0NidUEzS25DRkFkWnhHd2d5eWVwRkw0YWxOTWVTWmkyZ2p2eDQyQk1MaFBzaHlpNnREdjJoeXhJbFhvWDBPZkFtU3kwY3VOV3JhMmsybUFzdjdSczY?oc=5" target="_blank" rel="noopener noreferrer">shattered.io网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMixAFBVV95cUxOeHBQalQ0UlBpeEtqdmZBTlJpQTJtaVNlV1B4Zm45UnV3Q0R4VWl6MXF6U1RfZDRUSXBLQU5YWWFma0xxMnJ5OXpiRVliTFlELVoxZEZiWGFmbm8xNlJvTkJBdlZCTlY0RzlOTVNZNFp2UU1qTnFsalotZmZPcE5YbVktcm9URUNUN0dSN2draU5EYU81ekl1ZTZCOGZoZFRmVDI0NDlON2k1ZEREMEdyaWJsaHZyLTU5QWhNNnJ6bWE5U3BU?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMisgFBVV95cUxQTW13UV85bWhRYVptdDMyaWUwSkx6eElHVEluWE83eGdUOFlqMU53cmUtenF5akp0UUVFcXhVLV9rZHNZNHMxSUNjbm15bzZaSzNpajJfdG1VRnZsaC01eDBZcnVxejhUd2k5QVV1OE1lTjVOYTRDVVhWSEhZZXctSkVVeXQxekxTYkc0Uy1kVHZaZ0o4MTdVVFg5dDYtQmV1eXBDZVlBWXJRMnBLMjFIYzFn?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxQN0k3MUlIRnNjV2xSSm1GcUdDdzdPTlJvTC1wcGIwb2FEOEZKdEpXZ1J4X3ZRZXZMOWZmMlVtc2F5OVFhbTJ0ZFpLeF8zZkY3TTFraUhuSTFRLWpZUUE1dWlKVTdhQllKZ1hSSVVSX3dvUXcxb2lXNG5LbEozVkJHbENNbmNzSFlyNDJsdlFYRQ?oc=5" target="_blank" rel="noopener noreferrer">华尔街日报中文网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiUEFVX3lxTE9wQlZNbWhSa1dKTXVoREl4d1duOUtZV1pkb2lfVXpROUoteHFzMEN1QVFRQ0dwSjNtOS1ZdGRLR09oblpCbnhyUVN1bDBEQzli?oc=5" target="_blank" rel="noopener noreferrer">凤凰网财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiqwFBVV95cUxOVkROZXRCeGdzTjFBVU83WUVNVWNTekNZRHZpWTZkc0RWbW1OWGpmdVR2aDRZYy1HcEx3aldyY2NQUXFPTkE2VGFxLTN1VV9RbWRxTFhMeU03Mlp4YnEydi10cmppR2FsdG84Y25NODZBdkJYT2lubk5VeDI5eW9oV29tZHpFaUJkeEJtOEtwWG5UWXh5NEJPZXd1b3VuX0hLQ1oyNVFMeGdLSmc?oc=5" target="_blank" rel="noopener noreferrer">24/7 Wall St.网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">前三季度科技、涉农贷款数据出炉</h3>
+<p style="margin:5px 0 10px">前三季度科技贷款和涉农贷款数据出炉。报道称，金融支持实体经济的力度持续显现。</p>
+<div class="links">
+<span class="muted">来源：中国新闻网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFBCRmUyd084dGNScm1HclJqMENyREVTY3VFeHJNdVdlQ3RLLVpIclpTbk93alVtRjd5dHhyRTY0bC1STXlWanNUSm5oLWZfQ2dLRjB6eXdBMnpTTm96Z0lZUHp5NXkwVElI?oc=5" target="_blank" rel="noopener noreferrer">中国新闻网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">第九届进博会展示AI与芯片算力应用</h3>
+<p style="margin:5px 0 10px">第九届进博会上，AI技术与芯片算力成果加速落地，参展各方展示相关应用。多地参展团也在进博会上寻求全球商机。</p>
+<div class="links">
+<span class="muted">来源：中证网、河北新闻</span>
+
+  <a href="https://news.google.com/rss/articles/CBMieEFVX3lxTE1HLUw3aEFXX1Nnd2NoamVodGlnX0dOYWt1Z2FhSmlMbkcycWhndkt4RjIyeU1jUGdUSTRUNktZMFZxbkZEamF3MTdxVlc3VnhGamVUdkhLejVhSlRqMVNwb1JjVUs1elNBaDN0bWswbjZ3dUtLcU9YTg?oc=5" target="_blank" rel="noopener noreferrer">中证网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE95YTFSUTJXNFVHcXJ5ZktMUFJOdE5IdF92Mmw0MUItRmFsenVXTVVsaFNKYU1fVHR2blVpWGtNYm0zdnNZdDhFQk1TdVBxSzNaOVg4Q0tzcWxsUWlHUUR4cFZrVGJVdw?oc=5" target="_blank" rel="noopener noreferrer">河北新闻网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">45分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">麦当劳将扩大AI点餐，加盟商质疑成本</h3>
+<p style="margin:5px 0 10px">麦当劳将扩大AI点餐系统，称每周可节省50小时劳动力。加盟商则对该项成本提出质疑。</p>
+<div class="links">
+<span class="muted">来源：Yahoo Finance</span>
+
+  <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxOTlg1a0JTLVc5aXdjNlVGalg1cndXdVFCZ3h1Uk8yZ2Z5TWM1TTN3S211MVVzX0NTeVNQMGlsZXo4dWNQeGVWRmlXMDlMSGV2NXRiYm9RQ2ttcVpmYlNva0JyR0E1Y1VLeEFFTl9fWnFOd0VvLTVzNlJMY2VUanloMHhoWFNIOTlhemZnNmk2bmhUMkNGcmhYRkdFM081UQ?oc=5" target="_blank" rel="noopener noreferrer">Yahoo Finance网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">男子预判金价涨至2000元/克，花光积蓄买7斤黄金9个月亏114万元</h3>
+<p style="margin:5px 0 10px">郑州一家金店店长讲述，顾客孙某在今年2月金价暴涨时拿出全部资金买入3.5千克投资金条，买入价达每克1167元，并自认为年底能涨到每克2000元。此后金价持续波动，8月下旬起一再下挫，近日重回“8”字头；孙某9个月亏损114万元，因急用钱无奈“割肉”卖出。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101426752694261522?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101426752694261522">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">仰望U9 Xtreme在阿布扎比公路跑出503.17km/h极速纪录</h3>
+<p style="margin:5px 0 10px">2026年11月1日，仰望U9 Xtreme在阿联酋阿布扎比E11公路跑出503.17km/h，获吉尼斯世界纪录“量产汽车单方向行驶最高速度”认证，并称经过FIA验证。车手为Marc Basseng，车辆动力为四电机3019马力、全域1200V平台，极速轮胎由佳通定制；讨论焦点在于该成绩应放在极速纪录的真实规则和技术语境中审视。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2102058162580935679?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2102058162580935679">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">传统2元店淡出城市视野，名创优品等精品百货兴起</h3>
+<p style="margin:5px 0 10px">曾经遍布大街小巷的“全场2元”门店，如今在一、二线城市已基本消失，偶尔出现的招牌下真正2元商品也寥寥无几。报道将这一变化与名创优品等精品百货的兴起并置，讨论传统2元店衰落的原因，以及精品百货是否属于其升级形态。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2096651595064799938?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2096651595064799938">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">44分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">云南咖啡为何走不出中国引发产业讨论</h3>
+<p style="margin:5px 0 10px">话题聚焦云南咖啡长期难以走向全国乃至海外市场的原因。讨论围绕云南咖啡的产业基础、品牌认知与市场渠道展开，关注其在国内咖啡消费升温背景下的发展困境。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/321589074?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/321589074">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">40分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">咖啡从“高档象征”变为“打工续命水”，消费观念转变引讨论</h3>
+<p style="margin:5px 0 10px">讨论指出，过去影视作品中的咖啡常与都市精英、小资生活绑定，如今提起咖啡更多联想到瑞幸9.9元和“打工牛马续命水”。话题由此追问“高档”与咖啡何时解绑，以及这一变化源于咖啡变便宜还是大众对咖啡祛魅。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2102124807307227549?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2102124807307227549">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">40分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">澳洲公司部署35万个AI智能体反诈</h3>
+<p style="margin:5px 0 10px">澳大利亚一家公司派出35万个AI智能体用于反诈骗。相关报道引发网友关注，并将其形容为“缅北最严厉的父亲”。</p>
+<div class="links">
+<span class="muted">来源：驱动之家</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiWEFVX3lxTFBmZm5YT090Zzg0OWxBUG10SHYxeEFEMUdtdlRQMjVNamJRTF83d3Ffd25tVVZqTFFHYldIcGVBay1JNVgxUGw4aXV6eFRvd0ZmMVRBTVB4TDA?oc=5" target="_blank" rel="noopener noreferrer">驱动之家网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">73分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">宝马、丰田、大众接连出现冒用召回名义的精准诈骗</h3>
+<p style="margin:5px 0 10px">宝马中国声明称，近期有不法分子冒充宝马官方以“车辆召回”为名实施电信诈骗，相关“召回通知”均非官方发布。宝马强调官方召回不会引导车主提供银行卡、验证码或转账付款，并提示通过国家市场监管总局缺陷产品召回技术中心等官方渠道核实；报道还提到宝马、丰田、大众接连出现此类精准诈骗。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101797839600870754?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101797839600870754">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">爱奇艺回应会员电视端出现“弹幕广告”，称不包含在会员权益内</h3>
+<p style="margin:5px 0 10px">有爱奇艺白金会员反映，将电视剧投屏至电视端观看时，临近大结局的关键情节屏幕飞入大量带“CS扫描王”标识的弹幕广告，同一集内多次出现。爱奇艺回应称此次内容属于“弹幕广告”，不包含在会员权益内，该回应引发对会员权益边界和广告形式的争议。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2102014481567938105?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2102014481567938105">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">男子5年入职25家公司“表演式上班”骗薪13万余元</h3>
+<p style="margin:5px 0 10px">据《方圆》杂志报道，2019年10月至2024年11月，吕甲良先后入职25家公司，没有做成一单真实业务，却骗取工资待遇共计13万余元。他凭借光鲜简历入职，自称手握大量客户资源，还主动提出不用公司缴纳社保，入职后按时打卡、提交日志，同时出现在其他公司面试现场；此类骗局长期未被发现的原因引发讨论。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101692390444642514?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101692390444642514">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">广东31岁女子每天只吃一顿减肥，血糖爆表险失明</h3>
+<p style="margin:5px 0 10px">广东东莞31岁的姜女士为快速减肥每日只吃一顿饭，坚持一段时间后经常头昏眼花，左眼只能看清眼前约30厘米处的手指。就医检查发现其随机血糖高达25.7mmol/L，被诊断为双眼2型糖尿病性增殖性视网膜病变；医生表示，一日一餐会打乱进食节律，极端节食、作息紊乱会加速隐匿糖代谢异常病情暴发。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101793356409825215?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101793356409825215">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">儿子偷卖母亲13克金项链后旅游，被采取刑事强制措施</h3>
+<p style="margin:5px 0 10px">环卫工赵女士的儿子将母亲13.29克金项链以每克870元卖出，得款11562元后出门旅游，并在朋友圈晒出金项链过秤照片。赵女士一度以为项链在清扫街道时丢失，经外甥提醒核对后才知道是儿子拿走；因儿子此前多次偷拿家中财物变卖挥霍，赵女士主动报警，儿子在母亲陪同下到案，被采取刑事强制措施。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2101972581469500359?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2101972581469500359">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
