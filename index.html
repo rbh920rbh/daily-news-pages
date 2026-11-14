@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-11-14 10:21 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">8</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">7</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">4</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">95分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">FAA因通信故障一度停飞全美航班，恢复后延误持续</h3>
+<p style="margin:5px 0 10px">当地时间11月13日，美国多个航路交通管制中心出现通信故障，美国联邦航空管理局出于安全考虑暂停全美机场航班起飞，随后取消地面停飞令，但预计仍会出现大范围航班取消或延误。美国国土安全部长表示，总统特朗普已听取简报。有报道将事件与FAA本周推出AI空中交通管理联系起来，但美方称停飞并非网络攻击或AI干预。</p>
+<div class="links">
+<span class="muted">来源：Inc.com、The New York Times 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPS1JGMmk4ckVUM0Qza2Q5U18xRndmeEx3ZlFhWERQdVFrZVVDNFdnS2ZneWxRTVdEZDdpc2l4UVkxTm5naWM0a3I2eTZQdVN0QUtNLVoycUJIamRNQ0E4dU5mTmlwVXg3UnA5U3BpSlNSSWNNSzZteV82dU9Hb2RCZzZ6cmROekpkdGpSR2NoTGpZT0JkLW5OdHhuQmNHdFVZOEdjbUc3VzQwTU5fdEhHRFVTZWJXcEVMQTBOM080NExUZGR4c0pObHln?oc=5" target="_blank" rel="noopener noreferrer">Inc.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOS1F1U1pLV0V3dTVlT1RnSGF1dlJERU1sbkN5X2pMUmlPSFVoZkZaTmlRM3plQmZJQTBBaXdMQnZpbm1PV2NfajFvclpsUWE2VlhwZ3ZlcjVkNG1CbUVxMW9jempQY3VtVlNSUU11c3hGLU9GYk82N0cxT1BBQTZkbWs4VQ?oc=5" target="_blank" rel="noopener noreferrer">The New York Times网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5LMlF4V2xxR1NDMW5ZaUxXc2M1aFkwMV9ZUGF2RnF6LS1pQ1FxcEtaUHMzMUg5SFI4THl0ZG9JWUJ6c3NSNlQtdHhfQkJDZWs?oc=5" target="_blank" rel="noopener noreferrer">新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNHBIZjRJdjJocVFOcG5uN0YzeUExaUk1NjV5c0F4NUxHWGtXa0hacjAyczVkazlhS3B5ZHNLQUxNNE1ESWthT3YyWWN4UXJqVnVQLUh1LUtCb0hrV29pT1hBR0QyMDY4NnVVM3lFSUc4NzRpMzU1bTZ1WUppRG54SjVZcnZvOUFp?oc=5" target="_blank" rel="noopener noreferrer">The Atlantic网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2104838863910690956?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104838863910690956">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">SpaceX星舰第15次试飞推进完全复用，助推器回收中止改海上溅落</h3>
+<p style="margin:5px 0 10px">SpaceX进行星舰第15次试飞，目标是展示轨道级火箭的完全可复用能力。任务升空后实现一二级分离，原计划首次尝试助推器和飞船均返回发射场、由发射塔机械臂实施捕获回收，但“超级重型”助推器未按计划返回，在墨西哥湾海域受控溅落，首次抓取回收中止。多家媒体对这次里程碑试飞进行了直播报道。</p>
+<div class="links">
+<span class="muted">来源：CBS News、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBSZjU2emJ2X21oRkFSWllCbXlQSVBWMVJPLTdqMzJ2V0VFVmxsOFN1anZZblpZSFhxZ2xjSE1uU2psLWFQcFcxUVhZNExCS0Z2X2Y0WkpSNk1MemVSNExKRndCVTBEVzRzUEJ0SUxDbEsweFBGN0g4?oc=5" target="_blank" rel="noopener noreferrer">CBS News网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2103048368494793787?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2103048368494793787">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">求是刊文称习近平主席引领亚太大家庭前行</h3>
+<p style="margin:5px 0 10px">求是发表文章，称习近平主席引领亚太大家庭扬帆前行。文章聚焦中国在亚太合作中的引领作用。</p>
+<div class="links">
+<span class="muted">来源：求是</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1LQjFKUGQ4dktqcEFFSTVRb1FIMVNMSklJRlZYcXZaNDQxRkhvVGl2MXRKN3pfLTV4VGtWN3NIWDRsRElqM0JuTG4yQmxONFlVYTdJdEZDSEZOLWwxbWRfN2l5NmxhVlhsRWV6M0pGSERQZE9Hb2d2eU5salA?oc=5" target="_blank" rel="noopener noreferrer">求是网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">黄仁勋辞职风波持续，马斯克称将签名支持其回归英伟达</h3>
+<p style="margin:5px 0 10px">黄仁勋辞职事件持续发酵，马斯克继续为黄仁勋发声。马斯克在一名网友留言下表示自己将签名支持黄仁勋回归英伟达；连日来多名网友在马斯克社交账号下留言表达惋惜。相关讨论还提到优秀GPU工程师难找、员工希望黄仁勋回来。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104521888450064574?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104521888450064574">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">微软就全球服务中断道歉</h3>
+<p style="margin:5px 0 10px">微软就一次全球服务中断公开道歉。报道未披露此次中断的具体原因和完整影响范围。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNUF92aWlwS09QWXNjXzhSb1Btcmc5S0liVUhXbTZGZl9CcW9wcVFzMS1kWng0M3pfbXBjSXhFZGZxQXY5RFFnQm50U0NjeGJPMWJMQjJEZ3BfYjBqRDlrM09TRXFzRU1ZY3Vqb0RnTXV6c3ZUYktSRld4N0ZQUmN0b1Vn?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">阿里巴巴拟分拆平头哥赴港独立上市</h3>
+<p style="margin:5px 0 10px">阿里巴巴公告拟分拆全资子公司平头哥（上海）技术股份有限公司赴香港联交所主板独立上市。港交所已确认阿里巴巴可进行此次分拆，平头哥已于2026年9月11日以保密形式递交上市申请。此次分拆拟通过全球发售H股进行，包括香港公开发售及向机构和专业投资者配售。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2103593134626009683?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2103593134626009683">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">前10月中国外贸延续强劲增长，AI产业链支撑作用凸显</h3>
+<p style="margin:5px 0 10px">前10月中国外贸延续强劲增长，AI产业链被视为重要支撑。报道认为AI相关产业对出口表现起到凸显作用。</p>
+<div class="links">
+<span class="muted">来源：新浪财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVmVTaWxseHhOUmIycktuZEZ3UkRPTmpYQk9MRHNhdGk2cUhUUXlLZmxBVjRSYXVQZm1mOVFjOS1tMzNybVF6MUh4Ymstby05c09XWUEySEIyR3FsTVRqdFJNV1VMeW5pblJoV3h2UEhSUDZTT3UtQVZMQVB4bGMzdWlKYWRHTGx4c3lLQk4tVXl1TEFnMWlwdQ?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">DeepSeek开放“全家桶”应用API</h3>
+<p style="margin:5px 0 10px">DeepSeek于2026年11月13日公告，正式开放全家桶应用API。开发者在原有API中开启对应参数，即可获得深度思考搜索、文件输入等对话功能，语音及OCR、ASR、TTS等底层能力也已开放独立接口。开发者可在自有应用中组合调用，甚至1:1复刻完整DeepSeek App。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104704747362054197?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104704747362054197">知乎 App</a>
+  
+
+  <a href="https://www.zhihu.com/question/2104706638724560731?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104706638724560731">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">马克龙将召集科技企业会议推动欧洲科技自主</h3>
+<p style="margin:5px 0 10px">马克龙计划召集科技企业开会，议题涉及推动欧洲科技自主。会议旨在协调欧洲科技产业方向。</p>
+<div class="links">
+<span class="muted">来源：36Kr</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqQldwazl4SUFfY1M4UExfWXp1ZE9JdExxU29JLWFXUVYzRkpiX3YxTi0zdFN6VEZESkJqbGRDV1FNYVVoemxZb1J1Qi1BRERjTlF3bG9VZjgzQThjSHc?oc=5" target="_blank" rel="noopener noreferrer">36Kr网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">民主党人正评估弹劾卫生部长小罗伯特·肯尼迪</h3>
+<p style="margin:5px 0 10px">民主党人正评估对卫生部长小罗伯特·肯尼迪的弹劾。报道称，肯尼迪对疫苗指引的调整和削减医学研究引发批评，部分高层议员提出弹劾；民主党同时试图维系与MAHA支持者的共同议题，面临平衡难题。</p>
+<div class="links">
+<span class="muted">来源：orlandosentinel.com</span>
+
+  <a href="https://www.orlandosentinel.com/2026/11/13/congress-democrats-weighing-impeachment-rfk-jr/" target="_blank" rel="noopener noreferrer">orlandosentinel.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">求是刊文称习近平主席引领亚太大家庭前行</h3>
+<p style="margin:5px 0 10px">求是发表文章，称习近平主席引领亚太大家庭扬帆前行。文章聚焦中国在亚太合作中的引领作用。</p>
+<div class="links">
+<span class="muted">来源：求是</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1LQjFKUGQ4dktqcEFFSTVRb1FIMVNMSklJRlZYcXZaNDQxRkhvVGl2MXRKN3pfLTV4VGtWN3NIWDRsRElqM0JuTG4yQmxONFlVYTdJdEZDSEZOLWwxbWRfN2l5NmxhVlhsRWV6M0pGSERQZE9Hb2d2eU5salA?oc=5" target="_blank" rel="noopener noreferrer">求是网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">马克龙将召集科技企业会议推动欧洲科技自主</h3>
+<p style="margin:5px 0 10px">马克龙计划召集科技企业开会，议题涉及推动欧洲科技自主。会议旨在协调欧洲科技产业方向。</p>
+<div class="links">
+<span class="muted">来源：36Kr</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTFBqQldwazl4SUFfY1M4UExfWXp1ZE9JdExxU29JLWFXUVYzRkpiX3YxTi0zdFN6VEZESkJqbGRDV1FNYVVoemxZb1J1Qi1BRERjTlF3bG9VZjgzQThjSHc?oc=5" target="_blank" rel="noopener noreferrer">36Kr网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">民主党人正评估弹劾卫生部长小罗伯特·肯尼迪</h3>
+<p style="margin:5px 0 10px">民主党人正评估对卫生部长小罗伯特·肯尼迪的弹劾。报道称，肯尼迪对疫苗指引的调整和削减医学研究引发批评，部分高层议员提出弹劾；民主党同时试图维系与MAHA支持者的共同议题，面临平衡难题。</p>
+<div class="links">
+<span class="muted">来源：orlandosentinel.com</span>
+
+  <a href="https://www.orlandosentinel.com/2026/11/13/congress-democrats-weighing-impeachment-rfk-jr/" target="_blank" rel="noopener noreferrer">orlandosentinel.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">教皇利奥十四世重返曾任职的秘鲁奇克拉约</h3>
+<p style="margin:5px 0 10px">教皇利奥十四世重返曾担任主教的秘鲁奇克拉约，在潘帕斯德皮门特尔举行露天弥撒，受到大量民众欢迎。约百万人沿途迎接，另有约50万人参加弥撒；他提到一个月前接受癌症手术，并感谢信众为其健康祈祷。</p>
+<div class="links">
+<span class="muted">来源：ncregister.com、dca.gob.gt</span>
+
+  <a href="https://www.ncregister.com/cna/pope-leo-xiv-back-in-his-former-diocese-says-all-christians-are-called-to-be-missionaries" target="_blank" rel="noopener noreferrer">ncregister.com网页版</a>
+  
+  
+
+  <a href="https://dca.gob.gt/noticias-guatemala-diario-centro-america/miles-peregrinan-para-ver-regreso-de-leon-xiv-a-chiclayo/" target="_blank" rel="noopener noreferrer">dca.gob.gt网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">黎巴嫩军队在贝鲁特南郊武器库突袭缴获大量武器</h3>
+<p style="margin:5px 0 10px">黎巴嫩军队在贝鲁特南郊一处武器库展开突袭，缴获大量武器和弹药。行动发生在真主党据点Msharafieh，一人被拘留，相关部门已展开调查；此前以色列军方称在黎南部发现真主党武器库。</p>
+<div class="links">
+<span class="muted">来源：politika.rs</span>
+
+  <a href="https://www.politika.rs/scc/clanak/802579/libanska-vojska-izvela-raciju-u-juznom-predgradu-bejruta-zaplenjena-velika-kolicina-oruzja" target="_blank" rel="noopener noreferrer">politika.rs网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">瑞士国民院财政委员会建议否决2027年联邦预算</h3>
+<p style="margin:5px 0 10px">瑞士国民院财政委员会建议否决2027年联邦预算，并退回联邦委员会修订。极右人民党与左翼社民党、绿党出于不同原因反对预算；报道称该委员会在此阶段否决预算极为罕见。</p>
+<div class="links">
+<span class="muted">来源：lenews.ch</span>
+
+  <a href="https://lenews.ch/2026/11/13/switzerlands-polarised-politics-threaten-to-undo-the-2027-budget/" target="_blank" rel="noopener noreferrer">lenews.ch网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">欧洲在乌克兰谈判中由五国与欧盟机构代表</h3>
+<p style="margin:5px 0 10px">芬兰总理奥尔波称，欧洲在乌克兰谈判中由英、意、波、法、德五国及欧盟机构代表。该安排是在都柏林欧盟非正式峰会上决定的；克里姆林宫表示，俄罗斯尚未决定是否允许欧洲代表参加谈判。</p>
+<div class="links">
+<span class="muted">来源：aamuposti.fi</span>
+
+  <a href="https://www.aamuposti.fi/uutissuomalainen/9955125" target="_blank" rel="noopener noreferrer">aamuposti.fi网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">BBC调查揭英国全球人才签证造假服务</h3>
+<p style="margin:5px 0 10px">BBC调查发现，有公司帮助富裕移民伪造艺术或技术成就，以申请英国“全球人才”签证。英国内政部正撤销两名冒充艺术摄影师获得签证的尼日利亚男子的签证；该签证不设面试，申请人需证明在所属领域具有杰出才能。</p>
+<div class="links">
+<span class="muted">来源：bbc.com</span>
+
+  <a href="https://www.bbc.com/persian/articles/c962pm357x8yo" target="_blank" rel="noopener noreferrer">bbc.com网页版</a>
+  
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">SpaceX星舰第15次试飞推进完全复用，助推器回收中止改海上溅落</h3>
+<p style="margin:5px 0 10px">SpaceX进行星舰第15次试飞，目标是展示轨道级火箭的完全可复用能力。任务升空后实现一二级分离，原计划首次尝试助推器和飞船均返回发射场、由发射塔机械臂实施捕获回收，但“超级重型”助推器未按计划返回，在墨西哥湾海域受控溅落，首次抓取回收中止。多家媒体对这次里程碑试飞进行了直播报道。</p>
+<div class="links">
+<span class="muted">来源：CBS News、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMid0FVX3lxTFBSZjU2emJ2X21oRkFSWllCbXlQSVBWMVJPLTdqMzJ2V0VFVmxsOFN1anZZblpZSFhxZ2xjSE1uU2psLWFQcFcxUVhZNExCS0Z2X2Y0WkpSNk1MemVSNExKRndCVTBEVzRzUEJ0SUxDbEsweFBGN0g4?oc=5" target="_blank" rel="noopener noreferrer">CBS News网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2103048368494793787?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2103048368494793787">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">75分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">微软就全球服务中断道歉</h3>
+<p style="margin:5px 0 10px">微软就一次全球服务中断公开道歉。报道未披露此次中断的具体原因和完整影响范围。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiggFBVV95cUxNUF92aWlwS09QWXNjXzhSb1Btcmc5S0liVUhXbTZGZl9CcW9wcVFzMS1kWng0M3pfbXBjSXhFZGZxQXY5RFFnQm50U0NjeGJPMWJMQjJEZ3BfYjBqRDlrM09TRXFzRU1ZY3Vqb0RnTXV6c3ZUYktSRld4N0ZQUmN0b1Vn?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">64分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">MIT研究人员提出帮助企业缓解AI风险的路线图</h3>
+<p style="margin:5px 0 10px">MIT研究人员提出帮助企业缓解AI风险的路线图。该框架旨在指导组织应对AI相关风险。</p>
+<div class="links">
+<span class="muted">来源：HPCwire</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiswFBVV95cUxNOG1MMzd3bVcwVi1Sd0hPQkpzOF9NcmQ2U2RZU3NsNnYtQUVjeG14OFJyNjZBaWJiZzlRQnNjUndxNWJ1U1FibS15cHNLakVUUTFfcnFlRDZsazdybDVBdVN1VW45VUVfWmNOOExtc3N2NjkyYzRmaWNPeHhGR0VVWjNxbDN1U2h6YjVGdTJhNjhOUVdPUWNvaGZVbjRFR3JVQUM2VDRRTUJLVEFkcXNla2Fsbw?oc=5" target="_blank" rel="noopener noreferrer">HPCwire网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">64分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">互联网涌现拒绝作品被AI训练的“君子协议”</h3>
+<p style="margin:5px 0 10px">随着作品被用于AI训练引发争议，互联网上出现新的“君子协议”机制，供创作者表达是否拒绝作品被AI训练。报道聚焦这些自愿性约定的出现。</p>
+<div class="links">
+<span class="muted">来源：21财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxNX0NsMmM5UFpSZmN0Ym1vRlV1N00zUEoya2dpdWY3cW5EXy1iMGJyRC1PQk9vMVRZMzlPTFA1cndnV29QZmxhV25wNkRReTdjbGg2WVRBaHNrTDcxM25GSnRXbm5qUTJGVnJSdVNDamVtN3R6UnZ4YXRhVmZ1VGJFaUhVa2ZOems2NEViUFlkWQ?oc=5" target="_blank" rel="noopener noreferrer">21财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">前OpenAI研究员称超级AI研究员可能明年出现</h3>
+<p style="margin:5px 0 10px">一名前OpenAI研究员改口称，超级AI研究员可能明年就会出现。该报道来自CSDN博客，属于对AI进展预测的讨论。</p>
+<div class="links">
+<span class="muted">来源：CSDN博客</span>
+
+  <a href="https://news.google.com/rss/articles/CBMibkFVX3lxTE1XRmlfTWU5NEw2cEg4U0JWZ0ZRRmdaRWhCc0dYMUpKd2kwa2lKTG9HVFpRYTIwam5NNVhJdG1Wa01JXzJFN2VOQldVMWswdUltUGVlMTBuUGZsUG51di1WV3R4R2x2WTE2YS1MeXl3?oc=5" target="_blank" rel="noopener noreferrer">CSDN博客网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">DeepSeek开放“全家桶”应用API</h3>
+<p style="margin:5px 0 10px">DeepSeek于2026年11月13日公告，正式开放全家桶应用API。开发者在原有API中开启对应参数，即可获得深度思考搜索、文件输入等对话功能，语音及OCR、ASR、TTS等底层能力也已开放独立接口。开发者可在自有应用中组合调用，甚至1:1复刻完整DeepSeek App。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104704747362054197?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104704747362054197">知乎 App</a>
+  
+
+  <a href="https://www.zhihu.com/question/2104706638724560731?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104706638724560731">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI短剧《梦回红楼》被指侵害17位演员肖像并魔改剧情</h3>
+<p style="margin:5px 0 10px">有网友指出，某平台AI短剧未经授权，擅自使用AI技术提取并合成87版《红楼梦》中17位演员的面部特征与表演神韵。该剧还将《红楼梦》改编为宅斗爽文，出现林黛玉当街掌嘴薛宝钗、贾母跪拜黛玉等侮辱性情节；记者查看发现，剧中林黛玉、薛宝钗、王熙凤、贾母、刘姥姥等角色的AI形象确实与陈晓旭、张莉、邓婕、李婷、沙玉华等多位演员相似。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104307708622889582?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104307708622889582">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">前10月中国外贸延续强劲增长，AI产业链支撑作用凸显</h3>
+<p style="margin:5px 0 10px">前10月中国外贸延续强劲增长，AI产业链被视为重要支撑。报道认为AI相关产业对出口表现起到凸显作用。</p>
+<div class="links">
+<span class="muted">来源：新浪财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMimAFBVV95cUxNVmVTaWxseHhOUmIycktuZEZ3UkRPTmpYQk9MRHNhdGk2cUhUUXlLZmxBVjRSYXVQZm1mOVFjOS1tMzNybVF6MUh4Ymstby05c09XWUEySEIyR3FsTVRqdFJNV1VMeW5pblJoV3h2UEhSUDZTT3UtQVZMQVB4bGMzdWlKYWRHTGx4c3lLQk4tVXl1TEFnMWlwdQ?oc=5" target="_blank" rel="noopener noreferrer">新浪财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美媒讨论Anthropic IPO能否提振AI板块行情</h3>
+<p style="margin:5px 0 10px">The Motley Fool文章讨论Anthropic IPO能否挽救AI板块涨势。文章把Anthropic上市与AI行情前景联系起来。</p>
+<div class="links">
+<span class="muted">来源：The Motley Fool</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiigFBVV95cUxQNE1SOFhsZ0ZYOEdyQW5FdFpBanlSZE1NSjlRZVlGTGc5Y1FkNDhRUmZzQ1Y4QWh4QWwxajVzSGpTV3R2enluSVh2MVZVTnN1RVVmRTQ3SmxrY0xtWC1iMExRd05WdVZ2bWRZa3ZTNFlZdVNPRkpTWlRTZ2toZUtVNk4wZW1Kenhnbmc?oc=5" target="_blank" rel="noopener noreferrer">The Motley Fool网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Shopify股价大跌17%，AI智能体能否拯救电商巨头受关注</h3>
+<p style="margin:5px 0 10px">Shopify股价大跌17%，报道讨论AI智能体能否帮助这家电商巨头。市场关注AI代理对电商业务的影响。</p>
+<div class="links">
+<span class="muted">来源：NAI500</span>
+
+  <a href="https://news.google.com/rss/articles/CBMirgJBVV95cUxQSTVrLTJ3YTVpd000clhFOUNsYlpWVlI3akFDeVBiY0pZWW45ZWRlYUtjZGlOTEFZSkZ4S003NWlmUzZ0cDYtdDNtRzVSSWtCbHpZMjgwOWhZVFU3TjRGUHB4M01mSFdZVTlmaXZ2LXMwYjRBckpsV05KdHFrbzhNdmpJYlNJemRLQ0pPc2tOejl6NUpTamxHdHBZdTc5QXlMS0tRX0F3ZkNMbUdfalpIMnhESllrUGg5SmluNmtiQTBvQnB6eW9QNW1GOWRhVHNFYUNTSFd4d1NaVElqS01QTVhiSV9ZN3kyTnJxcUxjTVNnc29tOEExalBZeWVNelpjYnF2dGlvOW03MHdPU3JFQ3BpU0VOak9hQ0xMVUFJanNNcXM3Zld3TV9IZlhNZw?oc=5" target="_blank" rel="noopener noreferrer">NAI500网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">双创板块大幅回调，算力链集体杀跌</h3>
+<p style="margin:5px 0 10px">双创板块大幅回调，算力链集体杀跌。市场随之讨论科技主线是否仍有机会。</p>
+<div class="links">
+<span class="muted">来源：手机新浪网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMickFVX3lxTFBPRllnRHR0cWJGeWJBa0JOaU5wbWZuUjA1bEl2YU5wR1BOT2lEc0hjdXZ5cjVhNkRDYmh4R0NmUE1rQm9mdElQTy12UVcySjg4QVlBSjlrM0tnVVBtdDNGdUhpSUxtSUtwV0lrWTZxTnFSdw?oc=5" target="_blank" rel="noopener noreferrer">手机新浪网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">黄仁勋辞职风波持续，马斯克称将签名支持其回归英伟达</h3>
+<p style="margin:5px 0 10px">黄仁勋辞职事件持续发酵，马斯克继续为黄仁勋发声。马斯克在一名网友留言下表示自己将签名支持黄仁勋回归英伟达；连日来多名网友在马斯克社交账号下留言表达惋惜。相关讨论还提到优秀GPU工程师难找、员工希望黄仁勋回来。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104521888450064574?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104521888450064574">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">阿里巴巴拟分拆平头哥赴港独立上市</h3>
+<p style="margin:5px 0 10px">阿里巴巴公告拟分拆全资子公司平头哥（上海）技术股份有限公司赴香港联交所主板独立上市。港交所已确认阿里巴巴可进行此次分拆，平头哥已于2026年9月11日以保密形式递交上市申请。此次分拆拟通过全球发售H股进行，包括香港公开发售及向机构和专业投资者配售。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2103593134626009683?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2103593134626009683">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国际金价再度跌破3900美元，创近13个月新低</h3>
+<p style="margin:5px 0 10px">现货黄金价格直线跳水，再度跌破3900美元大关，创近13个月来新低。市场围绕金价后续走向展开讨论。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104503233062487324?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104503233062487324">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">47分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">于东来称胖东来将就洗发水争议发布调研报告</h3>
+<p style="margin:5px 0 10px">11月13日，胖东来创始人于东来在社媒发文称，针对目前出现的洗发水问题，公司已安排成立专项工作团队展开更详细调查。他表示大家不要急，胖东来会给社会拿出详细调研报告；即便万一有问题，也会拿出让顾客满意的解决方案。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104692031402647745?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104692031402647745">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">46分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">问界新M8上市，售价37.98万元起</h3>
+<p style="margin:5px 0 10px">11月13日，问界新M8正式上市，推出增程和纯电两种动力模式，以及大五座和享六座两种座椅布局。正式售价区间为37.98万元至46.98万元，市场关注其价格竞争力。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104607471683817591?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104607471683817591">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">42分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">何超琼提出澳门旅游“一人来一百次”理念</h3>
+<p style="margin:5px 0 10px">何超琼表示，澳门旅游发展不是让一百个人来一次，而是希望一个人来一百次。该表述将旅游发展重点放在重复到访而非单次客流上。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2095459699088962414?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2095459699088962414">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">95分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">FAA因通信故障一度停飞全美航班，恢复后延误持续</h3>
+<p style="margin:5px 0 10px">当地时间11月13日，美国多个航路交通管制中心出现通信故障，美国联邦航空管理局出于安全考虑暂停全美机场航班起飞，随后取消地面停飞令，但预计仍会出现大范围航班取消或延误。美国国土安全部长表示，总统特朗普已听取简报。有报道将事件与FAA本周推出AI空中交通管理联系起来，但美方称停飞并非网络攻击或AI干预。</p>
+<div class="links">
+<span class="muted">来源：Inc.com、The New York Times 等5个来源</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiygFBVV95cUxPS1JGMmk4ckVUM0Qza2Q5U18xRndmeEx3ZlFhWERQdVFrZVVDNFdnS2ZneWxRTVdEZDdpc2l4UVkxTm5naWM0a3I2eTZQdVN0QUtNLVoycUJIamRNQ0E4dU5mTmlwVXg3UnA5U3BpSlNSSWNNSzZteV82dU9Hb2RCZzZ6cmROekpkdGpSR2NoTGpZT0JkLW5OdHhuQmNHdFVZOEdjbUc3VzQwTU5fdEhHRFVTZWJXcEVMQTBOM080NExUZGR4c0pObHln?oc=5" target="_blank" rel="noopener noreferrer">Inc.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMigwFBVV95cUxOS1F1U1pLV0V3dTVlT1RnSGF1dlJERU1sbkN5X2pMUmlPSFVoZkZaTmlRM3plQmZJQTBBaXdMQnZpbm1PV2NfajFvclpsUWE2VlhwZ3ZlcjVkNG1CbUVxMW9jempQY3VtVlNSUU11c3hGLU9GYk82N0cxT1BBQTZkbWs4VQ?oc=5" target="_blank" rel="noopener noreferrer">The New York Times网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiT0FVX3lxTE5LMlF4V2xxR1NDMW5ZaUxXc2M1aFkwMV9ZUGF2RnF6LS1pQ1FxcEtaUHMzMUg5SFI4THl0ZG9JWUJ6c3NSNlQtdHhfQkJDZWs?oc=5" target="_blank" rel="noopener noreferrer">新浪网网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiiAFBVV95cUxNNHBIZjRJdjJocVFOcG5uN0YzeUExaUk1NjV5c0F4NUxHWGtXa0hacjAyczVkazlhS3B5ZHNLQUxNNE1ESWthT3YyWWN4UXJqVnVQLUh1LUtCb0hrV29pT1hBR0QyMDY4NnVVM3lFSUc4NzRpMzU1bTZ1WUppRG54SjVZcnZvOUFp?oc=5" target="_blank" rel="noopener noreferrer">The Atlantic网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2104838863910690956?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104838863910690956">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">冰岛紧急电话112因交换机故障中断约一小时</h3>
+<p style="margin:5px 0 10px">冰岛紧急电话112因电话交换机故障中断约一小时，后切换至备用系统恢复。应急热线负责人称这是其“最大噩梦”，当时全国多地正遭遇恶劣天气；目前尚不清楚是否有人因此未能及时求助。</p>
+<div class="links">
+<span class="muted">来源：visir.is</span>
+
+  <a href="https://www.visir.is/g/20262962896d/112-komid-i-samt-horf-thetta-er-min-staersta-mar-trod-" target="_blank" rel="noopener noreferrer">visir.is网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">江苏多地高中调整作息，推迟到校并缩短晚自习</h3>
+<p style="margin:5px 0 10px">11月1日起，江苏多所高中陆续发布作息调整通知，推迟上学时间并缩短晚自习时间。部分原来7点前到校的高中普遍将到校时间推迟至7:20或7:30，晚自习结束时间提前至21:00—21:30之间；家长反映孩子早上能多睡半小时，精神状态有所改善，江苏省教育厅厅长此前公开表示对学生太累深感愧疚。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104242893716309866?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104242893716309866">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">重庆通报“帮连吃7碗米饭母女放钱”视频系摆拍并立案</h3>
+<p style="margin:5px 0 10px">重庆市梁平区联合调查组11月12日通报，网传“一饭店老板悄悄为连吃7碗米饭母女放钱”视频引发关注后，当地组织网信、公安、民政、市场监管等部门核查。经查，餐馆运营人李某为博取关注、吸引流量，编造虚假情节、组织人员摆拍并制作视频发布；相关部门已对其立案调查，将依法处理涉嫌违法行为。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2104310469767054805?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2104310469767054805">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
