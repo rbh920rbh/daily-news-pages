@@ -1,0 +1,840 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="supported-color-schemes" content="light dark">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+:root{color-scheme:light dark;supported-color-schemes:light dark}
+*{box-sizing:border-box}
+body{margin:0;padding:0;background:#e9edf3;color:#20242c;font:15px/1.7 Arial,'PingFang SC',sans-serif}
+a{color:#1459a6}
+.shell{width:min(920px,calc(100% - 20px));margin:18px auto;padding:28px;background:#f9fafc;border-radius:16px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding:2px 0 12px;scrollbar-width:thin;position:sticky;top:0;
+  z-index:10;background:#f9fafc}
+.tab{flex:0 0 auto;border:0;border-radius:999px;padding:9px 15px;background:#dce5f0;color:#25405f;
+  font:700 14px/1.2 inherit;cursor:pointer}
+.tab:hover{background:#cbdced}
+.tab[aria-selected="true"]{background:#1769e0;color:#fff;box-shadow:0 4px 12px rgba(23,105,224,.25)}
+.tab:focus-visible{outline:3px solid #80b7ff;outline-offset:2px}
+.js .tab-panel{display:none}
+.js .tab-panel.active{display:block}
+.panel-title{margin:20px 0 2px;border-left:5px solid var(--accent);padding-left:10px;font-size:21px}
+.item{border-top:1px solid #d9dee7;padding:18px 0}
+.score{display:inline-block;background:#dce9f8;color:#123f72;border-radius:12px;padding:1px 9px;margin-right:8px}
+.muted{color:#5e6877}
+.links{display:flex;flex-wrap:wrap;gap:8px 18px;line-height:1.6}
+.links a{font-weight:600;text-decoration:none}
+.links a:hover{text-decoration:underline}
+@media (max-width:600px){.shell{width:100%;margin:0;padding:20px 15px;border-radius:0}.tabs{margin:0 -15px;padding:4px 15px 12px}}
+@media (prefers-color-scheme:dark){
+  body{background:#10141b;color:#edf1f7}.shell,.tabs{background:#1b212b}.muted{color:#b9c2cf}
+  .item{border-color:#394453}a{color:#8fc5ff}.tab{background:#263b53;color:#d9ebff}
+  .tab[aria-selected="true"]{background:#287dcc;color:#fff}.score{background:#263b53;color:#d9ebff}
+}
+</style>
+</head>
+<body>
+<main class="shell">
+<h1 style="margin:0 0 4px;font-size:28px;line-height:1.3">每日简报</h1>
+<div class="muted" style="margin-bottom:20px">2026-11-28 11:52 · 最近24小时</div>
+<div class="tabs" role="tablist" aria-label="简报分类">
+
+  <button class="tab" type="button" role="tab" id="tab-highlights"
+    aria-controls="highlights" aria-selected="true"
+    tabindex="0" data-tab="highlights">今日重点 <span aria-hidden="true">10</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-politics"
+    aria-controls="politics" aria-selected="false"
+    tabindex="-1" data-tab="politics">时政·国际 <span aria-hidden="true">7</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-tech"
+    aria-controls="tech" aria-selected="false"
+    tabindex="-1" data-tab="tech">科技·AI <span aria-hidden="true">12</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-business"
+    aria-controls="business" aria-selected="false"
+    tabindex="-1" data-tab="business">财经·商业 <span aria-hidden="true">9</span></button>
+
+  <button class="tab" type="button" role="tab" id="tab-society"
+    aria-controls="society" aria-selected="false"
+    tabindex="-1" data-tab="society">社会·民生 <span aria-hidden="true">7</span></button>
+
+</div>
+
+<section id="highlights" class="tab-panel active" role="tabpanel"
+  aria-labelledby="tab-highlights" style="--accent:#ca8a04">
+<h2 class="panel-title">今日重点</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国常会部署稳市，通稿首提“国家队”等表述</h3>
+<p style="margin:5px 0 10px">国务院常务会议作出新部署，释放明确的稳市信号，并提出加力发挥“国家队”稳市作用。国常会通稿首次使用“国家队”、类“平准基金”这些提法，11月内有两场国常会提及资本市场。多家媒体解读“国家队”与长期资金如何发力稳股市，并有学者认为资本市场定位已深度嵌入宏观底线思维。</p>
+<div class="links">
+<span class="muted">来源：求是、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1MNzhwYmNqRUhyV25URnJ6ZVBRQWY4TXhYWm5vbWFXczh0azVBaEJQYUx4aWJtMjFyZ1NnenZBREYtUklPOUEzcEZQcWVZOEZBTUhJQ2xBMFZvem1TSlJaZ1J2b1V4ZU9LRDFyZmlkdmdoWjhsYzc3RGFtakQ?oc=5" target="_blank" rel="noopener noreferrer">求是网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2109697976268321407?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109697976268321407">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美军在阿曼湾使一艘试图突破对伊朗港口封锁的商船失去动力</h3>
+<p style="margin:5px 0 10px">美军表示，在阿曼湾使一艘试图突破对伊朗港口海上封锁的商船失去动力。多家媒体称这是美方再次拦截尝试突破封锁的船只，美方以军机使该商船失能。事件发生在美伊紧张局势持续之际。</p>
+<div class="links">
+<span class="muted">来源：CBS News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2hfZGl0MVZmV1ZQZTFoUkpFNDVMM3E5bVhpZTRWdWZ5SVQtTEx6UFBGRWRkNjM0b0hvbnRpNzJscmVLMG95Mk1vUGt0YW1DQmxxbTZzUEVVOFJWdTVGNThiLU9G?oc=5" target="_blank" rel="noopener noreferrer">CBS News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">报道称特斯拉与SpaceX磋商全股票合并</h3>
+<p style="margin:5px 0 10px">《金融时报》报道称，马斯克正推动特斯拉与SpaceX合并，争取在2026年12月31日前达成协议。报道说交易拟采用全股票合并方式，双方正磋商换股比例，合并后市值约3.5万亿美元，可能成为人类史上最大并购交易。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109592384853861548?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109592384853861548">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">全球首个乙肝功能性治愈新药贝普若韦生在国内获批</h3>
+<p style="margin:5px 0 10px">11月26日，国家药品监督管理局批准贝普若韦生（商品名：贺舒可）上市，联合核苷（酸）类似物用于慢性乙肝病毒感染的功能性治愈。该药已在日本、美国、加拿大获批，被称为全球首个且唯一获多国监管共同认定、以“功能性治愈”为目标的乙肝新药。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109552078158820704?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109552078158820704">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">以色列政局生变：艾森科特组阁挑战内塔尼亚胡</h3>
+<p style="margin:5px 0 10px">多家媒体报道，以色列政坛的“奇特组合”可能接近推翻内塔尼亚胡，前军方高层艾森科特成为组阁关键人物。报道称内塔尼亚胡准备向艾森科特提供轮换政府中的高位，艾森科特已与左翼民主党达成联合协议，但左翼派系一度暂停谈判，贝内特被视为主要障碍。</p>
+<div class="links">
+<span class="muted">来源：The Washington Post</span>
+
+  <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxmUVRSOTlDS3pmTC14QjZiSzNiVHRDeV9RSmdZY3VyMl9Wb21ZVW9BRHJxbkFseEFGVklrMTRvSzJjZlprWm1UR2kyLW15RzhPNzNVWkNoYU9HUWFENV9sODA0a01kQ0FCTUtmNHhNRTJTREdzNVh3bDNtdDdwd0Z1WmVmYjF3aTlFTS14LXZ5YWtYbTU3NDBGazBqQmtXcmRyU3ZGeEJaTlNCZ1VBdnB5Slg?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普力挺黄仁勋引发政治代价，五角大楼曾讨论动用战时法律</h3>
+<p style="margin:5px 0 10px">《华尔街日报》报道称，特朗普对英伟达CEO黄仁勋的“忠诚”正付出高昂政治代价；《华盛顿邮报》称赫格塞思与五角大楼官员曾提出动用战时法律重新任命黄仁勋。与此同时，有财经媒体称规模达2万亿美元的芯片股上涨行情正在瓦解，多家媒体就此展开评论。</p>
+<div class="links">
+<span class="muted">来源：WSJ</span>
+
+  <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0RESWZCNURwWGRtNHhIZTY0OXFScXNJYVk5TUJ2djBDWHVKNXVsZlVmRDZfUmFucEJqTUZBdkF0NkY4Y2JmQUJqZzRfazlhN0dWbnY0WTJCRXJ0X0NQTXAySXE3bGtKNnVWbWJhQ1czWGhJVk1qV1NBM01HMXE2S1J2S2VzTlBmT3VUa2pObFBGMHZzUUtRYkNsNnUzUzc5Ty16OQ?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">76分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">陶哲轩参与验证黎曼猜想相关AI证明，Anthropic未发布模型引关注</h3>
+<p style="margin:5px 0 10px">报道称数学家陶哲轩参与验证与黎曼猜想相关的AI生成证明，并警告AI批量产出证明如同“发电厂排核废料”。另一篇报道则称，在“证明黎曼猜想”之后，Anthropic一款未发布的AI模型强到令人恐惧。相关讨论聚焦AI在数学研究中的能力与风险。</p>
+<div class="links">
+<span class="muted">来源：智源社区、ThePaper.cn</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9WNHdQUzdva1VXT0tvWVktYjhUM2Zuak53dlppeTdac3dPS3BtVnNsVmpSMUZlOEgwem8tT1o3X2J2LThxX3FpLQ?oc=5" target="_blank" rel="noopener noreferrer">智源社区网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBOSzVlUWl6NjhLTktUMWhVWVd6ZjV2bWVFQlc0Sm55cV9fZ25lN2RPV2I2QU1EdC1PMWJiRGNCOXViNG5WdnRQQUVvcVpCWDdENFUtTERnVjh6U2F6dlJ0aA?oc=5" target="_blank" rel="noopener noreferrer">ThePaper.cn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI称间谍向苹果泄露AI设备机密计划</h3>
+<p style="margin:5px 0 10px">OpenAI表示，一名间谍向苹果提供了有关AI设备的秘密计划，该设备可能在苹果“自己的地盘”上击败iPhone制造商。报道将此事描述为两家公司在AI硬件方向上的敏感竞争。</p>
+<div class="links">
+<span class="muted">来源：Yahoo Finance</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQWmROekpXeTBPR2Fqd2xTbjhkTWRQcm5LZVEtcFJjZlRhMGloQXFBY1ctTW5lX1JEODloRnRKYTJuSVRnRU9PQ1RlRjdlOFI3eWJBSFBmaTdnNXN5VUZ6VVhRX1h6cTF0S3VTMFVFazVGN21FVzVrUFNRa3c3U2szS3FpTmxWVlhHaEJnaFI0eVc1djdPY0Zz?oc=5" target="_blank" rel="noopener noreferrer">Yahoo Finance网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">市场监管总局约谈雅迪、爱玛等15家电动自行车企业</h3>
+<p style="margin:5px 0 10px">市场监管总局对雅迪、台铃、爱玛、新日、九号等15家电动自行车企业进行集中约谈。约谈指出，CCC认证全覆盖飞行检查发现有关企业质量主体责任落实不到位、产品一致性管控不严，部分企业存在违反强制性国家标准出厂销售不合格产品的情况。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109686222276622101?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109686222276622101">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">北大教师右眼被注入工业气体致残，获赔388万元执行到位</h3>
+<p style="margin:5px 0 10px">2015年，北京大学教师范晓蕾在治疗右眼视网膜脱离时，被北京熙仁医院注入工业用全氟丙烷气体，导致中毒性视网膜病变，右眼视力仅余光感。2026年7月31日，北京市一中院终审判决涉事医院赔偿388万元；范晓蕾11月14日表示赔偿款已执行到位。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109322061701177833?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109322061701177833">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="politics" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-politics" style="--accent:#c2410c">
+<h2 class="panel-title">时政·国际</h2>
+
+
+<article class="item">
+<div><span class="score">86分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">美军在阿曼湾使一艘试图突破对伊朗港口封锁的商船失去动力</h3>
+<p style="margin:5px 0 10px">美军表示，在阿曼湾使一艘试图突破对伊朗港口海上封锁的商船失去动力。多家媒体称这是美方再次拦截尝试突破封锁的船只，美方以军机使该商船失能。事件发生在美伊紧张局势持续之际。</p>
+<div class="links">
+<span class="muted">来源：CBS News</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilAFBVV95cUxPa0lGZ2x0YXZLeTRTdE1zN09yX3E5enVIX0ZnUmhUVDVfMlVNeVpqUmlxN3ZLZFM1X2hfZGl0MVZmV1ZQZTFoUkpFNDVMM3E5bVhpZTRWdWZ5SVQtTEx6UFBGRWRkNjM0b0hvbnRpNzJscmVLMG95Mk1vUGt0YW1DQmxxbTZzUEVVOFJWdTVGNThiLU9G?oc=5" target="_blank" rel="noopener noreferrer">CBS News网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">80分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">以色列政局生变：艾森科特组阁挑战内塔尼亚胡</h3>
+<p style="margin:5px 0 10px">多家媒体报道，以色列政坛的“奇特组合”可能接近推翻内塔尼亚胡，前军方高层艾森科特成为组阁关键人物。报道称内塔尼亚胡准备向艾森科特提供轮换政府中的高位，艾森科特已与左翼民主党达成联合协议，但左翼派系一度暂停谈判，贝内特被视为主要障碍。</p>
+<div class="links">
+<span class="muted">来源：The Washington Post</span>
+
+  <a href="https://news.google.com/rss/articles/CBMitAFBVV95cUxOLWxmUVRSOTlDS3pmTC14QjZiSzNiVHRDeV9RSmdZY3VyMl9Wb21ZVW9BRHJxbkFseEFGVklrMTRvSzJjZlprWm1UR2kyLW15RzhPNzNVWkNoYU9HUWFENV9sODA0a01kQ0FCTUtmNHhNRTJTREdzNVh3bDNtdDdwd0Z1WmVmYjF3aTlFTS14LXZ5YWtYbTU3NDBGazBqQmtXcmRyU3ZGeEJaTlNCZ1VBdnB5Slg?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">78分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">特朗普力挺黄仁勋引发政治代价，五角大楼曾讨论动用战时法律</h3>
+<p style="margin:5px 0 10px">《华尔街日报》报道称，特朗普对英伟达CEO黄仁勋的“忠诚”正付出高昂政治代价；《华盛顿邮报》称赫格塞思与五角大楼官员曾提出动用战时法律重新任命黄仁勋。与此同时，有财经媒体称规模达2万亿美元的芯片股上涨行情正在瓦解，多家媒体就此展开评论。</p>
+<div class="links">
+<span class="muted">来源：WSJ</span>
+
+  <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOd0RESWZCNURwWGRtNHhIZTY0OXFScXNJYVk5TUJ2djBDWHVKNXVsZlVmRDZfUmFucEJqTUZBdkF0NkY4Y2JmQUJqZzRfazlhN0dWbnY0WTJCRXJ0X0NQTXAySXE3bGtKNnVWbWJhQ1czWGhJVk1qV1NBM01HMXE2S1J2S2VzTlBmT3VUa2pObFBGMHZzUUtRYkNsNnUzUzc5Ty16OQ?oc=5" target="_blank" rel="noopener noreferrer">WSJ网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">歼-20A将首次亮相中国航展</h3>
+<p style="margin:5px 0 10px">新华网报道，歼-20A将首次亮相中国航展，并解读型号中“A”所代表的升级内容。这是该改进型战机首次在航展公开展示。</p>
+<div class="links">
+<span class="muted">来源：新华网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMif0FVX3lxTE9TckhaNWE0M2hHYUQxYXBEVXByYV9QZWhtUU5MMS13MG1TSnU0dWFJZUlkXzJZNEhuLWpvQzZUc3pIR29rbVRJa3JXc1hHSERVRWtMRGprU0sxM19GTXJSZWpCaVpNTF9ETUJSd1hNblVPQ284TlBtM2x5dkVINjA?oc=5" target="_blank" rel="noopener noreferrer">新华网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">中国空间站迎来首位外籍航天员</h3>
+<p style="margin:5px 0 10px">中国空间站首次迎来外国航天员，巴基斯坦航天员齐尚·阿里成为首位进入中国空间站的外籍航天员。其中文老师接受专访时称，阿里刚来时不会说中文，是从“你好”学起的。巴基斯坦部长表示“天宫”之旅承载巴方发展愿景，外媒关注中国航天国际合作迈出新步伐。</p>
+<div class="links">
+<span class="muted">来源：京报网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiXkFVX3lxTE9obUg5MXNWaXNvSWdZYWJjd3EtMVV0eXdxR09GcUZjOGc2YzdpNk9NZmp5VHphMTdYYTk0YV9fOVBwbE1IQWtXbzlQWUw4UFNVeUxDbUFfZkxaUlN6MkE?oc=5" target="_blank" rel="noopener noreferrer">京报网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">以军称在加沙打死4名哈马斯成员，哈马斯领导人之子幸存</h3>
+<p style="margin:5px 0 10px">以军称在加沙地带打死4名哈马斯成员。报道称哈马斯领导人哈利勒·哈亚之子在空袭中幸存，但其妻子受重伤；哈马斯方面拒绝按2025年由特朗普斡旋的协议解除武装。以方还宣称三天内连续击杀该组织三名要员。</p>
+<div class="links">
+<span class="muted">来源：Sohu</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxOUExRNU1GSGFaMTlJTXJwQWxMMHprcFBEVWpvazV4Zl9kTmxRX1c0UXBtamM3YnRCblhUNVc0bmc0U1gwUkVhZjMyQVZYZkFYb05VdU95Q2VUbHpLSW1EMEstUEtVT1BQQlAtLXFhU19tLTlleFREcF95NXZmNXV0all6SUlZMUM4UnJoWQ?oc=5" target="_blank" rel="noopener noreferrer">Sohu网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">46分</span><span class="muted">时政·国际</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">欧盟向巴勒斯坦提供2740万欧元医疗援助</h3>
+<p style="margin:5px 0 10px">欧盟宣布向巴勒斯坦提供2740万欧元医疗援助。该笔资金用于回应当地医疗需求。</p>
+<div class="links">
+<span class="muted">来源：中国新闻网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiaEFVX3lxTFA1cU9SMERvU0F6R0IwUmlydlZYNFBqbWYzazNkWmpEN2ptV2oxX0tSUGJSQks1QjBzVXNqcS1WMDVEbUFZQjhhejcxOGpaOVgwajl5Q0NaYXkweUp1OTl5akduamdIX1Ri?oc=5" target="_blank" rel="noopener noreferrer">中国新闻网网页版</a>
+  
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="tech" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-tech" style="--accent:#2563eb">
+<h2 class="panel-title">科技·AI</h2>
+
+
+<article class="item">
+<div><span class="score">76分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">陶哲轩参与验证黎曼猜想相关AI证明，Anthropic未发布模型引关注</h3>
+<p style="margin:5px 0 10px">报道称数学家陶哲轩参与验证与黎曼猜想相关的AI生成证明，并警告AI批量产出证明如同“发电厂排核废料”。另一篇报道则称，在“证明黎曼猜想”之后，Anthropic一款未发布的AI模型强到令人恐惧。相关讨论聚焦AI在数学研究中的能力与风险。</p>
+<div class="links">
+<span class="muted">来源：智源社区、ThePaper.cn</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiSEFVX3lxTE9WNHdQUzdva1VXT0tvWVktYjhUM2Zuak53dlppeTdac3dPS3BtVnNsVmpSMUZlOEgwem8tT1o3X2J2LThxX3FpLQ?oc=5" target="_blank" rel="noopener noreferrer">智源社区网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMiYEFVX3lxTFBOSzVlUWl6NjhLTktUMWhVWVd6ZjV2bWVFQlc0Sm55cV9fZ25lN2RPV2I2QU1EdC1PMWJiRGNCOXViNG5WdnRQQUVvcVpCWDdENFUtTERnVjh6U2F6dlJ0aA?oc=5" target="_blank" rel="noopener noreferrer">ThePaper.cn网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">74分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">OpenAI称间谍向苹果泄露AI设备机密计划</h3>
+<p style="margin:5px 0 10px">OpenAI表示，一名间谍向苹果提供了有关AI设备的秘密计划，该设备可能在苹果“自己的地盘”上击败iPhone制造商。报道将此事描述为两家公司在AI硬件方向上的敏感竞争。</p>
+<div class="links">
+<span class="muted">来源：Yahoo Finance</span>
+
+  <a href="https://news.google.com/rss/articles/CBMilwFBVV95cUxQWmROekpXeTBPR2Fqd2xTbjhkTWRQcm5LZVEtcFJjZlRhMGloQXFBY1ctTW5lX1JEODloRnRKYTJuSVRnRU9PQ1RlRjdlOFI3eWJBSFBmaTdnNXN5VUZ6VVhRX1h6cTF0S3VTMFVFazVGN21FVzVrUFNRa3c3U2szS3FpTmxWVlhHaEJnaFI0eVc1djdPY0Zz?oc=5" target="_blank" rel="noopener noreferrer">Yahoo Finance网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">洛杉矶学区禁用谷歌AI概览功能一年</h3>
+<p style="margin:5px 0 10px">洛杉矶联合学区（LAUSD）决定在学校中禁用谷歌AI Overviews功能，为期一年。相关报道称，有关机构就此事收到超过2万封邮件，显示争议热度较高。</p>
+<div class="links">
+<span class="muted">来源：shattered.io、Organización Mundial Bullying Sin Fronteras</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijgFBVV95cUxOUUpqeEVuZWJ1TW1pN192X0Jpc0J2NUw1bkRCSzZtay12NTY0Y3hZcUZHblljR0R0VVZSWWN4NTNBOWM3Z0FvREdIRkQxbkdLcUFULUNfY0NmSk9CeTJSSExQT1ZtMjhBdUh3YWpuR2N3cE84QS01SHdiOGQyZ0tOQW1icm85cFJCNDVIR01R?oc=5" target="_blank" rel="noopener noreferrer">shattered.io网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMilgFBVV95cUxOWTVIV0RGSV9hcklRVC04UGljQ1hlV0FMUVFBVXMyWnkzVHRnRlZxNllrcEFqX0ktTHVtUEZjSG04YTU3ZmR0WV9RaHNTeTRGSDhuZHZEVG11UXBsejFQaWNya0lIclpKZmNVR0xtcFlCRFExdkk1c0ZhM00wYVJrM1N5WGgyUFpiM3ZxTk44NFdXVHFsdVE?oc=5" target="_blank" rel="noopener noreferrer">Organización Mundial Bullying Sin Fronteras网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">南华早报：DeepSeek担忧失去对AI的控制</h3>
+<p style="margin:5px 0 10px">南华早报报道称，DeepSeek成为中国最新一家担忧失去对AI控制权的开发者。报道聚焦AI开发企业在模型可控性方面的顾虑。</p>
+<div class="links">
+<span class="muted">来源：South China Morning Post</span>
+
+  <a href="https://news.google.com/rss/articles/CBMipwFBVV95cUxNZ3MyLUlMOU1UNWl5YUNQcjFtdlR3SkFHX2VrT2Q4Sko1MTVUZUtjMFhOQVk4RjNRS3U0NFZ4aDZBNjNPZFVjUW9SbEdzazl4SDR1Y0xHNllRdmdJVGlTdkl1LVFma1dzRmFJdVJFTzNsVHZmVWpxbzNKdlNZNDMyM3NQNWR5Z0pOb2xIeUpESnNSZFp0SW1zYUpPc2x0RnA1cG1DVURwY9IBpwFBVV95cUxNbVpnQmMzaHJ2RFhTV2VWTUZITlB4TGhLN2NfcGNnSzFSTk0ycjZGYnpWaDljOVU4b0xoOGZBMXRmZGNyWU13TC1tRmxmZTJvVUd5dVBiczFBam42UXJKaHh5V2EyRUliUEZkTGN1enpmeDRPNHNHTWY4ZHk0eVphSlk2eEtqX3B0Qk9xSE1kdFZHdk5lWnVqYUtrVGNNSkZoUHk5eVdyMA?oc=5" target="_blank" rel="noopener noreferrer">South China Morning Post网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">韩国总统李在明出席江原道大型AI数据中心动工仪式</h3>
+<p style="margin:5px 0 10px">韩国总统李在明出席江原道一个大型AI数据中心的动工仪式。该项目被视为韩国扩充AI算力基础设施的举措之一。</p>
+<div class="links">
+<span class="muted">来源：The Korea Herald</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiV0FVX3lxTE54RXotWHZPNVRfMnA2LW93NDEybWJ0cElvMC1CRjFmYTdBNnZCT0p0UkZfZ05YaFVHQmtHeXUwcmVRaWNNQ2tNdmtTSjdlMkF6MFRSc1I4OA?oc=5" target="_blank" rel="noopener noreferrer">The Korea Herald网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">56分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">温州率先出台AI训练数据商业秘密保护指引</h3>
+<p style="margin:5px 0 10px">温州率先在全国出台针对AI训练数据的商业秘密保护指引，为训练数据扣上“保密锁”。该指引聚焦AI训练数据在商业保密方面的规则空白。</p>
+<div class="links">
+<span class="muted">来源：温州新闻网</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE1rRTBhWFNJcHBRdGdFS0VvWnl4X2prcG43eXFsQnkydVF1ZEhxUVRlS21IU3VGbTJUMWNlc2lIdlRiNE1qbmZVWXdjcDFKc2duejQxd2N0R3pVYndEQWZhOHI2Xzd2UQ?oc=5" target="_blank" rel="noopener noreferrer">温州新闻网网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">慧仑科技发布动作模型，称明年实现机器人量产</h3>
+<p style="margin:5px 0 10px">慧仑科技发布动作模型，并宣布明年实现机器人量产。该消息由财经媒体报道，聚焦具身智能产品的商业化节奏。</p>
+<div class="links">
+<span class="muted">来源：21财经</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxOMEY4VXJJYm5vZWxKbTBWTmFwX21JVU43V1hEazVBZzdHeF9sRmw4cTJKVnBBU084dThkdFlZaGpEOWxhYm1XWlBhQXZHSXhyWjN0OEVFUlNBUHVmS0hrQUo5RF9iSFBuaHdQcTdsTUdFN1JGUUJJOUZiZExRLUpuRzdUdE9GQ1hLRnRwY2tLcw?oc=5" target="_blank" rel="noopener noreferrer">21财经网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">82分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">全球首个乙肝功能性治愈新药贝普若韦生在国内获批</h3>
+<p style="margin:5px 0 10px">11月26日，国家药品监督管理局批准贝普若韦生（商品名：贺舒可）上市，联合核苷（酸）类似物用于慢性乙肝病毒感染的功能性治愈。该药已在日本、美国、加拿大获批，被称为全球首个且唯一获多国监管共同认定、以“功能性治愈”为目标的乙肝新药。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109552078158820704?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109552078158820704">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">70分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">模特称面部被AI短剧融脸，维权遇困难</h3>
+<p style="margin:5px 0 10px">模特七海发博称，自己的脸已被融进模型大数据，AI短剧中的丑角或反派与其面部有较高相似度，并晒出网友质疑《火狐》融脸的图文。她此前已起诉《桃花簪》方，案件尚未宣判；其代理律师表示，诉求是把面部特征从数据库移出，但维权存在困难。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109242936701478494?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109242936701478494">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">68分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">1Password披露2026年11月后端系统入侵事件</h3>
+<p style="margin:5px 0 10px">1Password于2026年11月25日披露后端系统入侵事件，并发布安全事件更新。披露材料未说明用户密码或数据是否受到影响。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109305751055373894?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109305751055373894">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">46分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">冯骥《后AI时代最重要的问题》一文引发讨论</h3>
+<p style="margin:5px 0 10px">冯骥在《后AI时代最重要的问题》一文中提出对后AI时代的思考，相关观点引发讨论。现有材料仅提供文章链接，未展开具体论述。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109705664087816135?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109705664087816135">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">45分</span><span class="muted">科技·AI</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">讨论称中国若突破EUV光刻机，高端芯片价格能否大幅下降</h3>
+<p style="margin:5px 0 10px">有讨论提出，中国一旦解决EUV光刻机技术，高端芯片能否实现“白菜价”。材料认为光刻机是芯片生产领域最难的技术之一，也是中国高端芯片制造面临的主要难题。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2020866489717139044?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2020866489717139044">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="business" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-business" style="--accent:#047857">
+<h2 class="panel-title">财经·商业</h2>
+
+
+<article class="item">
+<div><span class="score">88分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">国常会部署稳市，通稿首提“国家队”等表述</h3>
+<p style="margin:5px 0 10px">国务院常务会议作出新部署，释放明确的稳市信号，并提出加力发挥“国家队”稳市作用。国常会通稿首次使用“国家队”、类“平准基金”这些提法，11月内有两场国常会提及资本市场。多家媒体解读“国家队”与长期资金如何发力稳股市，并有学者认为资本市场定位已深度嵌入宏观底线思维。</p>
+<div class="links">
+<span class="muted">来源：求是、知乎</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTE1MNzhwYmNqRUhyV25URnJ6ZVBRQWY4TXhYWm5vbWFXczh0azVBaEJQYUx4aWJtMjFyZ1NnenZBREYtUklPOUEzcEZQcWVZOEZBTUhJQ2xBMFZvem1TSlJaZ1J2b1V4ZU9LRDFyZmlkdmdoWjhsYzc3RGFtakQ?oc=5" target="_blank" rel="noopener noreferrer">求是网页版</a>
+  
+  
+
+  <a href="https://www.zhihu.com/question/2109697976268321407?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109697976268321407">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">经历数周AI焦虑后美股多头回潮，存储与科技股大涨</h3>
+<p style="margin:5px 0 10px">彭博社报道，在经历数周围绕AI的焦虑后，股市多头再度活跃。另有报道称闪迪涨近16%，美国科技股出现暴涨，存储类股票全线走强。</p>
+<div class="links">
+<span class="muted">来源：Bloomberg.com、Sohu</span>
+
+  <a href="https://news.google.com/rss/articles/CBMipAFBVV95cUxOZ3VCeHg2b05tdzhRRmprOEUxTWJBQ2VHRWNyT0MzZW1sTVk2RVZBeGoyWVc2QkNBdGstbnlRS3VrOEtMT3hEcE02UjZsYmRLdjJwcTJ6c0t0dUZtbjRmNUotSU9qZ01OODJJLUpaTjN3RzI4cS1xQUhQb1hlN2NBa2tYcFFkMUF3SlExRVMybmZ4Xy0tSXp5am1McGVnOHFGR21xLQ?oc=5" target="_blank" rel="noopener noreferrer">Bloomberg.com网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMijAFBVV95cUxNbFl5bnJFSXQweTlrM2xWLWlfckFGSkNtYXEzN3FqQ0FXb1l5V0xwY1NGd3VtdE5jMWtWYUg1WmRXeUFlR0puNGZOcWRXREFmcldlTFg4ek5Kc01KNkdTUVFzd0lGLU96NHJiUTBhYkdGTUFZLTZsc3lNNENTNEozOTc5SVRoY2VyaHRvcQ?oc=5" target="_blank" rel="noopener noreferrer">Sohu网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">54分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">Robert Kraft拟建160亿美元AI数据中心面临镇民大会关键表决</h3>
+<p style="margin:5px 0 10px">Robert Kraft提出的160亿美元AI数据中心项目，在马萨诸塞州Sutton面临一场“生死攸关”的镇民大会表决。报道同时提到当地将就新英格兰地区AI开发前景举行线上研讨。</p>
+<div class="links">
+<span class="muted">来源：Contrarian Boston</span>
+
+  <a href="https://news.google.com/rss/articles/CBMifEFVX3lxTFBaSUdQSDQ4Vl9ydXZaYTA1YVBTSVBPbExUSXAydjV4MFpaaWR5clJ3RUZsck0wUUpfQnY3d0dHQkE0bllfTVl2dW91dkJ1NGFLV2NNVVE5em5aZ1BodEdjaWVIZzNlYzZjOVBhaWhnMDdTZ1NLemtzMUtHVWc?oc=5" target="_blank" rel="noopener noreferrer">Contrarian Boston网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">52分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">AI冲击软件公司旧有计价模式</h3>
+<p style="margin:5px 0 10px">报道指出，AI正在拆掉软件公司传统的“计价器”式收费模式，行业原有定价逻辑受到冲击。文章以有赞等公司为例，探讨软件企业是否已找到新的解法。</p>
+<div class="links">
+<span class="muted">来源：https://www.mrjjxw.com/</span>
+
+  <a href="https://news.google.com/rss/articles/CBMiZkFVX3lxTE5YZ1dOODV4c2N6aUtUejdXeDJqWEJHWVQ1UnBPejRYaE1rcG56MlAzWXowTDRicU14Y0hyaE4tZ1hEWGRaVllLYWJmNmUwa25vdzMtSC1zNHlscHVYc0NZR2JuS2k2dw?oc=5" target="_blank" rel="noopener noreferrer">https://www.mrjjxw.com/网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">85分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">报道称特斯拉与SpaceX磋商全股票合并</h3>
+<p style="margin:5px 0 10px">《金融时报》报道称，马斯克正推动特斯拉与SpaceX合并，争取在2026年12月31日前达成协议。报道说交易拟采用全股票合并方式，双方正磋商换股比例，合并后市值约3.5万亿美元，可能成为人类史上最大并购交易。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109592384853861548?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109592384853861548">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">72分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">市场监管总局约谈雅迪、爱玛等15家电动自行车企业</h3>
+<p style="margin:5px 0 10px">市场监管总局对雅迪、台铃、爱玛、新日、九号等15家电动自行车企业进行集中约谈。约谈指出，CCC认证全覆盖飞行检查发现有关企业质量主体责任落实不到位、产品一致性管控不严，部分企业存在违反强制性国家标准出厂销售不合格产品的情况。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109686222276622101?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109686222276622101">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">58分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">三只松鼠就员工宿舍条件致歉</h3>
+<p style="margin:5px 0 10px">有自称三只松鼠员工者反映公司宿舍条件差，网传图片显示房间摆放12张上下铺、公共洗漱间为毛坯水泥地。11月26日晚，公司致歉称涉事宿舍为年货节期间临时启用的旺季用工周转宿舍，已转移安置相关人员。另有信息称公司CEO与员工薪资相差23倍，引发关注。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109669812406334189?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109669812406334189">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">55分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">海康威视否认“965”工作新规报道</h3>
+<p style="margin:5px 0 10px">有报道称海康威视下发全员通知，取消原有“996”工作模式并试行“965”工作新规，且遭到抵制，相关消息登上热搜。海康威视回应上海证券报称该报道不属实，并表示持续营造良好职场环境，反对以在岗时间替代价值贡献的无效“内卷”。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109666479654297616?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109666479654297616">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">54分</span><span class="muted">财经·商业</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">快手2026年第三季度营收316亿元，日活4.17亿</h3>
+<p style="margin:5px 0 10px">11月19日，快手发布2026年第三季度业绩，总收入316亿元，经调整净利润7.9亿元，经调整EBITDA为39亿元。快手应用平均日活跃用户4.17亿，平均月活跃用户8.19亿，创历史新高。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2106815239039751997?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2106815239039751997">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<section id="society" class="tab-panel" role="tabpanel"
+  aria-labelledby="tab-society" style="--accent:#7c3aed">
+<h2 class="panel-title">社会·民生</h2>
+
+
+<article class="item">
+<div><span class="score">64分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">两架美国航空客机在里根国家机场滑行时机翼相碰</h3>
+<p style="margin:5px 0 10px">两架美国航空客机在华盛顿里根国家机场滑行时发生机翼相碰，美国联邦航空管理局（FAA）已确认此事。多家美国媒体报道称，事发时飞机正在滑行准备起飞。</p>
+<div class="links">
+<span class="muted">来源：The Washington Post</span>
+
+  <a href="https://news.google.com/rss/articles/CBMingFBVV95cUxNU1JBQ1NyNU5ldGtkRDVpMDY4QmQtU2s0T1Q4VnJMS01IQUtIa2Qtd01BMVNaVktUY3g2Qml2bnY4WmlXdVc4YUEyMkh5ekxyZWhsVjVPbU54X3B2OUwwOFRia3pwTmNDRGRyRFExdzc5Y0lQWXNWM3ZhTjJCY1FHdEVRSmhJSUVBZlpQSHBiT290akFrTjRXWElEeWVmQQ?oc=5" target="_blank" rel="noopener noreferrer">The Washington Post网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">48分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">广东文化人才秋招约三分之一岗位涉及人工智能</h3>
+<p style="margin:5px 0 10px">2026年文化人才秋季专题招聘活动举行，约三分之一的岗位招聘涉及人工智能。报道称泛AI岗位占比达三分之一，短剧与文旅领域对AI人才需求明显。</p>
+<div class="links">
+<span class="muted">来源：21财经、广州市人民政府</span>
+
+  <a href="https://news.google.com/rss/articles/CBMijwFBVV95cUxPUlNWdTFhbGpnT3BPTjlTUEIzX1c5azVFM0Z1cEJRR1VCRW9Wek5BX2hQdEllVFNmRkJjdE43dnlWUFYtM2RtNWZZdXhJUUNSNVIydlNERHNrZ3lkM0hpanctQzBjaGFrbXh1X0VzaVpqSkNSMmpveExMSnVrc01ENkNCc3hOSmd4QlcyOXNkRQ?oc=5" target="_blank" rel="noopener noreferrer">21财经网页版</a>
+  
+  
+
+  <a href="https://news.google.com/rss/articles/CBMicEFVX3lxTFBsNDJiT2t1S09rSlUxUUZZYXYxLVBxRGxLNG80ZUk1ZWZoT3AxRi1lSXh2VmZLeC1ySFBjSjFWaVlINEJCbmFqcnF5WktEbmhfU1pGX05PdGs4bWJ5NnhfakhhQUNadUx5VWp4WDFTVnY?oc=5" target="_blank" rel="noopener noreferrer">广州市人民政府网页版</a>
+  
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">66分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">北大教师右眼被注入工业气体致残，获赔388万元执行到位</h3>
+<p style="margin:5px 0 10px">2015年，北京大学教师范晓蕾在治疗右眼视网膜脱离时，被北京熙仁医院注入工业用全氟丙烷气体，导致中毒性视网膜病变，右眼视力仅余光感。2026年7月31日，北京市一中院终审判决涉事医院赔偿388万元；范晓蕾11月14日表示赔偿款已执行到位。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109322061701177833?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109322061701177833">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">62分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">57岁女子因超40岁被嘉兴一酒店拒住</h3>
+<p style="margin:5px 0 10px">57岁的李女士11月19日预订浙江嘉兴荔枝酒店床位房，到店后因年龄超过40岁被拒办入住。酒店回应称这是老板规定，预订平台主页和下单页均无醒目提示；当地警方称年龄限制系酒店自主规定，公安并无此项要求。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109585824480236082?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109585824480236082">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">60分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">济南医保局直播间工作人员辱骂咨询者，官方称已批评教育并道歉</h3>
+<p style="margin:5px 0 10px">山东一名男子向媒体反映，11月26日在济南市医保局官方视频号直播间咨询等待期问题时，被出镜工作人员点名辱骂“脑子有病”。次日直播回放不见，医保局回应称已批评教育并要求道歉。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2109655670127605450?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2109655670127605450">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">50分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">住宅楼板厚度与楼层噪音问题引发讨论</h3>
+<p style="margin:5px 0 10px">讨论提到，国内住宅楼板常规厚度多为10至12厘米，住户长期受楼上脚步声、拖拽家具等撞击噪音困扰。问题关注统一加厚楼板能否根治噪音，以及开发商不主动加厚是否仅出于成本考虑。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2066353729507422598?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2066353729507422598">知乎 App</a>
+  
+
+</div>
+</article>
+
+<article class="item">
+<div><span class="score">48分</span><span class="muted">社会·民生</span></div>
+<h3 style="margin:7px 0 5px;font-size:17px;line-height:1.45">深圳卫健委提醒纳米海绵洗碗或释放大量微塑料</h3>
+<p style="margin:5px 0 10px">深圳卫健委发布提醒称，纳米海绵不宜用来洗碗，每磨损1克可释放650万个微塑料。提醒还提到，部分劣质纳米海绵存在甲醛超标风险。</p>
+<div class="links">
+<span class="muted">来源：知乎</span>
+
+  <a href="https://www.zhihu.com/question/2108211840027313575?utm_medium=openapi_platform&amp;utm_source=b38f6831b176" target="_blank" rel="noopener noreferrer">知乎网页版</a>
+  
+  
+  <a href="zhihu://questions/2108211840027313575">知乎 App</a>
+  
+
+</div>
+</article>
+
+
+</section>
+
+<p class="muted" style="margin:26px 0 0;font-size:13px">内容由自动化程序整理，重要信息请以原始报道为准。知乎 App 链接无法打开时，请使用旁边的网页版链接。</p>
+</main>
+<script>
+(() => {
+  const tabs = [...document.querySelectorAll('[role="tab"]')];
+  const panels = [...document.querySelectorAll('[role="tabpanel"]')];
+  const ids = new Set(panels.map(panel => panel.id));
+  function activate(id, updateHash = false) {
+    if (!ids.has(id)) id = tabs[0].dataset.tab;
+    tabs.forEach(tab => {
+      const active = tab.dataset.tab === id;
+      tab.setAttribute('aria-selected', String(active));
+      tab.tabIndex = active ? 0 : -1;
+    });
+    panels.forEach(panel => panel.classList.toggle('active', panel.id === id));
+    if (updateHash) history.pushState(null, '', `#${id}`);
+  }
+  tabs.forEach((tab, index) => {
+    tab.addEventListener('click', () => activate(tab.dataset.tab, true));
+    tab.addEventListener('keydown', event => {
+      if (!['ArrowLeft', 'ArrowRight', 'Home', 'End'].includes(event.key)) return;
+      event.preventDefault();
+      let next = event.key === 'Home' ? 0 : event.key === 'End' ? tabs.length - 1 :
+        (index + (event.key === 'ArrowRight' ? 1 : -1) + tabs.length) % tabs.length;
+      tabs[next].focus();
+      activate(tabs[next].dataset.tab, true);
+    });
+  });
+  addEventListener('hashchange', () => activate(location.hash.slice(1)));
+  addEventListener('popstate', () => activate(location.hash.slice(1)));
+  activate(location.hash.slice(1));
+})();
+</script>
+</body></html>
